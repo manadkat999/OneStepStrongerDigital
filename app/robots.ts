@@ -9,7 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/"],
       },
     ],
-    sitemap: "https://onestepstrongermedia.com/sitemap.xml",
-    host: "https://onestepstrongermedia.com",
+    sitemap: "https://onestepstronger.co.uk/sitemap.xml",
+    host: "https://onestepstronger.co.uk",
   };
 }

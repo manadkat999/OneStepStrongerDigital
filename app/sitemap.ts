@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = "https://onestepstrongermedia.com";
+const BASE_URL = "https://onestepstronger.co.uk";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
@@ -9,24 +9,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
       lastModified: new Date(),
       changeFrequency: "monthly",
       priority: 1,
-    },
-    {
-      url: `${BASE_URL}/#services`,
-      lastModified: new Date(),
-      changeFrequency: "monthly",
-      priority: 0.8,
-    },
-    {
-      url: `${BASE_URL}/#about`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.6,
-    },
-    {
-      url: `${BASE_URL}/#contact`,
-      lastModified: new Date(),
-      changeFrequency: "yearly",
-      priority: 0.7,
     },
   ];
 }
