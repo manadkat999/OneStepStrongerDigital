@@ -1,0 +1,111 @@
+import { VALUES, INDUSTRIES } from "@/app/lib/data";
+import RevealOnScroll from "@/app/components/ui/RevealOnScroll";
+import Section from "@/app/components/ui/Section";
+import Container from "@/app/components/ui/Container";
+import Card from "@/app/components/ui/Card";
+import { SectionLabel } from "@/app/components/ui/Badge";
+
+const Check = () => (
+  <svg className="w-4 h-4 text-orange-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+    <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+  </svg>
+);
+
+const aboveStats = [
+  { value: "2019", label: "Founded" },
+  { value: "20+",  label: "Specialists" },
+  { value: "150+", label: "Clients Served" },
+  { value: "12+",  label: "Industries" },
+];
+
+export default function About() {
+  return (
+    <Section id="about" className="bg-gradient-to-b from-[#0a0a0a] via-[#0d0d0d] to-[#080808]">
+      <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-orange-500/4 blur-[130px] pointer-events-none" />
+
+      <Container className="relative z-10">
+        <RevealOnScroll className="text-center mb-20">
+          <SectionLabel>Our Mission</SectionLabel>
+          <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
+            Built to Champion{" "}
+            <span className="gradient-text">Small Business</span>
+          </h2>
+          <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
+            We started One Step Stronger because too many incredible small businesses were invisible online while big chains with mediocre products dominated search results. We&apos;re here to fix that.
+          </p>
+        </RevealOnScroll>
+
+        <div className="grid lg:grid-cols-2 gap-12 mb-16">
+          {/* Values */}
+          <RevealOnScroll>
+            <h3 className="text-2xl font-black text-white mb-7">What We Stand For</h3>
+            <div className="space-y-5">
+              {VALUES.map((v) => (
+                <div key={v.title} className="flex gap-3">
+                  <div className="w-9 h-9 rounded-xl bg-orange-500/12 border border-orange-500/20 flex items-center justify-center flex-shrink-0">
+                    <Check />
+                  </div>
+                  <div>
+                    <p className="font-bold text-white text-sm mb-0.5">{v.title}</p>
+                    <p className="text-gray-400 text-sm leading-relaxed">{v.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Industries */}
+            <div className="mt-10">
+              <p className="text-gray-500 text-xs font-semibold tracking-widest uppercase mb-3">Industries we serve</p>
+              <div className="flex flex-wrap gap-2">
+                {INDUSTRIES.map((ind) => (
+                  <span key={ind} className="text-xs px-3 py-1.5 rounded-full bg-white/4 border border-white/8 text-gray-300 hover:border-orange-500/25 hover:text-orange-400 transition-colors cursor-default">
+                    {ind}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </RevealOnScroll>
+
+          {/* Story + stats */}
+          <RevealOnScroll delay={150}>
+            <Card className="mb-5">
+              <h3 className="text-lg font-black text-white mb-3">Our Story</h3>
+              <p className="text-gray-400 text-sm leading-relaxed mb-3">
+                Founded in Chicago in 2019 by a team of SEOs who spent years at enterprise agencies watching small business clients get deprioritised — they had the smallest budgets but needed the most help.
+              </p>
+              <p className="text-gray-400 text-sm leading-relaxed">
+                So we built the agency we always wished existed: one that treats every small business like its most important client. Today we work exclusively with small and growing businesses across the US.
+              </p>
+            </Card>
+
+            <div className="grid grid-cols-2 gap-4 mb-5">
+              {aboveStats.map((s) => (
+                <div key={s.label} className="card-glow rounded-xl p-5 text-center">
+                  <p className="text-2xl font-black gradient-text mb-0.5">{s.value}</p>
+                  <p className="text-gray-400 text-xs">{s.label}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Guarantee */}
+            <Card accent="orange" padding="md">
+              <div className="flex gap-3 items-start">
+                <div className="w-9 h-9 rounded-xl bg-orange-500/15 flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                  </svg>
+                </div>
+                <div>
+                  <p className="font-bold text-white text-sm mb-1">Our 90-Day Promise</p>
+                  <p className="text-gray-400 text-sm leading-relaxed">
+                    If we don&apos;t show measurable improvement in your online visibility within 90 days, you don&apos;t pay for month three. Simple as that.
+                  </p>
+                </div>
+              </div>
+            </Card>
+          </RevealOnScroll>
+        </div>
+      </Container>
+    </Section>
+  );
+}

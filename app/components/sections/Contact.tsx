@@ -1,0 +1,183 @@
+"use client";
+import { useState } from "react";
+import RevealOnScroll from "@/app/components/ui/RevealOnScroll";
+import Section from "@/app/components/ui/Section";
+import Container from "@/app/components/ui/Container";
+import { SectionLabel } from "@/app/components/ui/Badge";
+
+const BENEFITS = [
+  { title: "Free SEO Audit", desc: "A full technical and content audit — $500 value, yours free." },
+  { title: "Custom Growth Plan", desc: "A 90-day roadmap tailored to your goals and market." },
+  { title: "No Long Contracts", desc: "We earn your business month by month." },
+  { title: "Response in 24hrs", desc: "A senior strategist will reach out personally." },
+];
+
+const inputClass =
+  "w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-orange-500/50 transition-colors";
+
+export default function Contact() {
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [firstName, setFirstName] = useState("");
+  const [lastName, setLastName] = useState("");
+  const [email, setEmail] = useState("");
+  const [website, setWebsite] = useState("");
+  const [budget, setBudget] = useState("");
+  const [challenge, setChallenge] = useState("");
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    setLoading(true);
+    setError("");
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ firstName, lastName, email, website, budget, challenge }),
+      });
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error ?? "Something went wrong.");
+      setSubmitted(true);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <Section id="contact" className="bg-gradient-to-b from-[#0a0a0a] to-[#0d0d0d]">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-orange-500/6 blur-[120px] pointer-events-none" />
+
+      <Container className="relative z-10">
+        <RevealOnScroll className="text-center mb-14">
+          <SectionLabel>Get Started</SectionLabel>
+          <h2 className="text-4xl md:text-5xl font-black mb-5 leading-tight">
+            Ready to{" "}
+            <span className="gradient-text">Dominate Search?</span>
+          </h2>
+          <p className="text-gray-400 max-w-xl mx-auto">
+            Get a free, no-obligation SEO audit. We&apos;ll identify exactly what&apos;s holding back your rankings and build a custom growth roadmap.
+          </p>
+        </RevealOnScroll>
+
+        <RevealOnScroll delay={100}>
+          <div className="grid lg:grid-cols-5 gap-10 items-start">
+            {/* Benefits column */}
+            <div className="lg:col-span-2 space-y-5">
+              {BENEFITS.map((b) => (
+                <div key={b.title} className="flex gap-3">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center mt-0.5">
+                    <svg className="w-3 h-3 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="font-semibold text-white text-sm">{b.title}</p>
+                    <p className="text-gray-400 text-xs mt-0.5">{b.desc}</p>
+                  </div>
+                </div>
+              ))}
+
+              <div className="pt-4 border-t border-gray-800 space-y-2">
+                <a href="mailto:hello@onestepstronger.media" className="flex items-center gap-2 text-gray-400 hover:text-orange-400 transition-colors text-sm">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+                  </svg>
+                  hello@onestepstronger.media
+                </a>
+                <a href="tel:+13125550100" className="flex items-center gap-2 text-gray-400 hover:text-orange-400 transition-colors text-sm">
+                  <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+                  </svg>
+                  +1 (312) 555-0100
+                </a>
+              </div>
+            </div>
+
+            {/* Form column */}
+            <div className="lg:col-span-3 card-glow rounded-2xl p-8">
+              {submitted ? (
+                <div className="text-center py-8">
+                  <div className="w-16 h-16 mx-auto rounded-full bg-orange-500/15 border border-orange-500/30 flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
+                    </svg>
+                  </div>
+                  <h3 className="text-xl font-bold text-white mb-2">You&apos;re on the list!</h3>
+                  <p className="text-gray-400 text-sm">A senior strategist will reach out within 24 hours with your custom audit plan.</p>
+                </div>
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-5">
+                  <div className="grid md:grid-cols-2 gap-5">
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-400 mb-1.5">First Name</label>
+                      <input type="text" required placeholder="Alex" value={firstName} onChange={(e) => setFirstName(e.target.value)} className={inputClass} />
+                    </div>
+                    <div>
+                      <label className="block text-xs font-semibold text-gray-400 mb-1.5">Last Name</label>
+                      <input type="text" required placeholder="Morgan" value={lastName} onChange={(e) => setLastName(e.target.value)} className={inputClass} />
+                    </div>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-400 mb-1.5">Work Email</label>
+                    <input type="email" required placeholder="alex@company.com" value={email} onChange={(e) => setEmail(e.target.value)} className={inputClass} />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-400 mb-1.5">Website URL</label>
+                    <input type="url" required placeholder="https://yoursite.com" value={website} onChange={(e) => setWebsite(e.target.value)} className={inputClass} />
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-400 mb-1.5">Monthly SEO Budget</label>
+                    <select value={budget} onChange={(e) => setBudget(e.target.value)} className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-3 text-gray-300 text-sm focus:outline-none focus:border-orange-500/50 transition-colors">
+                      <option value="">Select a range...</option>
+                      <option>$1,000 – $2,500 / mo</option>
+                      <option>$2,500 – $5,000 / mo</option>
+                      <option>$5,000 – $10,000 / mo</option>
+                      <option>$10,000+ / mo</option>
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-xs font-semibold text-gray-400 mb-1.5">Tell us your biggest SEO challenge</label>
+                    <textarea rows={3} placeholder="We're struggling with..." value={challenge} onChange={(e) => setChallenge(e.target.value)} className={`${inputClass} resize-none`} />
+                  </div>
+
+                  {error && (
+                    <p className="text-red-400 text-sm bg-red-500/10 border border-red-500/20 rounded-lg px-4 py-3">
+                      {error}
+                    </p>
+                  )}
+
+                  <button
+                    type="submit"
+                    disabled={loading}
+                    className="btn-primary w-full py-4 rounded-xl font-bold text-base flex items-center justify-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed"
+                  >
+                    {loading ? (
+                      <>
+                        <svg className="w-4 h-4 animate-spin" fill="none" viewBox="0 0 24 24">
+                          <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                          <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z" />
+                        </svg>
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        Get My Free Audit
+                        <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
+                        </svg>
+                      </>
+                    )}
+                  </button>
+                  <p className="text-center text-gray-500 text-xs">No spam. No commitment. Just a free, honest audit.</p>
+                </form>
+              )}
+            </div>
+          </div>
+        </RevealOnScroll>
+      </Container>
+    </Section>
+  );
+}
