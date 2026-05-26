@@ -1,3 +1,4 @@
+import React from "react";
 import { SERVICES } from "@/app/lib/data";
 import RevealOnScroll from "@/app/components/ui/RevealOnScroll";
 import Section from "@/app/components/ui/Section";
@@ -6,7 +7,7 @@ import Button from "@/app/components/ui/Button";
 import { SectionLabel } from "@/app/components/ui/Badge";
 import { cn } from "@/app/lib/utils";
 
-const Icons: Record<string, JSX.Element> = {
+const Icons: Record<string, React.ReactNode> = {
   "map-pin": (
     <svg className="w-full h-full" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
       <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 1 1-6 0 3 3 0 0 1 6 0ZM19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1 1 15 0Z" />
