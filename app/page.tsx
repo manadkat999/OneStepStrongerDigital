@@ -6,6 +6,7 @@ import ServicesBento from "@/app/components/sections/ServicesBento";
 import HowItWorks from "@/app/components/sections/HowItWorks";
 import Testimonials from "@/app/components/sections/Testimonials";
 import About from "@/app/components/sections/About";
+import Pricing from "@/app/components/sections/Pricing";
 import CTABanner from "@/app/components/sections/CTABanner";
 import Contact from "@/app/components/sections/Contact";
 
@@ -20,6 +21,7 @@ export default function Home() {
         <HowItWorks />
         <Testimonials />
         <About />
+        <Pricing />
         <CTABanner />
         <Contact />
       </main>

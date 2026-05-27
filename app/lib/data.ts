@@ -1,8 +1,8 @@
 // ─── Navigation ───────────────────────────────────────────────────────────────
 export const NAV_LINKS = [
   { label: "Services", href: "#services" },
-  { label: "Why It Matters", href: "#why-digital" },
   { label: "How It Works", href: "#how-it-works" },
+  { label: "Pricing", href: "#pricing" },
   { label: "Clients", href: "#results" },
   { label: "About", href: "#about" },
 ] as const;
