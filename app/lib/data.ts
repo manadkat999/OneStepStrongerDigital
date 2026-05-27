@@ -46,7 +46,7 @@ export const SERVICES = [
     icon: "map-pin",
     title: "Local SEO",
     description:
-      "Own the top spot on Google Maps and local search when customers in your area search for what you do. We make sure your community finds you — not your competitors.",
+      "When someone nearby searches for what you do, you want to be the first name they see — not your competitor down the road. We sort your local presence so that actually happens.",
     tags: ["Google Business Profile", "Maps Ranking", "Local Citations"],
     featured: true,
     accent: "orange" as const,
@@ -57,7 +57,7 @@ export const SERVICES = [
     icon: "wrench",
     title: "Technical SEO",
     description:
-      "Fix the invisible problems stopping Google from ranking you: site speed, crawl errors, Core Web Vitals, and broken structure.",
+      "There are often technical reasons a site doesn't rank well that have nothing to do with content — speed issues, crawl errors, broken structure. We find them and fix them.",
     tags: ["Site Speed", "Core Web Vitals", "Schema Markup"],
     featured: false,
     accent: "blue" as const,
@@ -68,7 +68,7 @@ export const SERVICES = [
     icon: "document",
     title: "Content That Converts",
     description:
-      "Pages that answer real customer questions, build local authority, and rank — turning traffic into trust and trust into sales.",
+      "Good content does two things: it helps people find you, and it gives them a reason to get in touch. We write pages that actually do both.",
     tags: ["Service Pages", "Blog & FAQ", "EEAT"],
     featured: false,
     accent: "orange" as const,
@@ -79,7 +79,7 @@ export const SERVICES = [
     icon: "search",
     title: "Keyword Strategy",
     description:
-      "We map exactly what your future customers are searching and build a precise plan to capture every high-intent opportunity.",
+      "We look at what people in your market are actually typing into Google, find where you're missing out, and build a plan around that.",
     tags: ["Search Intent", "Competitor Gaps", "Opportunity Mapping"],
     featured: false,
     accent: "blue" as const,
@@ -90,7 +90,7 @@ export const SERVICES = [
     icon: "link",
     title: "Link Building",
     description:
-      "Quality backlinks from trusted local publications and industry sites that signal authority to Google — white-hat only.",
+      "Links from credible, relevant sites tell Google you're worth paying attention to. We build them properly — no shortcuts, no spam.",
     tags: ["Local Press", "Digital PR", "Guest Posts"],
     featured: false,
     accent: "orange" as const,
@@ -101,7 +101,7 @@ export const SERVICES = [
     icon: "star",
     title: "Reputation & Reviews",
     description:
-      "97% of consumers read reviews before choosing a local business. We help you earn more 5-star reviews and manage your reputation everywhere.",
+      "Most people check reviews before they call anyone. We help you get more of the good ones, respond to the awkward ones, and make sure your reputation is working for you.",
     tags: ["Review Generation", "Response Strategy", "Reputation Mgmt"],
     featured: false,
     accent: "blue" as const,
@@ -112,7 +112,7 @@ export const SERVICES = [
     icon: "chart",
     title: "Plain-English Reporting",
     description:
-      "Monthly reports in plain language showing exactly how many customers found you through search and what we're doing next — no dashboards to decipher.",
+      "Once a month, you get a plain-English update on what's changed, what we're doing next, and how many people found you through search. No logins, no dashboards, no decoding required.",
     tags: ["Monthly Reports", "ROI Tracking", "Clear Metrics"],
     featured: false,
     accent: "orange" as const,
@@ -183,20 +183,20 @@ export const HERO_STATS = [
 // ─── About ────────────────────────────────────────────────────────────────────
 export const VALUES = [
   {
-    title: "We Root for the Underdog",
-    desc: "Big brands have massive marketing budgets. We level the playing field with expert SEO that gives small businesses a real shot.",
+    title: "We're on your side",
+    desc: "Big brands can afford to throw money at Google ads and still come out ahead. We help the businesses that can't do that compete anyway.",
   },
   {
-    title: "No Jargon. Ever.",
-    desc: "You'll always know what we're doing and why. If we can't explain it in plain English, we won't do it.",
+    title: "No jargon, ever",
+    desc: "We'll always tell you what we're doing and why, in plain English. If we can't explain it clearly, we probably shouldn't be doing it.",
   },
   {
-    title: "Long-Term Thinking",
-    desc: "We build lasting visibility — not quick tricks. Your SEO compounds every month like interest in a savings account.",
+    title: "We play the long game",
+    desc: "Quick wins are nice, but rankings built properly stick around. We focus on work that keeps paying off months down the line.",
   },
   {
-    title: "Month-to-Month Only",
-    desc: "We earn your business every month. No lock-in contracts, no cancellation fees. Our results keep you.",
+    title: "No lock-ins",
+    desc: "We don't tie anyone into long contracts. If we're doing good work, you'll stay because you want to — not because you have to.",
   },
 ] as const;
 

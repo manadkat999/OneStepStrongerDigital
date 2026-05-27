@@ -35,7 +35,7 @@ export default function CTABanner() {
                 <span className="gradient-text">page one.</span>
               </h2>
               <p className="text-gray-400 text-lg mb-10 max-w-lg mx-auto">
-                Join 150+ local businesses growing their organic revenue with One Step Stronger Media.
+                Get a free, honest look at your digital presence. We&apos;ll tell you exactly where you stand — no hard sell, no jargon, no obligation.
               </p>
 
               <div className="flex flex-wrap justify-center gap-3 mb-10">

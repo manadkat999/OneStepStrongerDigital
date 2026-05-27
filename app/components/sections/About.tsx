@@ -25,13 +25,13 @@ export default function About() {
 
       <Container className="relative z-10">
         <RevealOnScroll className="text-center mb-20">
-          <SectionLabel>Our Mission</SectionLabel>
+          <SectionLabel>Who We Are</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
-            Built to Champion{" "}
-            <span className="gradient-text">Small Business</span>
+            A small team that backs{" "}
+            <span className="gradient-text">small businesses.</span>
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-            We started One Step Stronger Digital because too many brilliant UK small businesses were invisible online while bigger competitors with deeper pockets dominated search results. We&apos;re here to change that.
+            Between us we&apos;ve got backgrounds in web development, copywriting, design, and digital marketing. We&apos;re not a big agency. We came together because we kept seeing the same thing — decent, hard-working businesses getting buried online while their flashier competitors hoovered up all the traffic.
           </p>
         </RevealOnScroll>
 
@@ -71,10 +71,10 @@ export default function About() {
             <Card className="mb-5">
               <h3 className="text-lg font-black text-white mb-3">Our Story</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-3">
-                Founded in the UK in 2025 by a small team who saw talented small business owners losing customers every day to competitors who simply showed up better online — not because they were better, but because they were more visible.
+                We&apos;re a group of people who met through different corners of the industry and realised we were all frustrated by the same thing. The businesses that actually put in the work — the ones worth finding — kept losing out to whoever had the bigger budget.
               </p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                We built the agency we always wished existed: one that gives small businesses the same quality of SEO that big brands pay a premium for, without the jargon, the long contracts, or the feeling that you&apos;re just another invoice. Every client we take on, we treat as our most important one.
+                So we started One Step Stronger Digital. Not to be the biggest agency, but to be a useful one. We take on clients we believe in, do the work properly, and tell you exactly what we&apos;re doing without the usual smoke and mirrors.
               </p>
             </Card>
 
