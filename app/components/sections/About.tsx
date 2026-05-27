@@ -12,10 +12,10 @@ const Check = () => (
 );
 
 const aboveStats = [
-  { value: "2019", label: "Founded" },
-  { value: "20+",  label: "Specialists" },
-  { value: "150+", label: "Clients Served" },
-  { value: "12+",  label: "Industries" },
+  { value: "2025", label: "Founded" },
+  { value: "UK",   label: "Based" },
+  { value: "48hr", label: "Audit Delivery" },
+  { value: "0",    label: "Lock-in Contracts" },
 ];
 
 export default function About() {
@@ -31,7 +31,7 @@ export default function About() {
             <span className="gradient-text">Small Business</span>
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-            We started One Step Stronger because too many incredible small businesses were invisible online while big chains with mediocre products dominated search results. We&apos;re here to fix that.
+            We started One Step Stronger Digital because too many brilliant UK small businesses were invisible online while bigger competitors with deeper pockets dominated search results. We&apos;re here to change that.
           </p>
         </RevealOnScroll>
 
@@ -71,10 +71,10 @@ export default function About() {
             <Card className="mb-5">
               <h3 className="text-lg font-black text-white mb-3">Our Story</h3>
               <p className="text-gray-400 text-sm leading-relaxed mb-3">
-                Founded in Chicago in 2019 by a team of SEOs who spent years at enterprise agencies watching small business clients get deprioritised — they had the smallest budgets but needed the most help.
+                Founded in the UK in 2025 by a small team who saw talented small business owners losing customers every day to competitors who simply showed up better online — not because they were better, but because they were more visible.
               </p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                So we built the agency we always wished existed: one that treats every small business like its most important client. Today we work exclusively with small and growing businesses across the US.
+                We built the agency we always wished existed: one that gives small businesses the same quality of SEO that big brands pay a premium for, without the jargon, the long contracts, or the feeling that you&apos;re just another invoice. Every client we take on, we treat as our most important one.
               </p>
             </Card>
 

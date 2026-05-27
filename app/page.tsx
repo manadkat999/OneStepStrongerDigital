@@ -1,7 +1,6 @@
 import Navbar from "@/app/components/layout/Navbar";
 import Footer from "@/app/components/layout/Footer";
 import Hero from "@/app/components/sections/Hero";
-import LogoStrip from "@/app/components/sections/LogoStrip";
 import WhyDigital from "@/app/components/sections/WhyDigital";
 import ServicesBento from "@/app/components/sections/ServicesBento";
 import HowItWorks from "@/app/components/sections/HowItWorks";
@@ -16,8 +15,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <LogoStrip />
-        <WhyDigital />
+<WhyDigital />
         <ServicesBento />
         <HowItWorks />
         <Testimonials />

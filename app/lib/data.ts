@@ -3,27 +3,9 @@ export const NAV_LINKS = [
   { label: "Services", href: "#services" },
   { label: "Why It Matters", href: "#why-digital" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Results", href: "#results" },
+  { label: "Clients", href: "#results" },
   { label: "About", href: "#about" },
 ] as const;
-
-// ─── Logo Strip ───────────────────────────────────────────────────────────────
-export const LOGO_STRIP_ITEMS = [
-  { name: "Rosa's Artisan Bakery", type: "Food & Beverage" },
-  { name: "Metro Plumbing Co.", type: "Home Services" },
-  { name: "Sharma Dental Group", type: "Healthcare" },
-  { name: "JW Auto & Tire", type: "Auto Services" },
-  { name: "Chen Law Group", type: "Legal" },
-  { name: "Peak Fitness Studio", type: "Health & Wellness" },
-  { name: "Harbor Coffee Roasters", type: "Retail" },
-  { name: "City Realty Partners", type: "Real Estate" },
-  { name: "Summit HVAC", type: "Home Services" },
-  { name: "Nova Family Clinic", type: "Healthcare" },
-  { name: "Green Ridge Landscaping", type: "Outdoor Services" },
-  { name: "Swift Accounting LLC", type: "Professional Services" },
-  { name: "Blue Lake Salon", type: "Beauty & Wellness" },
-  { name: "Apex Electrical", type: "Trades" },
-];
 
 // ─── Why Digital Stats ────────────────────────────────────────────────────────
 export const WHY_DIGITAL_STATS = [
@@ -68,7 +50,7 @@ export const SERVICES = [
     tags: ["Google Business Profile", "Maps Ranking", "Local Citations"],
     featured: true,
     accent: "orange" as const,
-    metric: { label: "Avg. ranking improvement", value: "Top 3" },
+    metric: { label: "The goal for every client", value: "Top 3" },
   },
   {
     id: "technical-seo",
@@ -79,7 +61,7 @@ export const SERVICES = [
     tags: ["Site Speed", "Core Web Vitals", "Schema Markup"],
     featured: false,
     accent: "blue" as const,
-    metric: { label: "Avg. speed improvement", value: "2.4×" },
+    metric: { label: "Target page speed grade", value: "A+" },
   },
   {
     id: "content",
@@ -90,7 +72,7 @@ export const SERVICES = [
     tags: ["Service Pages", "Blog & FAQ", "EEAT"],
     featured: false,
     accent: "orange" as const,
-    metric: { label: "Avg. organic traffic lift", value: "+220%" },
+    metric: { label: "Content pieces per month", value: "4–8" },
   },
   {
     id: "keywords",
@@ -101,7 +83,7 @@ export const SERVICES = [
     tags: ["Search Intent", "Competitor Gaps", "Opportunity Mapping"],
     featured: false,
     accent: "blue" as const,
-    metric: { label: "Avg. new keywords ranking", value: "180+" },
+    metric: { label: "Opportunities identified per audit", value: "50+" },
   },
   {
     id: "links",
@@ -112,7 +94,7 @@ export const SERVICES = [
     tags: ["Local Press", "Digital PR", "Guest Posts"],
     featured: false,
     accent: "orange" as const,
-    metric: { label: "Avg. DA improvement", value: "+18 pts" },
+    metric: { label: "Only approach we use", value: "White-hat" },
   },
   {
     id: "reviews",
@@ -123,7 +105,7 @@ export const SERVICES = [
     tags: ["Review Generation", "Response Strategy", "Reputation Mgmt"],
     featured: false,
     accent: "blue" as const,
-    metric: { label: "Avg. new monthly reviews", value: "+14" },
+    metric: { label: "Consumers who read reviews first", value: "97%" },
   },
   {
     id: "analytics",
@@ -134,7 +116,7 @@ export const SERVICES = [
     tags: ["Monthly Reports", "ROI Tracking", "Clear Metrics"],
     featured: false,
     accent: "orange" as const,
-    metric: { label: "Client retention rate", value: "94%" },
+    metric: { label: "Reporting frequency", value: "Monthly" },
   },
 ] as const;
 
@@ -152,7 +134,7 @@ export const HOW_IT_WORKS_STEPS = [
     number: "02",
     title: "A Plan Built for Your Business",
     description:
-      "No cookie-cutter packages. We build a strategy around your specific goals, market, and budget — whether you're a plumber, a café owner, or a growing law firm.",
+      "No cookie-cutter packages. We build a strategy around your specific goals, market, and budget — whether you're a candle maker, an app founder, or a growing local firm.",
     detail: "Custom to your goals",
     accent: "blue" as const,
   },
@@ -166,66 +148,36 @@ export const HOW_IT_WORKS_STEPS = [
   },
 ] as const;
 
-// ─── Testimonials ─────────────────────────────────────────────────────────────
+// ─── Clients ──────────────────────────────────────────────────────────────────
 export const TESTIMONIALS = [
   {
     quote:
-      "Before One Step Stronger, my bakery was invisible online. Within 4 months we were the top result for 'bakery near me' and I had to hire two more staff just to keep up with new orders. I wish I'd done this years ago.",
-    name: "Rosa Lombardi",
-    role: "Owner, Rosa's Artisan Bakery",
-    initials: "RL",
+      "We pour every candle by hand in our London studio — but reaching the right customers online felt out of reach. One Step Stronger Digital is building our search presence so that people looking for premium home fragrance find Casa Nochi first.",
+    name: "Pavel & Milayde",
+    role: "Co-Founders, Casa Nochi",
+    initials: "CN",
     color: "#f97316",
-    result: "+180% Walk-ins",
-    industry: "Food & Beverage",
+    result: "Home Fragrance SEO",
+    industry: "Luxury Candles",
   },
   {
     quote:
-      "As a plumber, all my work came from word of mouth. One Step Stronger got us ranked #1 on Google Maps for three cities. Now 60% of new jobs come through Google. It completely changed our business.",
-    name: "Marcus Thompson",
-    role: "Owner, Metro Plumbing Co.",
-    initials: "MT",
-    color: "#3b82f6",
-    result: "#1 on Google Maps",
-    industry: "Home Services",
-  },
-  {
-    quote:
-      "My dental practice was struggling to attract new patients. The team built our online presence from scratch — reviews, local SEO, content — and we're fully booked three weeks out now.",
-    name: "Dr. Sunita Kapoor",
-    role: "Principal Dentist, Bright Smiles Dental",
-    initials: "SK",
-    color: "#10b981",
-    result: "Fully Booked",
-    industry: "Healthcare",
-  },
-  {
-    quote:
-      "I was skeptical about SEO — thought it was just for big companies. They showed me how many people in my town search for auto repair every month and were never finding me. That changed everything.",
-    name: "James Whitfield",
-    role: "Owner, JW Auto & Tire",
-    initials: "JW",
+      "We're launching something completely new in London's nightlife scene. Before we go live, One Step Stronger Digital is laying the SEO foundations to make sure MYSOVA shows up wherever London's nightlife crowd is searching.",
+    name: "MYSOVA Team",
+    role: "MYSOVA — London Nightlife App",
+    initials: "MY",
     color: "#8b5cf6",
-    result: "3× More Calls",
-    industry: "Auto Services",
-  },
-  {
-    quote:
-      "The reporting is what sold me. Every month I get a simple breakdown — no tech jargon — showing exactly how many people found my law firm through Google. The ROI is crystal clear.",
-    name: "Patricia Chen",
-    role: "Principal Attorney, Chen Law Group",
-    initials: "PC",
-    color: "#f97316",
-    result: "4.8× ROI",
-    industry: "Legal",
+    result: "App Launch SEO",
+    industry: "Entertainment & Nightlife",
   },
 ] as const;
 
 // ─── Hero Stats ───────────────────────────────────────────────────────────────
 export const HERO_STATS = [
-  { value: "150+", label: "Small Businesses" },
-  { value: "4.9★", label: "Avg. Client Rating" },
-  { value: "94%", label: "Retention Rate" },
-  { value: "0", label: "Long-term Contracts" },
+  { value: "Free", label: "SEO Audit" },
+  { value: "48hr", label: "Turnaround" },
+  { value: "0", label: "Lock-in Contracts" },
+  { value: "90-Day", label: "Results Guarantee" },
 ] as const;
 
 // ─── About ────────────────────────────────────────────────────────────────────
@@ -250,17 +202,17 @@ export const VALUES = [
 
 export const INDUSTRIES = [
   "Restaurants & Cafés",
-  "Plumbers & Electricians",
-  "Dental & Medical",
+  "E-commerce & Retail",
+  "Apps & Tech Startups",
   "Law Firms",
-  "Auto Repair",
-  "Retail Boutiques",
+  "Trades & Contractors",
+  "Health & Wellness",
   "Real Estate",
   "Salons & Spas",
-  "Contractors",
+  "Home Services",
   "Accountants",
   "Fitness Studios",
-  "Veterinary Clinics",
+  "Luxury & Lifestyle",
 ] as const;
 
 // ─── Footer ───────────────────────────────────────────────────────────────────
@@ -273,7 +225,7 @@ export const FOOTER_LINKS = {
     "Keyword Strategy",
     "SEO Reporting",
   ],
-  Company: ["About Us", "Our Mission", "Case Studies", "Blog", "Careers"],
+  Company: ["About Us", "Our Mission", "Case Studies", "Blog"],
   Resources: [
     "Free SEO Audit",
     "Small Business Guide",

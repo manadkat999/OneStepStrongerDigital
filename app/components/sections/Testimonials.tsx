@@ -43,13 +43,13 @@ export default function Testimonials() {
 
       <Container className="relative z-10">
         <RevealOnScroll className="text-center mb-16">
-          <SectionLabel>Real Businesses. Real Results.</SectionLabel>
+          <SectionLabel>Who We Work With</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-black mb-5 leading-tight">
-            Small Businesses We&apos;ve{" "}
-            <span className="gradient-text">Helped Grow</span>
+            Businesses We&apos;re{" "}
+            <span className="gradient-text">Proud to Back</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            From corner bakeries to multi-location service companies — here&apos;s what happens when great local businesses get found online.
+            From luxury candle makers to app startups — we work with small businesses building something real, and help them get found online.
           </p>
         </RevealOnScroll>
 
@@ -61,8 +61,6 @@ export default function Testimonials() {
             <span className="inline-block bg-white/5 border border-white/10 rounded-full px-3 py-1 text-gray-400 text-xs mb-5">
               {t.industry}
             </span>
-
-            <div className="flex justify-center mb-4"><Stars /></div>
 
             <blockquote key={active} className="text-xl md:text-2xl font-medium text-white leading-relaxed mb-8 animate-fade-up">
               &ldquo;{t.quote}&rdquo;
@@ -95,7 +93,7 @@ export default function Testimonials() {
         </div>
 
         {/* Selector cards */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
+        <div className="grid grid-cols-2 max-w-sm mx-auto gap-3">
           {TESTIMONIALS.map((item, i) => (
             <button
               key={i}

@@ -49,7 +49,7 @@ export default function Footer() {
               <span className="font-bold text-sm">One Step <span className="text-orange-500">Stronger</span> Digital</span>
             </a>
             <p className="text-gray-500 text-sm leading-relaxed mb-5">
-              Helping small businesses build the online presence they deserve.
+              Helping UK small businesses build the online presence they deserve.
             </p>
             <div className="flex gap-2.5">
               {socials.map((s) => (
