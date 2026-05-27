@@ -11,10 +11,6 @@ const ArrowRight = () => (
   </svg>
 );
 
-const avatars = [
-  { i: "RL", c: "#f97316" }, { i: "MT", c: "#3b82f6" }, { i: "SK", c: "#10b981" },
-  { i: "JW", c: "#8b5cf6" }, { i: "PC", c: "#f97316" },
-];
 
 export default function Hero() {
   const cardRef = useRef<HTMLDivElement>(null);
@@ -43,7 +39,7 @@ export default function Hero() {
           <div>
             <div className="animate-fade-up mb-7">
               <Badge dot variant="orange">
-                Helping 150+ small businesses get found online
+                UK SEO Agency · Free 48-Hour Audit
               </Badge>
             </div>
 
@@ -53,8 +49,11 @@ export default function Hero() {
               <br className="hidden sm:block" /> Deserves to Be Found.
             </h1>
 
+            <p className="text-gray-400 text-lg leading-relaxed mb-3 max-w-lg animate-fade-up delay-200">
+              You&apos;ve built something worth finding.
+            </p>
             <p className="text-gray-400 text-lg leading-relaxed mb-10 max-w-lg animate-fade-up delay-200">
-              You&apos;ve built something worth finding. We make sure the right customers — the ones actively searching in your community — discover you first, every time.
+              We make sure the right people — the ones searching for exactly what you do, right now — find you first.
             </p>
 
             <div className="flex flex-wrap gap-3 animate-fade-up delay-300">
@@ -66,23 +65,20 @@ export default function Hero() {
               </Button>
             </div>
 
-            {/* Social proof */}
-            <div className="mt-11 flex items-center gap-4 animate-fade-up delay-400">
-              <div className="flex -space-x-2.5">
-                {avatars.map((a, i) => (
-                  <div
-                    key={i}
-                    className="w-9 h-9 rounded-full border-2 border-[#080808] flex items-center justify-center text-xs font-bold text-white"
-                    style={{ background: a.c }}
-                  >
-                    {a.i}
-                  </div>
-                ))}
-              </div>
-              <div>
-                <span className="text-orange-400 text-sm">★★★★★</span>
-                <p className="text-gray-500 text-xs mt-0.5">Trusted by restaurants, contractors, clinics & more</p>
-              </div>
+            {/* Trust signals */}
+            <div className="mt-11 flex flex-wrap items-center gap-3 animate-fade-up delay-400">
+              {[
+                { icon: "M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z", label: "90-day results guarantee" },
+                { icon: "M19.5 14.25v-2.625a3.375 3.375 0 0 0-3.375-3.375h-1.5A1.125 1.125 0 0 1 13.5 7.125v-1.5a3.375 3.375 0 0 0-3.375-3.375H8.25m0 12.75h7.5m-7.5 3H12M10.5 2.25H5.625c-.621 0-1.125.504-1.125 1.125v17.25c0 .621.504 1.125 1.125 1.125h12.75c.621 0 1.125-.504 1.125-1.125V11.25a9 9 0 0 0-9-9Z", label: "Free 48-hour audit" },
+                { icon: "M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z", label: "No long-term contracts" },
+              ].map((t) => (
+                <span key={t.label} className="flex items-center gap-1.5 text-xs text-gray-400 bg-white/4 border border-white/8 rounded-full px-3 py-1.5">
+                  <svg className="w-3.5 h-3.5 text-orange-400 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+                    <path strokeLinecap="round" strokeLinejoin="round" d={t.icon} />
+                  </svg>
+                  {t.label}
+                </span>
+              ))}
             </div>
           </div>
 
@@ -95,10 +91,10 @@ export default function Hero() {
                   <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-black text-xs shadow-lg shadow-orange-500/30">OS</div>
                   <div>
                     <p className="text-white font-semibold text-sm">Digital Presence Report</p>
-                    <p className="text-gray-500 text-xs">Rosa&apos;s Artisan Bakery · Live</p>
+                    <p className="text-gray-500 text-xs">Rosa&apos;s Artisan Bakery · Example</p>
                   </div>
                   <span className="ml-auto flex items-center gap-1 text-xs text-green-400 font-medium">
-                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />Live
+                    <span className="w-1.5 h-1.5 rounded-full bg-green-400 animate-pulse" />Demo
                   </span>
                 </div>
 
@@ -143,7 +139,7 @@ export default function Hero() {
 
               <div className="absolute -bottom-4 -left-5 card-glow rounded-xl px-3.5 py-2.5 w-44 shadow-xl animate-fade-up delay-600">
                 <p className="text-gray-500 text-xs mb-0.5">Now ranking</p>
-                <p className="text-white text-xs font-bold">&quot;best bakery chicago&quot;</p>
+                <p className="text-white text-xs font-bold">&quot;best bakery london&quot;</p>
                 <p className="text-orange-400 text-xs font-bold mt-0.5">#1 · Google Maps ↑5</p>
               </div>
             </div>
