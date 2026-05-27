@@ -11,7 +11,7 @@ const geist = Geist({
 
 const BASE_URL = "https://onestepstronger.co.uk";
 const BUSINESS_NAME = "One Step Stronger Digital";
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID; // e.g. G-XXXXXXXXXX
+const GA_ID = "G-Y5WRK4SXR1";
 
 export const viewport: Viewport = {
   themeColor: "#f97316",
