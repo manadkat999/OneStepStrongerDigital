@@ -51,6 +51,12 @@ export default function Footer() {
             <p className="text-gray-500 text-sm leading-relaxed mb-5">
               Helping UK small businesses build the online presence they deserve.
             </p>
+            <a href="mailto:hello@onestepstronger.co.uk" className="flex items-center gap-1.5 text-gray-500 hover:text-orange-400 transition-colors text-sm mb-4">
+              <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+              </svg>
+              hello@onestepstronger.co.uk
+            </a>
             <div className="flex gap-2.5">
               {socials.map((s) => (
                 <a
@@ -84,7 +90,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/5 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          <p className="text-gray-600 text-xs">© {new Date().getFullYear()} One Step Stronger Digital LLC · Chicago, IL</p>
+          <p className="text-gray-600 text-xs">© {new Date().getFullYear()} One Step Stronger Digital · United Kingdom</p>
           <div className="flex gap-5">
             {["Privacy", "Terms", "Cookies"].map((l) => (
               <a key={l} href="#" className="text-gray-600 hover:text-gray-400 text-xs transition-colors">{l}</a>
