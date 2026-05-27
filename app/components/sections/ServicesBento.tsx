@@ -47,11 +47,11 @@ const Icons: Record<string, React.ReactNode> = {
 
 // Bento layout: 3-column grid on lg
 // Row 1: [Featured Local SEO - 2 cols] [Tech SEO - 1 col]
-// Row 2: [Content - 1 col] [Keywords - 1 col] [Link Building - 1 col]
+// Row 2: [Content - 1 col] [Keywords - 1 col] [Links - 1 col]
 // Row 3: [Analytics - 2 cols] [Reviews - 1 col]
 
 const bentoLayout: Record<string, string> = {
-  "local-seo":    "lg:col-span-2 lg:row-span-2",
+  "local-seo":    "lg:col-span-2",
   "technical-seo":"lg:col-span-1",
   "content":      "lg:col-span-1",
   "keywords":     "lg:col-span-1",
@@ -75,7 +75,7 @@ export default function ServicesBento() {
           </p>
         </RevealOnScroll>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:grid-rows-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.map((service, i) => {
             const isOrange = service.accent === "orange";
             const isFeatured = service.featured;
