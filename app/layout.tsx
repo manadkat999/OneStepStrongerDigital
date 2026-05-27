@@ -49,9 +49,8 @@ export const metadata: Metadata = {
   alternates: {
     canonical: BASE_URL,
   },
-  // Google Search Console verification — add NEXT_PUBLIC_GSC_VERIFICATION to Vercel env vars
   verification: {
-    google: process.env.NEXT_PUBLIC_GSC_VERIFICATION,
+    google: "7sDW6F4lHhr5JKAdMduKJRCjk78Ci_9ZQ4FH7Tm7e-s",
   },
   openGraph: {
     type: "website",
