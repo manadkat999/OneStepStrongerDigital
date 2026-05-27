@@ -176,7 +176,7 @@ export const TESTIMONIALS = [
 export const HERO_STATS = [
   { value: "Free", label: "SEO Audit" },
   { value: "48hr", label: "Turnaround" },
-  { value: "0", label: "Lock-in Contracts" },
+  { value: "Month-to-Month", label: "Flexible Contracts" },
   { value: "90-Day", label: "Results Guarantee" },
 ] as const;
 
