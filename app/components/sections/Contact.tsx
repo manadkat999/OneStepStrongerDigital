@@ -123,13 +123,25 @@ export default function Contact() {
                     <input type="url" required placeholder="https://yoursite.com" value={website} onChange={(e) => setWebsite(e.target.value)} className={inputClass} />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-[#4B5563] mb-1.5">Monthly SEO Budget</label>
+                    <label className="block text-xs font-semibold text-[#4B5563] mb-1.5">Service / Budget</label>
                     <select value={budget} onChange={(e) => setBudget(e.target.value)} className="w-full bg-white border border-[#E0E7FF] rounded-lg px-4 py-3 text-[#1E1B4B] text-sm focus:outline-none focus:border-[#6366F1]/50 transition-colors">
-                      <option value="">Select a range...</option>
-                      <option>$1,000 – $2,500 / mo</option>
-                      <option>$2,500 – $5,000 / mo</option>
-                      <option>$5,000 – $10,000 / mo</option>
-                      <option>$10,000+ / mo</option>
+                      <option value="">Select a service or budget...</option>
+                      <optgroup label="SEO Retainers">
+                        <option>SEO Starter — £495/mo</option>
+                        <option>SEO Growth — £995/mo</option>
+                        <option>SEO Authority — From £1,895/mo</option>
+                      </optgroup>
+                      <optgroup label="Website Builds">
+                        <option>Website Essential — £795 one-off</option>
+                        <option>Website Professional — £1,895 one-off</option>
+                        <option>Website Premium — From £3,495 one-off</option>
+                      </optgroup>
+                      <optgroup label="Other Services">
+                        <option>Graphic Design — Request a quote</option>
+                        <option>Bespoke App Development — Request a quote</option>
+                        <option>Website + SEO Bundle — Ask us</option>
+                      </optgroup>
+                      <option>Not sure yet — let&apos;s talk</option>
                     </select>
                   </div>
                   <div>
