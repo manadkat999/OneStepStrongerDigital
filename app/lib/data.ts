@@ -118,6 +118,28 @@ export const SERVICES = [
     accent: "orange" as const,
     metric: { label: "Reporting frequency", value: "Monthly" },
   },
+  {
+    id: "graphic-design",
+    icon: "palette",
+    title: "Professional Graphic Design",
+    description:
+      "First impressions matter. Whether it's a logo, brand identity, social media assets, or print materials — we create designs that look professional, feel consistent, and make your business stand out.",
+    tags: ["Logo & Branding", "Social Media Assets", "Print & Digital"],
+    featured: false,
+    accent: "orange" as const,
+    metric: { label: "Turnaround on most projects", value: "5–7 days" },
+  },
+  {
+    id: "bespoke-apps",
+    icon: "code",
+    title: "Bespoke App Development",
+    description:
+      "Got an idea for an app or a tool your business needs? We build custom web and mobile applications tailored exactly to your requirements. Every project is quoted individually — no off-the-shelf solutions, just something built for you.",
+    tags: ["Web Apps", "Mobile Apps", "Custom Quoting"],
+    featured: false,
+    accent: "blue" as const,
+    metric: { label: "Every build is", value: "Bespoke" },
+  },
 ] as const;
 
 // ─── How It Works ─────────────────────────────────────────────────────────────
@@ -224,6 +246,8 @@ export const FOOTER_LINKS = {
     "Reputation & Reviews",
     "Keyword Strategy",
     "SEO Reporting",
+    "Graphic Design",
+    "Bespoke App Development",
   ],
   Company: ["About Us", "Our Mission", "Case Studies", "Blog"],
   Resources: [
