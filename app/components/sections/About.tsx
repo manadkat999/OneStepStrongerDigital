@@ -18,21 +18,79 @@ const aboveStats = [
   { value: "90-Day", label: "Results Guarantee" },
 ];
 
+const capabilities = [
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
+      </svg>
+    ),
+    title: "SEO & Digital Marketing",
+    desc: "Getting your business found on Google — local SEO, technical SEO, content, link building, and plain-English reporting.",
+    color: "#6366F1",
+    bg: "#EEF2FF",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M9.53 16.122a3 3 0 0 0-5.78 1.128 2.25 2.25 0 0 1-2.4 2.245 4.5 4.5 0 0 0 8.4-2.245c0-.399-.078-.78-.22-1.128Zm0 0a15.998 15.998 0 0 0 3.388-1.62m-5.043-.025a15.994 15.994 0 0 1 1.622-3.395m3.42 3.42a15.995 15.995 0 0 0 4.764-4.648l3.876-5.814a1.151 1.151 0 0 0-1.597-1.597L14.146 6.32a15.996 15.996 0 0 0-4.649 4.763m3.42 3.42a6.776 6.776 0 0 0-3.42-3.42" />
+      </svg>
+    ),
+    title: "Professional Graphic Design",
+    desc: "Logos, brand identities, social media assets, print materials and more — designs that look sharp, feel consistent, and make people trust you on sight.",
+    color: "#22C55E",
+    bg: "#F0FDF4",
+  },
+  {
+    icon: (
+      <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.7}>
+        <path strokeLinecap="round" strokeLinejoin="round" d="M17.25 6.75 22.5 12l-5.25 5.25m-10.5 0L1.5 12l5.25-5.25m7.5-3-4.5 16.5" />
+      </svg>
+    ),
+    title: "Bespoke App Development",
+    desc: "Got an idea for a web or mobile app? We build it from scratch, tailored exactly to what your business needs. Every project is quoted individually — no templates, no shortcuts.",
+    color: "#818CF8",
+    bg: "#EEF2FF",
+  },
+];
+
 export default function About() {
   return (
     <Section id="about" className="bg-gradient-to-b from-[#F8F9FF] via-[#F3F4F6] to-[#EEF2FF]">
       <div className="absolute top-0 right-0 w-[500px] h-[500px] rounded-full bg-[#EEF2FF] blur-[130px] pointer-events-none" />
 
       <Container className="relative z-10">
-        <RevealOnScroll className="text-center mb-20">
+        <RevealOnScroll className="text-center mb-16">
           <SectionLabel>Who We Are</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-black mb-6 leading-tight">
             A small team that backs{" "}
             <span className="gradient-text">small businesses.</span>
           </h2>
           <p className="text-[#1E1B4B] text-xl max-w-3xl mx-auto leading-relaxed">
-            Between us we&apos;ve got backgrounds in web development, copywriting, design, and digital marketing. We&apos;re not a big agency. We came together because we kept seeing the same thing — decent, hard-working businesses getting buried online while their flashier competitors hoovered up all the traffic.
+            Between us we&apos;ve got backgrounds in web development, graphic design, copywriting, app development, and digital marketing. We&apos;re not a big agency — and that&apos;s the point. We came together because we kept seeing the same thing: decent, hard-working businesses getting buried online while their flashier competitors hoovered up all the traffic.
           </p>
+        </RevealOnScroll>
+
+        {/* Capabilities strip */}
+        <RevealOnScroll className="mb-16">
+          <div className="grid md:grid-cols-3 gap-5">
+            {capabilities.map((c) => (
+              <div key={c.title} className="card-glow rounded-2xl p-6 flex flex-col gap-4">
+                <div className="w-11 h-11 rounded-xl flex items-center justify-center flex-shrink-0" style={{ background: c.bg, color: c.color }}>
+                  {c.icon}
+                </div>
+                <div>
+                  <h3 className="font-black text-[#1E1B4B] text-base mb-1.5">{c.title}</h3>
+                  <p className="text-[#4B5563] text-sm leading-relaxed">{c.desc}</p>
+                </div>
+                <div className="mt-auto pt-3 border-t border-[#E5E7EB]">
+                  <a href="#contact" className="text-xs font-semibold transition-colors" style={{ color: c.color }}>
+                    Get a quote →
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
         </RevealOnScroll>
 
         <div className="grid lg:grid-cols-2 gap-12 mb-16">
@@ -73,8 +131,11 @@ export default function About() {
               <p className="text-[#4B5563] text-sm leading-relaxed mb-3">
                 We&apos;re a group of people who met through different corners of the industry and realised we were all frustrated by the same thing. The businesses that actually put in the work — the ones worth finding — kept losing out to whoever had the bigger budget.
               </p>
+              <p className="text-[#4B5563] text-sm leading-relaxed mb-3">
+                So we started One Step Stronger Digital. Not to be the biggest agency, but to be a useful one. We do SEO, graphic design, and bespoke app development — all under one roof, all done properly.
+              </p>
               <p className="text-[#4B5563] text-sm leading-relaxed">
-                So we started One Step Stronger Digital. Not to be the biggest agency, but to be a useful one. We take on clients we believe in, do the work properly, and tell you exactly what we&apos;re doing without the usual smoke and mirrors.
+                We take on clients we believe in, do the work without shortcuts, and tell you exactly what we&apos;re doing without the usual smoke and mirrors.
               </p>
             </Card>
 
@@ -92,7 +153,7 @@ export default function About() {
               <div className="flex gap-3 items-start">
                 <div className="w-9 h-9 rounded-xl bg-[#EEF2FF] flex items-center justify-center flex-shrink-0">
                   <svg className="w-5 h-5 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-                    <path strokeLinecap="round" strokeLinejoin="round" d="9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285Z" />
                   </svg>
                 </div>
                 <div>
