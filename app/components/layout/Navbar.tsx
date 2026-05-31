@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import Image from "next/image";
 import { NAV_LINKS } from "@/app/lib/data";
 import Button from "@/app/components/ui/Button";
 import Container from "@/app/components/ui/Container";
@@ -30,13 +31,15 @@ export default function Navbar() {
     >
       <Container className="flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group select-none" aria-label="One Step Stronger Digital - Home">
-          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] flex items-center justify-center text-white font-black text-xs shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 transition-shadow">
-            1S
-          </div>
-          <span className="font-bold text-[15px] tracking-tight hidden sm:block text-[#1E1B4B]">
-            One Step <span className="text-[#6366F1]">Stronger</span> Digital
-          </span>
+        <a href="#" className="flex items-center group select-none" aria-label="One Step Stronger Digital - Home">
+          <Image
+            src="/logo.png"
+            alt="One Step Stronger Digital"
+            width={160}
+            height={40}
+            className="h-10 w-auto object-contain"
+            priority
+          />
         </a>
 
         {/* Desktop links */}

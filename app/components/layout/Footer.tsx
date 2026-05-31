@@ -1,3 +1,4 @@
+import Image from "next/image";
 import { FOOTER_LINKS } from "@/app/lib/data";
 import Button from "@/app/components/ui/Button";
 import Container from "@/app/components/ui/Container";
@@ -42,11 +43,14 @@ export default function Footer() {
         {/* Links grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
           <div className="col-span-2 md:col-span-1">
-            <a href="#" className="flex items-center gap-2 mb-4 select-none">
-              <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-[#6366F1] to-[#4F46E5] flex items-center justify-center font-black text-white text-xs shadow-lg shadow-indigo-500/25">
-                1S
-              </div>
-              <span className="font-bold text-sm">One Step <span className="text-[#6366F1]">Stronger</span> Digital</span>
+            <a href="#" className="flex items-center mb-4 select-none">
+              <Image
+                src="/logo.png"
+                alt="One Step Stronger Digital"
+                width={140}
+                height={35}
+                className="h-9 w-auto object-contain brightness-0 invert"
+              />
             </a>
             <p className="text-[#94A3B8] text-sm leading-relaxed mb-5">
               Helping UK small businesses build the online presence they deserve.
