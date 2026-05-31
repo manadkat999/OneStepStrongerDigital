@@ -107,7 +107,7 @@ export default function Testimonials() {
                 {item.initials}
               </div>
               <p className="text-white text-xs font-semibold leading-tight">{item.name.split(" ")[0]}</p>
-              <p className="text-[#9CA3AF] text-xs mt-0.5">{item.industry}</p>
+              <p className="text-[#6B7280] text-xs mt-0.5">{item.industry}</p>
               <p className="text-xs font-bold mt-1.5" style={{ color: item.color }}>{item.result}</p>
             </button>
           ))}

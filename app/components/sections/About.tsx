@@ -113,7 +113,7 @@ export default function About() {
 
             {/* Industries */}
             <div className="mt-10">
-              <p className="text-[#9CA3AF] text-xs font-semibold tracking-widest uppercase mb-3">Industries we serve</p>
+              <p className="text-[#6B7280] text-xs font-semibold tracking-widest uppercase mb-3">Industries we serve</p>
               <div className="flex flex-wrap gap-2">
                 {INDUSTRIES.map((ind) => (
                   <span key={ind} className="text-xs px-3 py-1.5 rounded-full bg-[#EEF2FF] border border-[#E5E7EB] text-[#1E1B4B] hover:border-[#6366F1]/25 hover:text-[#6366F1] transition-colors cursor-default">

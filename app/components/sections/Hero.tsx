@@ -98,7 +98,7 @@ export default function Hero() {
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] flex items-center justify-center text-white font-black text-xs shadow-lg shadow-indigo-500/30">OS</div>
                   <div>
                     <p className="text-[#1E1B4B] font-semibold text-sm">Digital Presence Report</p>
-                    <p className="text-[#9CA3AF] text-xs">Rosa&apos;s Artisan Bakery · Example</p>
+                    <p className="text-[#6B7280] text-xs">Rosa&apos;s Artisan Bakery · Example</p>
                   </div>
                   <span className="ml-auto flex items-center gap-1 text-xs text-[#22C55E] font-semibold bg-[#F0FDF4] px-2 py-1 rounded-full border border-[#22C55E]/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />Live
@@ -129,7 +129,7 @@ export default function Hero() {
                   ].map((s) => (
                     <div key={s.l} className="bg-[#F8F9FF] rounded-xl p-2.5 text-center border border-[#E5E7EB]">
                       <p className="text-base font-black" style={{ color: s.c }}>{s.v}</p>
-                      <p className="text-[#9CA3AF] text-xs mt-0.5">{s.l}</p>
+                      <p className="text-[#6B7280] text-xs mt-0.5">{s.l}</p>
                     </div>
                   ))}
                 </div>
@@ -140,13 +140,13 @@ export default function Hero() {
                 <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse flex-shrink-0" />
                 <div>
                   <p className="text-[#1E1B4B] text-xs font-semibold leading-tight">New customer found you</p>
-                  <p className="text-[#9CA3AF] text-xs">via &quot;bakery near me&quot; · just now</p>
+                  <p className="text-[#6B7280] text-xs">via &quot;bakery near me&quot; · just now</p>
                 </div>
               </div>
 
               {/* Floating ranking tag — bottom left */}
               <div className="absolute -bottom-5 -left-5 card-glow rounded-xl px-3.5 py-2.5 w-44 shadow-xl animate-fade-up delay-600">
-                <p className="text-[#9CA3AF] text-xs mb-0.5">Now ranking</p>
+                <p className="text-[#6B7280] text-xs mb-0.5">Now ranking</p>
                 <p className="text-[#1E1B4B] text-xs font-bold">&quot;best bakery london&quot;</p>
                 <p className="text-[#6366F1] text-xs font-bold mt-0.5">#1 · Google Maps ↑5</p>
               </div>
@@ -159,7 +159,7 @@ export default function Hero() {
           {HERO_STATS.map((s) => (
             <div key={s.label} className="text-center">
               <p className="text-2xl md:text-3xl font-black gradient-text mb-1">{s.value}</p>
-              <p className="text-[#9CA3AF] text-sm font-medium">{s.label}</p>
+              <p className="text-[#6B7280] text-sm font-medium">{s.label}</p>
             </div>
           ))}
         </div>

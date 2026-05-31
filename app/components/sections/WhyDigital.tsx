@@ -49,7 +49,7 @@ export default function WhyDigital() {
                 than those without — and small businesses with a strong online presence grow{" "}
                 <span className="text-blue-400 font-bold">40% faster</span>.
               </p>
-              <p className="text-[#9CA3AF] text-sm">Google & Deloitte Connected Small Businesses Report</p>
+              <p className="text-[#6B7280] text-sm">Google & Deloitte Connected Small Businesses Report</p>
             </div>
           </div>
         </RevealOnScroll>
