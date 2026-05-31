@@ -35,9 +35,9 @@ export default function Navbar() {
           <Image
             src="/logo.png"
             alt="One Step Stronger Digital"
-            width={160}
-            height={40}
-            className="h-10 w-auto object-contain"
+            width={240}
+            height={64}
+            className="h-16 w-auto object-contain"
             priority
           />
         </a>

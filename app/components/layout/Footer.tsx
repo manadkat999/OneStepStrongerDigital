@@ -53,9 +53,9 @@ export default function Footer() {
               <Image
                 src="/logo.png"
                 alt="One Step Stronger Digital"
-                width={200}
-                height={50}
-                className="h-14 w-auto object-contain brightness-0 invert"
+                width={280}
+                height={80}
+                className="h-20 w-auto object-contain brightness-0 invert"
               />
             </a>
             {/* #CBD5E1 on #1E1B4B = ~7:1 ✓ */}
