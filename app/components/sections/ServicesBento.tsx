@@ -74,22 +74,22 @@ const bentoLayout: Record<string, string> = {
 
 export default function ServicesBento() {
   return (
-    <Section id="services" className="bg-[#080808]">
+    <Section id="services" className="bg-[#F3F4F6]">
       <Container>
         <RevealOnScroll className="text-center mb-14">
           <SectionLabel>Our Services</SectionLabel>
-          <h2 className="text-4xl md:text-5xl font-black mb-5 leading-tight">
+          <h2 className="text-4xl md:text-5xl font-black mb-5 leading-tight text-[#1E1B4B]">
             Everything Your Business Needs to{" "}
             <span className="gradient-text">Show Up Online</span>
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p className="text-[#4B5563] max-w-xl mx-auto">
             From Google Maps to long-term organic traffic — we cover every angle of your digital presence.
           </p>
         </RevealOnScroll>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
           {SERVICES.map((service, i) => {
-            const isOrange = service.accent === "orange";
+            const isIndigo = service.accent === "orange"; // map old "orange" to indigo
             const isFeatured = service.featured;
 
             return (
@@ -102,11 +102,11 @@ export default function ServicesBento() {
                   className={cn(
                     "card-glow rounded-2xl flex flex-col h-full group transition-all duration-300",
                     isFeatured ? "p-8 lg:p-10" : "p-7",
-                    isFeatured && "border-orange-500/20"
+                    isFeatured && "border-[#6366F1]/25 ring-1 ring-[#6366F1]/10"
                   )}
                 >
                   {isFeatured && (
-                    <span className="self-start mb-4 text-xs bg-orange-500 text-white font-bold px-2.5 py-1 rounded-full">
+                    <span className="self-start mb-4 text-xs bg-[#6366F1] text-white font-bold px-3 py-1 rounded-full shadow-sm shadow-indigo-500/30">
                       Most Popular
                     </span>
                   )}
@@ -115,34 +115,34 @@ export default function ServicesBento() {
                   <div
                     className={cn(
                       "rounded-xl flex items-center justify-center mb-5 flex-shrink-0 transition-colors duration-300",
-                      isFeatured ? "w-14 h-14" : "w-10 h-10",
-                      isOrange
-                        ? "bg-orange-500/15 group-hover:bg-orange-500/25"
-                        : "bg-blue-500/15 group-hover:bg-blue-500/25"
+                      isFeatured ? "w-14 h-14" : "w-11 h-11",
+                      isIndigo
+                        ? "bg-[#EEF2FF] group-hover:bg-[#E0E7FF]"
+                        : "bg-[#F0FDF4] group-hover:bg-[#DCFCE7]"
                     )}
                   >
-                    <div className={cn(isFeatured ? "w-7 h-7" : "w-5 h-5", isOrange ? "text-orange-400" : "text-blue-400")}>
+                    <div className={cn(isFeatured ? "w-7 h-7" : "w-5 h-5", isIndigo ? "text-[#6366F1]" : "text-[#22C55E]")}>
                       {Icons[service.icon]}
                     </div>
                   </div>
 
-                  <h3 className={cn("font-black text-white mb-2", isFeatured ? "text-2xl" : "text-lg")}>
+                  <h3 className={cn("font-black text-[#1E1B4B] mb-2", isFeatured ? "text-2xl" : "text-lg")}>
                     {service.title}
                   </h3>
-                  <p className={cn("text-gray-400 leading-relaxed flex-1", isFeatured ? "text-base" : "text-sm")}>
+                  <p className={cn("text-[#4B5563] leading-relaxed flex-1", isFeatured ? "text-base" : "text-sm")}>
                     {service.description}
                   </p>
 
                   {/* Metric callout */}
                   <div className={cn(
                     "mt-5 flex items-center gap-2",
-                    isFeatured ? "p-4 rounded-xl" : "pt-4 border-t border-white/6",
-                    isFeatured && (isOrange ? "bg-orange-500/10" : "bg-blue-500/10")
+                    isFeatured ? "p-4 rounded-xl" : "pt-4 border-t border-[#E5E7EB]",
+                    isFeatured && (isIndigo ? "bg-[#EEF2FF]" : "bg-[#F0FDF4]")
                   )}>
-                    <span className={cn("font-black", isFeatured ? "text-2xl" : "text-lg", isOrange ? "text-orange-400" : "text-blue-400")}>
+                    <span className={cn("font-black", isFeatured ? "text-2xl" : "text-xl", isIndigo ? "text-[#6366F1]" : "text-[#22C55E]")}>
                       {service.metric.value}
                     </span>
-                    <span className="text-gray-400 text-xs">{service.metric.label}</span>
+                    <span className="text-[#9CA3AF] text-xs font-medium">{service.metric.label}</span>
                   </div>
 
                   {/* Tags */}
@@ -151,10 +151,10 @@ export default function ServicesBento() {
                       <span
                         key={tag}
                         className={cn(
-                          "text-xs px-2.5 py-1 rounded-full border",
-                          isOrange
-                            ? "bg-orange-500/8 text-orange-400 border-orange-500/20"
-                            : "bg-blue-500/8 text-blue-400 border-blue-500/20"
+                          "text-xs px-2.5 py-1 rounded-full border font-medium",
+                          isIndigo
+                            ? "bg-[#EEF2FF] text-[#4F46E5] border-[#6366F1]/20"
+                            : "bg-[#F0FDF4] text-[#16A34A] border-[#22C55E]/25"
                         )}
                       >
                         {tag}
@@ -168,11 +168,13 @@ export default function ServicesBento() {
         </div>
 
         <RevealOnScroll className="text-center mt-12">
-          <Button variant="primary" size="lg" href="#contact"
-            icon={<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>}
+          <a
+            href="#contact"
+            className="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold"
           >
             Get Your Free Audit
-          </Button>
+            <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
+          </a>
         </RevealOnScroll>
       </Container>
     </Section>

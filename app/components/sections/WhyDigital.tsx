@@ -8,7 +8,7 @@ import { SectionLabel } from "@/app/components/ui/Badge";
 
 export default function WhyDigital() {
   return (
-    <Section id="why-digital" className="bg-gradient-to-b from-[#080808] via-[#0c0c0c] to-[#080808]">
+    <Section id="why-digital" className="bg-gradient-to-b from-[#F8F9FF] via-[#F3F4F6] to-[#F8F9FF]">
       <Container>
         <RevealOnScroll className="text-center mb-16">
           <SectionLabel>Why It Matters</SectionLabel>
@@ -16,7 +16,7 @@ export default function WhyDigital() {
             Your Customers Are Searching.{" "}
             <span className="gradient-text">Are You Showing Up?</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto text-lg">
+          <p className="text-[#4B5563] max-w-2xl mx-auto text-lg">
             A strong online presence isn&apos;t optional for small businesses anymore — it&apos;s the difference between a full calendar and an empty one.
           </p>
         </RevealOnScroll>
@@ -28,10 +28,10 @@ export default function WhyDigital() {
                 <AnimatedNumber
                   to={s.value}
                   suffix={s.suffix}
-                  className={`text-5xl font-black tracking-tight ${s.accent === "orange" ? "text-orange-500" : "text-blue-400"}`}
+                  className={`text-5xl font-black tracking-tight ${s.accent === "orange" ? "text-[#6366F1]" : "text-blue-400"}`}
                 />
                 <p className="text-white text-sm font-medium leading-snug flex-1">{s.label}</p>
-                <p className="text-gray-600 text-xs">Source: {s.source}</p>
+                <p className="text-[#6B7280] text-xs">Source: {s.source}</p>
               </Card>
             </RevealOnScroll>
           ))}
@@ -40,16 +40,16 @@ export default function WhyDigital() {
         {/* Pull quote */}
         <RevealOnScroll>
           <div className="relative card-glow rounded-2xl p-10 md:p-14 text-center overflow-hidden max-w-4xl mx-auto">
-            <div className="absolute inset-0 bg-gradient-to-br from-orange-500/5 via-transparent to-blue-500/5" />
+            <div className="absolute inset-0 bg-gradient-to-br from-[#6366F1]/5 via-transparent to-[#22C55E]/4" />
             <div className="relative z-10">
-              <span className="text-6xl text-orange-500/20 font-serif leading-none">&ldquo;</span>
-              <p className="text-xl md:text-2xl font-medium text-white leading-relaxed -mt-4 mb-5">
+              <span className="text-6xl text-[#6366F1]/20 font-serif leading-none">&ldquo;</span>
+              <p className="text-xl md:text-2xl font-medium text-[#1E1B4B] leading-relaxed -mt-4 mb-5">
                 Businesses with websites are{" "}
-                <span className="text-orange-400 font-bold">2.8× more likely to grow revenues</span>{" "}
+                <span className="text-[#6366F1] font-bold">2.8× more likely to grow revenues</span>{" "}
                 than those without — and small businesses with a strong online presence grow{" "}
                 <span className="text-blue-400 font-bold">40% faster</span>.
               </p>
-              <p className="text-gray-500 text-sm">Google & Deloitte Connected Small Businesses Report</p>
+              <p className="text-[#9CA3AF] text-sm">Google & Deloitte Connected Small Businesses Report</p>
             </div>
           </div>
         </RevealOnScroll>

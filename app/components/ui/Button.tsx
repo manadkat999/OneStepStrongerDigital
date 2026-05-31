@@ -20,11 +20,11 @@ const variantStyles: Record<Variant, string> = {
   primary:
     "btn-primary text-white font-bold",
   secondary:
-    "bg-transparent border border-white/20 text-white hover:border-orange-500/50 hover:text-orange-400 transition-all duration-300",
+    "bg-transparent border-2 border-[#6366F1]/25 text-[#4F46E5] hover:bg-[#EEF2FF] hover:border-[#6366F1]/50 transition-all duration-200",
   ghost:
-    "bg-transparent text-gray-400 hover:text-white transition-colors duration-200",
+    "bg-transparent text-[#4B5563] hover:text-[#6366F1] transition-colors duration-200",
   outline:
-    "bg-transparent border border-orange-500/40 text-orange-400 hover:bg-orange-500/10 transition-all duration-300",
+    "bg-transparent border border-[#6366F1]/30 text-[#4F46E5] hover:bg-[#EEF2FF] transition-all duration-200",
 };
 
 const sizeStyles: Record<Size, string> = {

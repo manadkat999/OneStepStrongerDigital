@@ -25,70 +25,85 @@ export default function Navbar() {
     <header
       className={cn(
         "fixed top-0 inset-x-0 z-50 transition-all duration-500",
-        scrolled ? "glass-nav py-3" : "py-5"
+        scrolled ? "glass-nav py-3 shadow-sm" : "bg-transparent py-5"
       )}
     >
       <Container className="flex items-center justify-between">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2.5 group select-none">
-          <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-orange-600 flex items-center justify-center text-white font-black text-xs shadow-lg shadow-orange-500/25 group-hover:shadow-orange-500/45 transition-shadow">
+        <a href="#" className="flex items-center gap-2.5 group select-none" aria-label="One Step Stronger Digital - Home">
+          <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] flex items-center justify-center text-white font-black text-xs shadow-lg shadow-indigo-500/30 group-hover:shadow-indigo-500/50 transition-shadow">
             1S
           </div>
-          <span className="font-bold text-[15px] tracking-tight hidden sm:block">
-            One Step <span className="text-orange-500">Stronger</span> Digital
+          <span className="font-bold text-[15px] tracking-tight hidden sm:block text-[#1E1B4B]">
+            One Step <span className="text-[#6366F1]">Stronger</span> Digital
           </span>
         </a>
 
         {/* Desktop links */}
-        <nav className="hidden md:flex items-center gap-7">
+        <nav className="hidden md:flex items-center gap-7" aria-label="Main navigation">
           {NAV_LINKS.map((l) => (
             <a
               key={l.label}
               href={l.href}
-              className="text-[13px] text-gray-400 hover:text-white transition-colors relative group"
+              className="text-[13px] font-medium text-[#4B5563] hover:text-[#6366F1] transition-colors duration-200 relative group cursor-pointer"
             >
               {l.label}
-              <span className="absolute -bottom-0.5 left-0 w-0 h-px bg-orange-500 group-hover:w-full transition-all duration-300" />
+              <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-[#6366F1] group-hover:w-full transition-all duration-300 rounded-full" />
             </a>
           ))}
         </nav>
 
         {/* Desktop CTA */}
         <div className="hidden md:flex items-center gap-3">
-          <Button variant="ghost" size="sm" href="#results">See Results</Button>
-          <Button variant="primary" size="sm" href="#contact" icon={<ArrowRight />}>
+          <a
+            href="#results"
+            className="text-sm font-medium text-[#4B5563] hover:text-[#6366F1] transition-colors cursor-pointer px-3 py-2"
+          >
+            See Results
+          </a>
+          <a
+            href="#contact"
+            className="btn-primary flex items-center gap-2 px-5 py-2.5 rounded-xl text-sm font-semibold"
+          >
             Free Audit
-          </Button>
+            <ArrowRight />
+          </a>
         </div>
 
         {/* Hamburger */}
         <button
-          aria-label="Toggle menu"
-          className="md:hidden p-2 flex flex-col gap-1.5"
+          aria-label="Toggle navigation menu"
+          aria-expanded={open}
+          className="md:hidden p-2 flex flex-col gap-1.5 cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          <span className={cn("block w-5 h-px bg-white transition-all duration-300", open && "rotate-45 translate-y-2")} />
-          <span className={cn("block w-5 h-px bg-white transition-all duration-300", open && "opacity-0")} />
-          <span className={cn("block w-5 h-px bg-white transition-all duration-300", open && "-rotate-45 -translate-y-2")} />
+          <span className={cn("block w-5 h-0.5 bg-[#1E1B4B] transition-all duration-300", open && "rotate-45 translate-y-2")} />
+          <span className={cn("block w-5 h-0.5 bg-[#1E1B4B] transition-all duration-300", open && "opacity-0")} />
+          <span className={cn("block w-5 h-0.5 bg-[#1E1B4B] transition-all duration-300", open && "-rotate-45 -translate-y-2")} />
         </button>
       </Container>
 
       {/* Mobile drawer */}
-      <div className={cn("md:hidden overflow-hidden transition-all duration-300", open ? "max-h-80" : "max-h-0")}>
-        <Container className="glass-nav flex flex-col gap-4 py-5">
+      <div className={cn("md:hidden overflow-hidden transition-all duration-300", open ? "max-h-96" : "max-h-0")}>
+        <Container className="bg-white/95 backdrop-blur-md border-t border-indigo-100 flex flex-col gap-1 py-5 shadow-lg">
           {NAV_LINKS.map((l) => (
             <a
               key={l.label}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-gray-300 hover:text-orange-400 transition-colors py-1 text-sm"
+              className="text-[#4B5563] hover:text-[#6366F1] hover:bg-[#EEF2FF] transition-colors py-2.5 px-3 text-sm font-medium rounded-lg cursor-pointer"
             >
               {l.label}
             </a>
           ))}
-          <Button variant="primary" size="md" href="#contact" className="mt-1 text-center justify-center" icon={<ArrowRight />}>
+          <a
+            href="#contact"
+            onClick={() => setOpen(false)}
+            className="btn-primary mt-3 flex items-center justify-center gap-2 px-5 py-3 rounded-xl text-sm font-semibold"
+          >
             Get Free Audit
-          </Button>
+            <ArrowRight />
+          </a>
         </Container>
       </div>
     </header>

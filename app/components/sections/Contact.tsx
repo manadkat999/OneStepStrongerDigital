@@ -13,7 +13,7 @@ const BENEFITS = [
 ];
 
 const inputClass =
-  "w-full bg-white/5 border border-white/10 rounded-lg px-4 py-3 text-white placeholder-gray-600 text-sm focus:outline-none focus:border-orange-500/50 transition-colors";
+  "w-full bg-white border border-[#E0E7FF] rounded-lg px-4 py-3 text-[#1E1B4B] placeholder-[#9CA3AF] text-sm focus:outline-none focus:border-[#6366F1] focus:ring-2 focus:ring-[#6366F1]/10 transition-colors";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
@@ -47,8 +47,8 @@ export default function Contact() {
   };
 
   return (
-    <Section id="contact" className="bg-gradient-to-b from-[#0a0a0a] to-[#0d0d0d]">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-orange-500/6 blur-[120px] pointer-events-none" />
+    <Section id="contact" className="bg-gradient-to-b from-[#EEF2FF] to-[#F3F4F6]">
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] rounded-full bg-[#6366F1]/6 blur-[120px] pointer-events-none" />
 
       <Container className="relative z-10">
         <RevealOnScroll className="text-center mb-14">
@@ -57,7 +57,7 @@ export default function Contact() {
             Ready to{" "}
             <span className="gradient-text">Dominate Search?</span>
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p className="text-[#4B5563] max-w-xl mx-auto">
             Get a free, no-obligation SEO audit. We&apos;ll identify exactly what&apos;s holding back your rankings and build a custom growth roadmap.
           </p>
         </RevealOnScroll>
@@ -68,20 +68,20 @@ export default function Contact() {
             <div className="lg:col-span-2 space-y-5">
               {BENEFITS.map((b) => (
                 <div key={b.title} className="flex gap-3">
-                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-orange-500/20 border border-orange-500/30 flex items-center justify-center mt-0.5">
-                    <svg className="w-3 h-3 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-[#6366F1]/20 border border-[#6366F1]/20 flex items-center justify-center mt-0.5">
+                    <svg className="w-3 h-3 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={3}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                     </svg>
                   </div>
                   <div>
-                    <p className="font-semibold text-white text-sm">{b.title}</p>
-                    <p className="text-gray-400 text-xs mt-0.5">{b.desc}</p>
+                    <p className="font-semibold text-[#1E1B4B] text-sm">{b.title}</p>
+                    <p className="text-[#4B5563] text-xs mt-0.5">{b.desc}</p>
                   </div>
                 </div>
               ))}
 
-              <div className="pt-4 border-t border-gray-800 space-y-2">
-                <a href="mailto:hello@onestepstronger.co.uk" className="flex items-center gap-2 text-gray-400 hover:text-orange-400 transition-colors text-sm">
+              <div className="pt-4 border-t border-[#E5E7EB] space-y-2">
+                <a href="mailto:hello@onestepstronger.co.uk" className="flex items-center gap-2 text-[#4B5563] hover:text-[#6366F1] transition-colors text-sm">
                   <svg className="w-4 h-4 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                     <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
                   </svg>
@@ -94,37 +94,37 @@ export default function Contact() {
             <div className="lg:col-span-3 card-glow rounded-2xl p-8">
               {submitted ? (
                 <div className="text-center py-8">
-                  <div className="w-16 h-16 mx-auto rounded-full bg-orange-500/15 border border-orange-500/30 flex items-center justify-center mb-4">
-                    <svg className="w-8 h-8 text-orange-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <div className="w-16 h-16 mx-auto rounded-full bg-[#EEF2FF] border border-[#6366F1]/20 flex items-center justify-center mb-4">
+                    <svg className="w-8 h-8 text-[#6366F1]" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
                     </svg>
                   </div>
-                  <h3 className="text-xl font-bold text-white mb-2">You&apos;re on the list!</h3>
-                  <p className="text-gray-400 text-sm">A senior strategist will reach out within 24 hours with your custom audit plan.</p>
+                  <h3 className="text-xl font-bold text-[#1E1B4B] mb-2">You&apos;re on the list!</h3>
+                  <p className="text-[#4B5563] text-sm">A senior strategist will reach out within 24 hours with your custom audit plan.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
                   <div className="grid md:grid-cols-2 gap-5">
                     <div>
-                      <label className="block text-xs font-semibold text-gray-400 mb-1.5">First Name</label>
+                      <label className="block text-xs font-semibold text-[#4B5563] mb-1.5">First Name</label>
                       <input type="text" required placeholder="Alex" value={firstName} onChange={(e) => setFirstName(e.target.value)} className={inputClass} />
                     </div>
                     <div>
-                      <label className="block text-xs font-semibold text-gray-400 mb-1.5">Last Name</label>
+                      <label className="block text-xs font-semibold text-[#4B5563] mb-1.5">Last Name</label>
                       <input type="text" required placeholder="Morgan" value={lastName} onChange={(e) => setLastName(e.target.value)} className={inputClass} />
                     </div>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-400 mb-1.5">Work Email</label>
+                    <label className="block text-xs font-semibold text-[#4B5563] mb-1.5">Work Email</label>
                     <input type="email" required placeholder="alex@company.com" value={email} onChange={(e) => setEmail(e.target.value)} className={inputClass} />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-400 mb-1.5">Website URL</label>
+                    <label className="block text-xs font-semibold text-[#4B5563] mb-1.5">Website URL</label>
                     <input type="url" required placeholder="https://yoursite.com" value={website} onChange={(e) => setWebsite(e.target.value)} className={inputClass} />
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-400 mb-1.5">Monthly SEO Budget</label>
-                    <select value={budget} onChange={(e) => setBudget(e.target.value)} className="w-full bg-[#111] border border-white/10 rounded-lg px-4 py-3 text-gray-300 text-sm focus:outline-none focus:border-orange-500/50 transition-colors">
+                    <label className="block text-xs font-semibold text-[#4B5563] mb-1.5">Monthly SEO Budget</label>
+                    <select value={budget} onChange={(e) => setBudget(e.target.value)} className="w-full bg-white border border-[#E0E7FF] rounded-lg px-4 py-3 text-[#1E1B4B] text-sm focus:outline-none focus:border-[#6366F1]/50 transition-colors">
                       <option value="">Select a range...</option>
                       <option>$1,000 – $2,500 / mo</option>
                       <option>$2,500 – $5,000 / mo</option>
@@ -133,7 +133,7 @@ export default function Contact() {
                     </select>
                   </div>
                   <div>
-                    <label className="block text-xs font-semibold text-gray-400 mb-1.5">Tell us your biggest SEO challenge</label>
+                    <label className="block text-xs font-semibold text-[#4B5563] mb-1.5">Tell us your biggest SEO challenge</label>
                     <textarea rows={3} placeholder="We're struggling with..." value={challenge} onChange={(e) => setChallenge(e.target.value)} className={`${inputClass} resize-none`} />
                   </div>
 
@@ -165,7 +165,7 @@ export default function Contact() {
                       </>
                     )}
                   </button>
-                  <p className="text-center text-gray-500 text-xs">No spam. No commitment. Just a free, honest audit.</p>
+                  <p className="text-center text-[#9CA3AF] text-xs">No spam. No commitment. Just a free, honest audit.</p>
                 </form>
               )}
             </div>

@@ -11,17 +11,17 @@ interface BadgeProps {
 }
 
 const variantStyles: Record<BadgeVariant, string> = {
-  orange: "bg-orange-500/10 border-orange-500/25 text-orange-400",
-  blue:   "bg-blue-500/10 border-blue-500/25 text-blue-400",
-  neutral:"bg-white/5 border-white/10 text-gray-400",
-  green:  "bg-green-500/10 border-green-500/25 text-green-400",
+  orange:  "bg-[#EEF2FF] border-[#6366F1]/20 text-[#4F46E5]",
+  blue:    "bg-[#EEF2FF] border-[#6366F1]/20 text-[#4F46E5]",
+  neutral: "bg-[#F3F4F6] border-[#E5E7EB] text-[#4B5563]",
+  green:   "bg-[#F0FDF4] border-[#22C55E]/25 text-[#16A34A]",
 };
 
 const dotStyles: Record<BadgeVariant, string> = {
-  orange: "bg-orange-500",
-  blue:   "bg-blue-500",
-  neutral:"bg-gray-400",
-  green:  "bg-green-500",
+  orange:  "bg-[#6366F1]",
+  blue:    "bg-[#6366F1]",
+  neutral: "bg-[#9CA3AF]",
+  green:   "bg-[#22C55E]",
 };
 
 export default function Badge({ children, variant = "orange", dot = false, className }: BadgeProps) {
@@ -43,7 +43,7 @@ export default function Badge({ children, variant = "orange", dot = false, class
 
 export function SectionLabel({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <p className={cn("text-orange-500 text-xs font-bold tracking-widest uppercase mb-4", className)}>
+    <p className={cn("text-[#6366F1] text-xs font-bold tracking-widest uppercase mb-4", className)}>
       {children}
     </p>
   );

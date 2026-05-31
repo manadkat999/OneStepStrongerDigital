@@ -8,7 +8,7 @@ import { cn } from "@/app/lib/utils";
 
 export default function HowItWorks() {
   return (
-    <Section id="how-it-works" className="bg-gradient-to-b from-[#0a0a0a] to-[#080808]">
+    <Section id="how-it-works" className="bg-gradient-to-b from-[#EEF2FF] to-[#F3F4F6]">
       <Container>
         <RevealOnScroll className="text-center mb-20">
           <SectionLabel>How It Works</SectionLabel>
@@ -16,7 +16,7 @@ export default function HowItWorks() {
             Simple Process.{" "}
             <span className="gradient-text">Real Results.</span>
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto">
+          <p className="text-[#4B5563] max-w-xl mx-auto">
             We made getting started as friction-free as possible — because you have a business to run.
           </p>
         </RevealOnScroll>
@@ -33,21 +33,21 @@ export default function HowItWorks() {
                 <div className={cn(
                   "relative w-20 h-20 rounded-2xl flex flex-col items-center justify-center border mb-7 z-10",
                   isOrange
-                    ? "bg-orange-500/12 border-orange-500/35 shadow-lg shadow-orange-500/10"
+                    ? "bg-[#6366F1]/12 border-[#6366F1]/35 shadow-lg shadow-indigo-500/10"
                     : "bg-blue-500/12 border-blue-500/35 shadow-lg shadow-blue-500/10"
                 )}>
-                  <span className={cn("text-2xl font-black", isOrange ? "text-orange-500" : "text-blue-400")}>
+                  <span className={cn("text-2xl font-black", isOrange ? "text-[#6366F1]" : "text-blue-400")}>
                     {step.number}
                   </span>
                 </div>
 
-                <h3 className="text-xl font-black text-white mb-3 leading-tight">{step.title}</h3>
-                <p className="text-gray-400 text-sm leading-relaxed mb-5">{step.description}</p>
+                <h3 className="text-xl font-black text-[#1E1B4B] mb-3 leading-tight">{step.title}</h3>
+                <p className="text-[#4B5563] text-sm leading-relaxed mb-5">{step.description}</p>
 
                 <span className={cn(
                   "inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border",
                   isOrange
-                    ? "bg-orange-500/10 text-orange-400 border-orange-500/25"
+                    ? "bg-[#EEF2FF] text-[#6366F1] border-[#6366F1]/25"
                     : "bg-blue-500/10 text-blue-400 border-blue-500/25"
                 )}>
                   <span className="w-1.5 h-1.5 rounded-full bg-current" />
@@ -64,7 +64,7 @@ export default function HowItWorks() {
           >
             Start with Your Free Audit
           </Button>
-          <p className="mt-3 text-gray-600 text-xs">Free · No commitment · 48-hour turnaround</p>
+          <p className="mt-3 text-[#6B7280] text-xs">Free · No commitment · 48-hour turnaround</p>
         </RevealOnScroll>
       </Container>
     </Section>

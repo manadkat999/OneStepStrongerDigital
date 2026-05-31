@@ -1,11 +1,18 @@
 import type { Metadata, Viewport } from "next";
-import { Geist } from "next/font/google";
+import { Poppins, Inter } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 
-const geist = Geist({
+const poppins = Poppins({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-poppins",
+  display: "swap",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
   display: "swap",
 });
 
@@ -14,7 +21,7 @@ const BUSINESS_NAME = "One Step Stronger Digital";
 const GA_ID = "G-Y5WRK4SXR1";
 
 export const viewport: Viewport = {
-  themeColor: "#f97316",
+  themeColor: "#6366F1",
   width: "device-width",
   initialScale: 1,
 };
@@ -210,14 +217,14 @@ const organizationSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-GB" className={`${geist.variable} scroll-smooth`}>
+    <html lang="en-GB" className={`${poppins.variable} ${inter.variable} scroll-smooth`}>
       <head>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className="bg-[#080808] text-white antialiased">
+      <body className="bg-[#F8F9FF] text-[#1E1B4B] antialiased">
         {children}
 
         {/* Google Analytics — add NEXT_PUBLIC_GA_ID to Vercel env vars */}

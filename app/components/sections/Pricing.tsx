@@ -8,7 +8,7 @@ import { SectionLabel } from "@/app/components/ui/Badge";
 import { cn } from "@/app/lib/utils";
 
 const Check = ({ muted }: { muted?: boolean }) => (
-  <svg className={cn("w-4 h-4 flex-shrink-0 mt-0.5", muted ? "text-gray-600" : "text-orange-400")} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
+  <svg className={cn("w-4 h-4 flex-shrink-0 mt-0.5", muted ? "text-[#6B7280]" : "text-[#6366F1]")} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
     <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
   </svg>
 );
@@ -138,7 +138,7 @@ export default function Pricing() {
 
   return (
     <Section id="pricing" className="bg-gradient-to-b from-[#080808] to-[#0a0a0a]">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] rounded-full bg-orange-500/5 blur-[130px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] rounded-full bg-[#6366F1]/5 blur-[130px] pointer-events-none" />
 
       <Container className="relative z-10">
         <RevealOnScroll className="text-center mb-12">
@@ -147,12 +147,12 @@ export default function Pricing() {
             Simple Prices.{" "}
             <span className="gradient-text">No Surprises.</span>
           </h2>
-          <p className="text-gray-400 max-w-xl mx-auto mb-8">
+          <p className="text-[#4B5563] max-w-xl mx-auto mb-8">
             No hidden fees. No long contracts. Just clear, honest pricing for the work that actually moves the needle.
           </p>
 
           {/* Tab toggle */}
-          <div className="inline-flex bg-white/5 border border-white/10 rounded-xl p-1 gap-1">
+          <div className="inline-flex bg-[#F3F4F6] border border-[#E0E7FF] rounded-xl p-1 gap-1">
             {(["seo", "websites"] as Tab[]).map((t) => (
               <button
                 key={t}
@@ -160,8 +160,8 @@ export default function Pricing() {
                 className={cn(
                   "px-5 py-2 rounded-lg text-sm font-semibold transition-all duration-200",
                   tab === t
-                    ? "bg-orange-500 text-white shadow-lg shadow-orange-500/25"
-                    : "text-gray-400 hover:text-white"
+                    ? "bg-[#6366F1] text-white shadow-lg shadow-indigo-500/25"
+                    : "text-[#4B5563] hover:text-[#1E1B4B]"
                 )}
               >
                 {t === "seo" ? "SEO Retainers" : "Website Builds"}
@@ -177,36 +177,36 @@ export default function Pricing() {
               <div className={cn(
                 "card-glow rounded-2xl flex flex-col h-full relative overflow-hidden transition-all duration-300",
                 tier.featured
-                  ? "border-orange-500/35 shadow-xl shadow-orange-500/10 p-8"
+                  ? "border-[#6366F1]/35 shadow-xl shadow-indigo-500/10 p-8"
                   : "p-7"
               )}>
                 {tier.featured && (
                   <>
                     <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-orange-500 to-transparent" />
-                    <span className="self-start mb-4 text-xs bg-orange-500 text-white font-bold px-2.5 py-1 rounded-full">
+                    <span className="self-start mb-4 text-xs bg-[#6366F1] text-[#1E1B4B] font-bold px-2.5 py-1 rounded-full">
                       Most Popular
                     </span>
                   </>
                 )}
 
                 <div className="mb-5">
-                  <h3 className="text-lg font-black text-white mb-1">{tier.name}</h3>
-                  <p className="text-gray-500 text-sm">{tier.tagline}</p>
+                  <h3 className="text-lg font-black text-[#1E1B4B] mb-1">{tier.name}</h3>
+                  <p className="text-[#9CA3AF] text-sm">{tier.tagline}</p>
                 </div>
 
                 <div className="mb-6">
-                  <span className={cn("font-black leading-none", tier.featured ? "text-4xl text-white" : "text-3xl text-white")}>
+                  <span className={cn("font-black leading-none", tier.featured ? "text-4xl text-[#1E1B4B]" : "text-3xl text-[#1E1B4B]")}>
                     {tier.price}
                   </span>
-                  <span className="text-gray-500 text-sm ml-1">{tier.period}</span>
+                  <span className="text-[#9CA3AF] text-sm ml-1">{tier.period}</span>
                   {"note" in tier && tier.note && (
-                    <p className="text-orange-400 text-xs font-semibold mt-1.5">{tier.note}</p>
+                    <p className="text-[#6366F1] text-xs font-semibold mt-1.5">{tier.note}</p>
                   )}
                 </div>
 
                 <ul className="space-y-3 flex-1 mb-7">
                   {tier.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2.5 text-sm text-gray-300">
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-[#1E1B4B]">
                       <Check />
                       {f}
                     </li>
@@ -230,26 +230,26 @@ export default function Pricing() {
         {/* Founding cohort offer — SEO tab only */}
         {tab === "seo" && (
           <RevealOnScroll delay={200}>
-            <div className="card-glow rounded-2xl p-8 md:p-10 relative overflow-hidden border-orange-500/20">
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/8 via-transparent to-transparent" />
+            <div className="card-glow rounded-2xl p-8 md:p-10 relative overflow-hidden border-[#6366F1]/20">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#6366F1]/6 via-transparent to-transparent" />
               <div className="absolute top-0 inset-x-0 h-px bg-gradient-to-r from-transparent via-orange-500/50 to-transparent" />
               <div className="relative z-10 flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
                 <div className="flex-shrink-0">
-                  <span className="inline-flex items-center gap-2 bg-orange-500/15 border border-orange-500/30 text-orange-400 text-xs font-bold px-3 py-1.5 rounded-full mb-3">
-                    <span className="w-1.5 h-1.5 rounded-full bg-orange-400 animate-pulse" />
+                  <span className="inline-flex items-center gap-2 bg-[#EEF2FF] border border-[#6366F1]/20 text-[#6366F1] text-xs font-bold px-3 py-1.5 rounded-full mb-3">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />
                     Founding Client Offer — 3 Spots Only
                   </span>
-                  <h3 className="text-2xl font-black text-white mb-2">
+                  <h3 className="text-2xl font-black text-[#1E1B4B] mb-2">
                     Growth at{" "}
                     <span className="gradient-text">£595/mo</span>
-                    <span className="text-gray-500 text-lg font-normal line-through ml-3">£995</span>
+                    <span className="text-[#9CA3AF] text-lg font-normal line-through ml-3">£995</span>
                   </h3>
-                  <p className="text-gray-400 text-sm leading-relaxed max-w-lg">
+                  <p className="text-[#4B5563] text-sm leading-relaxed max-w-lg">
                     Our first three clients get 40% off the Growth plan for 6 months — in exchange for a 6-month commitment, a testimonial, and case study rights. You get full-service SEO at a founding price. We get proof. Everyone wins.
                   </p>
                   <ul className="flex flex-wrap gap-x-5 gap-y-1.5 mt-4">
                     {["40% off for 6 months", "6-month commitment", "Testimonial + case study rights", "Full Growth plan — nothing removed"].map((item) => (
-                      <li key={item} className="flex items-center gap-1.5 text-xs text-gray-300">
+                      <li key={item} className="flex items-center gap-1.5 text-xs text-[#1E1B4B]">
                         <Check />
                         {item}
                       </li>
@@ -260,7 +260,7 @@ export default function Pricing() {
                   <Button variant="primary" size="lg" href="#contact" icon={<ArrowRight />}>
                     Claim a Founding Spot
                   </Button>
-                  <p className="text-gray-600 text-xs text-center mt-2">3 spots · First come, first served</p>
+                  <p className="text-[#6B7280] text-xs text-center mt-2">3 spots · First come, first served</p>
                 </div>
               </div>
             </div>
@@ -277,11 +277,11 @@ export default function Pricing() {
                   <span className="inline-block bg-blue-500/15 border border-blue-500/25 text-blue-400 text-xs font-bold px-3 py-1 rounded-full mb-2">
                     Bundle & Save
                   </span>
-                  <h3 className="text-lg font-black text-white mb-1">Website + SEO Combo</h3>
-                  <p className="text-gray-400 text-sm">
-                    Professional website build <span className="text-white font-semibold">(£1,895)</span> + 3 months Growth SEO at{" "}
-                    <span className="text-white font-semibold">£795/mo</span>{" "}
-                    <span className="text-gray-500 line-through text-xs">£995</span> — one seamless project, one team.
+                  <h3 className="text-lg font-black text-[#1E1B4B] mb-1">Website + SEO Combo</h3>
+                  <p className="text-[#4B5563] text-sm">
+                    Professional website build <span className="text-[#1E1B4B] font-semibold">(£1,895)</span> + 3 months Growth SEO at{" "}
+                    <span className="text-[#1E1B4B] font-semibold">£795/mo</span>{" "}
+                    <span className="text-[#9CA3AF] line-through text-xs">£995</span> — one seamless project, one team.
                   </p>
                 </div>
                 <div className="flex-shrink-0 sm:ml-auto">
@@ -295,7 +295,7 @@ export default function Pricing() {
         )}
 
         <RevealOnScroll className="text-center mt-10">
-          <p className="text-gray-600 text-sm">
+          <p className="text-[#6B7280] text-sm">
             All plans are month-to-month after the initial term. No cancellation fees. No hidden costs. Prices exclude VAT.
           </p>
         </RevealOnScroll>
