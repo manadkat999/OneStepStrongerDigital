@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { motion, useScroll, useTransform, useSpring } from "framer-motion";
 import { HERO_STATS } from "@/app/lib/data";
 import Container from "@/app/components/ui/Container";
 
@@ -16,46 +17,106 @@ const ShieldCheck = () => (
 );
 
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
   const cardRef = useRef<HTMLDivElement>(null);
 
+  // Parallax scroll values
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  });
+
+  // Background glows move up slower than scroll (parallax depth)
+  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "40%"]);
+  const bgYSpring = useSpring(bgY, { stiffness: 80, damping: 20 });
+
+  // Dot pattern moves at half scroll speed
+  const dotY = useTransform(scrollYProgress, [0, 1], ["0%", "20%"]);
+
+  // Hero copy fades and rises on scroll
+  const copyY = useTransform(scrollYProgress, [0, 0.6], ["0%", "-15%"]);
+  const copyOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0]);
+
+  // Card moves at different rate for depth
+  const cardY = useTransform(scrollYProgress, [0, 1], ["0%", "-30%"]);
+  const cardYSpring = useSpring(cardY, { stiffness: 60, damping: 18 });
+
+  // Mouse tilt on card
   useEffect(() => {
     const card = cardRef.current;
     if (!card) return;
     const onMove = (e: MouseEvent) => {
       const { left, top, width, height } = card.getBoundingClientRect();
-      card.style.transform = `translate(${(e.clientX - left - width / 2) * 0.01}px, ${(e.clientY - top - height / 2) * 0.01}px)`;
+      const x = (e.clientX - left - width / 2) * 0.012;
+      const y = (e.clientY - top - height / 2) * 0.012;
+      card.style.transform = `translate(${x}px, ${y}px)`;
     };
     window.addEventListener("mousemove", onMove, { passive: true });
     return () => window.removeEventListener("mousemove", onMove);
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-28 pb-20 overflow-hidden dot-bg">
-      {/* Ambient glows */}
-      <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-indigo-400/10 blur-[120px] pointer-events-none" />
-      <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-green-400/10 blur-[100px] pointer-events-none" />
+    <section
+      ref={sectionRef}
+      className="relative min-h-screen flex flex-col justify-center pt-28 pb-20 overflow-hidden"
+    >
+      {/* Parallax dot background */}
+      <motion.div
+        style={{ y: dotY }}
+        className="absolute inset-0 dot-bg pointer-events-none"
+      />
+
+      {/* Parallax ambient glows */}
+      <motion.div
+        style={{ y: bgYSpring }}
+        className="absolute inset-0 pointer-events-none"
+      >
+        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-indigo-400/10 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-green-400/10 blur-[100px]" />
+      </motion.div>
 
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* ── Copy ── */}
-          <div>
+          {/* ── Copy — fades/rises on scroll ── */}
+          <motion.div style={{ y: copyY, opacity: copyOpacity }}>
+
             {/* Trust badge */}
-            <div className="animate-fade-up mb-6 inline-flex items-center gap-2 bg-[#EEF2FF] border border-[#6366F1]/20 text-[#4F46E5] text-xs font-semibold px-4 py-2 rounded-full">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="mb-6 inline-flex items-center gap-2 bg-[#EEF2FF] border border-[#6366F1]/20 text-[#4F46E5] text-xs font-semibold px-4 py-2 rounded-full"
+            >
               <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
               UK Digital Agency · Free 48-Hour Audit
-            </div>
+            </motion.div>
 
-            <h1 className="text-5xl md:text-6xl xl:text-[4rem] font-black leading-[1.08] tracking-tight mb-6 animate-fade-up delay-100 text-[#1E1B4B]">
+            <motion.h1
+              initial={{ opacity: 0, y: 28 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
+              className="text-5xl md:text-6xl xl:text-[4rem] font-black leading-[1.08] tracking-tight mb-6 text-[#1E1B4B]"
+            >
               Your Business Deserves to{" "}
               <span className="gradient-text">Be Found First.</span>
-            </h1>
+            </motion.h1>
 
-            <p className="text-[#4B5563] text-lg leading-relaxed mb-10 max-w-lg animate-fade-up delay-200">
+            <motion.p
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+              className="text-[#4B5563] text-lg leading-relaxed mb-10 max-w-lg"
+            >
               We help UK small businesses get to the top of Google — with expert SEO, professional design, and bespoke digital solutions. No jargon. No lock-ins. Real results.
-            </p>
+            </motion.p>
 
-            <div className="flex flex-wrap gap-3 animate-fade-up delay-300">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.3, ease: "easeOut" }}
+              className="flex flex-wrap gap-3"
+            >
               <a
                 href="#contact"
                 className="btn-primary flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold"
@@ -69,36 +130,52 @@ export default function Hero() {
               >
                 Our Services
               </a>
-            </div>
+            </motion.div>
 
             {/* Trust signals */}
-            <div className="mt-10 flex flex-wrap items-center gap-2.5 animate-fade-up delay-400">
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+              className="mt-10 flex flex-wrap items-center gap-2.5"
+            >
               {[
                 { label: "90-day results guarantee" },
                 { label: "Free 48-hour audit" },
                 { label: "No long-term contracts" },
-              ].map((t) => (
-                <span
+              ].map((t, i) => (
+                <motion.span
                   key={t.label}
+                  initial={{ opacity: 0, scale: 0.9 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 0.4, delay: 0.5 + i * 0.08 }}
                   className="flex items-center gap-1.5 text-xs font-medium text-[#16A34A] bg-[#F0FDF4] border border-[#22C55E]/25 rounded-full px-3.5 py-1.5"
                 >
                   <ShieldCheck />
                   {t.label}
-                </span>
+                </motion.span>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
 
-          {/* ── Dashboard card ── */}
-          <div ref={cardRef} className="hidden lg:block animate-float">
-            <div className="relative max-w-sm mx-auto">
+          {/* ── Dashboard card — parallax depth ── */}
+          <motion.div
+            style={{ y: cardYSpring }}
+            className="hidden lg:block"
+          >
+            <div ref={cardRef} className="relative max-w-sm mx-auto">
               {/* Main card */}
-              <div className="card-glow rounded-2xl p-7 hover:!transform-none">
+              <motion.div
+                initial={{ opacity: 0, y: 40, scale: 0.97 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
+                className="card-glow rounded-2xl p-7"
+              >
                 <div className="flex items-center gap-3 mb-6 pb-5 border-b border-[#E5E7EB]">
                   <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] flex items-center justify-center text-white font-black text-xs shadow-lg shadow-indigo-500/30">OS</div>
                   <div>
                     <p className="text-[#1E1B4B] font-semibold text-sm">Digital Presence Report</p>
-                    <p className="text-[#6B7280] text-xs">Rosa&apos;s Artisan Bakery · Example</p>
+                    <p className="text-[#374151] text-xs">Rosa&apos;s Artisan Bakery · Example</p>
                   </div>
                   <span className="ml-auto flex items-center gap-1 text-xs text-[#22C55E] font-semibold bg-[#F0FDF4] px-2 py-1 rounded-full border border-[#22C55E]/20">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />Live
@@ -109,16 +186,28 @@ export default function Hero() {
                   { label: "Visibility Score", after: 91, color: "#6366F1" },
                   { label: "Local Rank",       after: 96, color: "#22C55E" },
                   { label: "Review Score",     after: 88, color: "#818CF8" },
-                ].map((m) => (
-                  <div key={m.label} className="mb-4">
+                ].map((m, i) => (
+                  <motion.div
+                    key={m.label}
+                    className="mb-4"
+                    initial={{ opacity: 0, x: -16 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+                  >
                     <div className="flex justify-between mb-1.5">
                       <span className="text-[#4B5563] text-xs font-medium">{m.label}</span>
                       <span className="text-xs font-bold" style={{ color: m.color }}>{m.after}%</span>
                     </div>
                     <div className="h-2 bg-[#F3F4F6] rounded-full overflow-hidden">
-                      <div className="h-full rounded-full" style={{ width: `${m.after}%`, background: m.color }} />
+                      <motion.div
+                        className="h-full rounded-full"
+                        style={{ background: m.color }}
+                        initial={{ width: "0%" }}
+                        animate={{ width: `${m.after}%` }}
+                        transition={{ duration: 1, delay: 0.8 + i * 0.15, ease: "easeOut" }}
+                      />
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
 
                 <div className="mt-5 grid grid-cols-3 gap-2 pt-4 border-t border-[#E5E7EB]">
@@ -126,43 +215,70 @@ export default function Hero() {
                     { v: "#1",    l: "Maps Rank",   c: "#6366F1" },
                     { v: "+340%", l: "Traffic",      c: "#22C55E" },
                     { v: "4.9★",  l: "Rating",       c: "#818CF8" },
-                  ].map((s) => (
-                    <div key={s.l} className="bg-[#F8F9FF] rounded-xl p-2.5 text-center border border-[#E5E7EB]">
+                  ].map((s, i) => (
+                    <motion.div
+                      key={s.l}
+                      className="bg-[#F8F9FF] rounded-xl p-2.5 text-center border border-[#E5E7EB]"
+                      initial={{ opacity: 0, y: 12 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      transition={{ duration: 0.4, delay: 1.1 + i * 0.1 }}
+                    >
                       <p className="text-base font-black" style={{ color: s.c }}>{s.v}</p>
-                      <p className="text-[#6B7280] text-xs mt-0.5">{s.l}</p>
-                    </div>
+                      <p className="text-[#374151] text-xs mt-0.5">{s.l}</p>
+                    </motion.div>
                   ))}
                 </div>
-              </div>
+              </motion.div>
 
               {/* Floating notification — top right */}
-              <div className="absolute -top-5 -right-5 card-glow rounded-xl px-3.5 py-2.5 flex items-center gap-2.5 w-52 shadow-xl animate-fade-up delay-500">
+              <motion.div
+                initial={{ opacity: 0, x: 20, y: -10 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.2 }}
+                className="absolute -top-5 -right-5 card-glow rounded-xl px-3.5 py-2.5 flex items-center gap-2.5 w-52 shadow-xl"
+              >
                 <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse flex-shrink-0" />
                 <div>
                   <p className="text-[#1E1B4B] text-xs font-semibold leading-tight">New customer found you</p>
-                  <p className="text-[#6B7280] text-xs">via &quot;bakery near me&quot; · just now</p>
+                  <p className="text-[#374151] text-xs">via &quot;bakery near me&quot; · just now</p>
                 </div>
-              </div>
+              </motion.div>
 
               {/* Floating ranking tag — bottom left */}
-              <div className="absolute -bottom-5 -left-5 card-glow rounded-xl px-3.5 py-2.5 w-44 shadow-xl animate-fade-up delay-600">
-                <p className="text-[#6B7280] text-xs mb-0.5">Now ranking</p>
+              <motion.div
+                initial={{ opacity: 0, x: -20, y: 10 }}
+                animate={{ opacity: 1, x: 0, y: 0 }}
+                transition={{ duration: 0.5, delay: 1.35 }}
+                className="absolute -bottom-5 -left-5 card-glow rounded-xl px-3.5 py-2.5 w-44 shadow-xl"
+              >
+                <p className="text-[#374151] text-xs mb-0.5">Now ranking</p>
                 <p className="text-[#1E1B4B] text-xs font-bold">&quot;best bakery london&quot;</p>
                 <p className="text-[#6366F1] text-xs font-bold mt-0.5">#1 · Google Maps ↑5</p>
-              </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
         {/* Stats strip */}
-        <div className="mt-20 pt-8 border-t border-[#E5E7EB] grid grid-cols-2 md:grid-cols-4 gap-6 animate-fade-up delay-500">
-          {HERO_STATS.map((s) => (
-            <div key={s.label} className="text-center">
+        <motion.div
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.5 }}
+          className="mt-20 pt-8 border-t border-[#E5E7EB] grid grid-cols-2 md:grid-cols-4 gap-6"
+        >
+          {HERO_STATS.map((s, i) => (
+            <motion.div
+              key={s.label}
+              className="text-center"
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
+            >
               <p className="text-2xl md:text-3xl font-black gradient-text mb-1">{s.value}</p>
-              <p className="text-[#6B7280] text-sm font-medium">{s.label}</p>
-            </div>
+              <p className="text-[#374151] text-sm font-medium">{s.label}</p>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </Container>
 
       <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#F8F9FF] to-transparent pointer-events-none" />
