@@ -29,14 +29,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: `${BUSINESS_NAME} | SEO Agency for Small Businesses`,
+    default: `${BUSINESS_NAME} | Digital Marketing Agency for Small Businesses`,
     template: `%s | ${BUSINESS_NAME}`,
   },
   description:
     "One Step Stronger Digital helps UK small businesses get found on Google. Expert local SEO, technical SEO, and content marketing that turns searches into real customers. Free 48-hour audit.",
   keywords: [
     "One Step Stronger Digital",
-    "SEO agency UK",
+    "digital marketing agency UK",
     "local SEO for small business UK",
     "small business SEO",
     "digital marketing agency UK",
@@ -45,7 +45,7 @@ export const metadata: Metadata = {
     "affordable SEO UK",
     "SEO for small business",
     "small business online presence UK",
-    "technical SEO agency",
+    "digital marketing agency",
     "content marketing UK",
     "Google Business Profile optimisation",
   ],
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     locale: "en_GB",
     url: BASE_URL,
     siteName: BUSINESS_NAME,
-    title: `${BUSINESS_NAME} | SEO Agency for Small Businesses`,
+    title: `${BUSINESS_NAME} | Digital Marketing Agency for Small Businesses`,
     description:
       "One Step Stronger Digital helps UK small businesses get found on Google. Expert local SEO, technical SEO, and content marketing that turns searches into real customers.",
     images: [
@@ -81,7 +81,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@onestepstronger",
     creator: "@onestepstronger",
-    title: `${BUSINESS_NAME} | SEO Agency for Small Businesses`,
+    title: `${BUSINESS_NAME} | Digital Marketing Agency for Small Businesses`,
     description:
       "One Step Stronger Digital helps UK small businesses get found on Google. Expert SEO and local search optimisation that drives real customers.",
     images: ["/og-image.png"],
@@ -120,7 +120,7 @@ const organizationSchema = {
         height: 630,
       },
       description:
-        "UK SEO agency helping small businesses get found on Google through local SEO, technical SEO, content marketing, and plain-English reporting.",
+        "UK digital marketing agency helping small businesses get found on Google through local SEO, technical SEO, content marketing, and plain-English reporting.",
       email: "hello@onestepstronger.co.uk",
       address: {
         "@type": "PostalAddress",
@@ -138,7 +138,7 @@ const organizationSchema = {
       "@id": `${BASE_URL}/#website`,
       url: BASE_URL,
       name: BUSINESS_NAME,
-      description: "SEO agency for small businesses in the UK",
+      description: "Digital marketing agency for small businesses in the UK",
       publisher: { "@id": `${BASE_URL}/#organization` },
       inLanguage: "en-GB",
     },
@@ -149,7 +149,7 @@ const organizationSchema = {
       url: BASE_URL,
       image: `${BASE_URL}/og-image.png`,
       priceRange: "££",
-      serviceType: "SEO Agency",
+      serviceType: "Digital Marketing Agency",
       areaServed: { "@type": "Country", name: "United Kingdom" },
       description:
         "Expert SEO services for UK small businesses: local SEO, technical SEO, content marketing, link building, and plain-English reporting.",

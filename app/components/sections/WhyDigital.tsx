@@ -28,10 +28,10 @@ export default function WhyDigital() {
                 <AnimatedNumber
                   to={s.value}
                   suffix={s.suffix}
-                  className={`text-5xl font-black tracking-tight ${s.accent === "orange" ? "text-[#6366F1]" : "text-blue-400"}`}
+                  className={`text-5xl font-black tracking-tight ${s.accent === "orange" ? "text-[#6366F1]" : "text-[#1D4ED8]"}`}
                 />
                 <p className="text-white text-sm font-medium leading-snug flex-1">{s.label}</p>
-                <p className="text-[#6B7280] text-xs">Source: {s.source}</p>
+                <p className="text-[#374151] text-xs">Source: {s.source}</p>
               </Card>
             </RevealOnScroll>
           ))}
@@ -47,9 +47,9 @@ export default function WhyDigital() {
                 Businesses with websites are{" "}
                 <span className="text-[#6366F1] font-bold">2.8× more likely to grow revenues</span>{" "}
                 than those without — and small businesses with a strong online presence grow{" "}
-                <span className="text-blue-400 font-bold">40% faster</span>.
+                <span className="text-[#1D4ED8] font-bold">40% faster</span>.
               </p>
-              <p className="text-[#6B7280] text-sm">Google & Deloitte Connected Small Businesses Report</p>
+              <p className="text-[#374151] text-sm">Google & Deloitte Connected Small Businesses Report</p>
             </div>
           </div>
         </RevealOnScroll>

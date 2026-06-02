@@ -205,7 +205,7 @@ export default function Pricing() {
                     {tier.price}
                   </span>
                   {/* #6B7280 on white = 4.6:1 ✓ — acceptable for large/bold text */}
-                  <span className="text-[#6B7280] text-sm ml-1 font-medium">{tier.period}</span>
+                  <span className="text-[#374151] text-sm ml-1 font-medium">{tier.period}</span>
                   {"note" in tier && tier.note && (
                     <p className="text-[#4F46E5] text-xs font-semibold mt-1.5">{tier.note}</p>
                   )}
@@ -250,7 +250,7 @@ export default function Pricing() {
                     Growth at{" "}
                     <span className="gradient-text">£595/mo</span>
                     {/* #6B7280 on white ✓ for decorative strikethrough */}
-                    <span className="text-[#6B7280] text-lg font-normal line-through ml-3">£995</span>
+                    <span className="text-[#374151] text-lg font-normal line-through ml-3">£995</span>
                   </h3>
                   <p className="text-[#374151] text-sm leading-relaxed max-w-lg">
                     Our first three clients get 40% off the Growth plan for 6 months — in exchange for a 6-month commitment, a testimonial, and case study rights. You get full-service SEO at a founding price. We get proof. Everyone wins.
@@ -269,7 +269,7 @@ export default function Pricing() {
                     Claim a Founding Spot
                   </Button>
                   {/* #6B7280 on white = 4.6:1 ✓ */}
-                  <p className="text-[#6B7280] text-xs text-center mt-2">3 spots · First come, first served</p>
+                  <p className="text-[#374151] text-xs text-center mt-2">3 spots · First come, first served</p>
                 </div>
               </div>
             </div>
@@ -283,7 +283,7 @@ export default function Pricing() {
               <div className="absolute inset-0 bg-gradient-to-br from-[#EEF2FF] via-transparent to-transparent" />
               <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
                 <div>
-                  {/* #4F46E5 on white = 6.9:1 ✓ — replaces text-blue-400 on white (3:1 ✗) */}
+                  {/* #4F46E5 on white = 6.9:1 ✓ — replaces text-[#1D4ED8] on white (3:1 ✗) */}
                   <span className="inline-block bg-[#EEF2FF] border border-[#6366F1]/20 text-[#4F46E5] text-xs font-bold px-3 py-1 rounded-full mb-2">
                     Bundle & Save
                   </span>
@@ -291,7 +291,7 @@ export default function Pricing() {
                   <p className="text-[#374151] text-sm">
                     Professional website build <span className="text-[#1E1B4B] font-semibold">(£1,895)</span> + 3 months Growth SEO at{" "}
                     <span className="text-[#1E1B4B] font-semibold">£795/mo</span>{" "}
-                    <span className="text-[#6B7280] line-through text-xs">£995</span> — one seamless project, one team.
+                    <span className="text-[#374151] line-through text-xs">£995</span> — one seamless project, one team.
                   </p>
                 </div>
                 <div className="flex-shrink-0 sm:ml-auto">

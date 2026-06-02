@@ -142,7 +142,7 @@ export default function ServicesBento() {
                     <span className={cn("font-black", isFeatured ? "text-2xl" : "text-xl", isIndigo ? "text-[#6366F1]" : "text-[#22C55E]")}>
                       {service.metric.value}
                     </span>
-                    <span className="text-[#6B7280] text-xs font-medium">{service.metric.label}</span>
+                    <span className="text-[#374151] text-xs font-medium">{service.metric.label}</span>
                   </div>
 
                   {/* Tags */}

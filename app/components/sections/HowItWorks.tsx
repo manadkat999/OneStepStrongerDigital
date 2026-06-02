@@ -34,9 +34,9 @@ export default function HowItWorks() {
                   "relative w-20 h-20 rounded-2xl flex flex-col items-center justify-center border mb-7 z-10",
                   isOrange
                     ? "bg-[#6366F1]/12 border-[#6366F1]/35 shadow-lg shadow-indigo-500/10"
-                    : "bg-blue-500/12 border-blue-500/35 shadow-lg shadow-blue-500/10"
+                    : "bg-[#EFF6FF] border-[#1D4ED8]/30 shadow-lg shadow-blue-700/10"
                 )}>
-                  <span className={cn("text-2xl font-black", isOrange ? "text-[#6366F1]" : "text-blue-400")}>
+                  <span className={cn("text-2xl font-black", isOrange ? "text-[#6366F1]" : "text-[#1D4ED8]")}>
                     {step.number}
                   </span>
                 </div>
@@ -48,7 +48,7 @@ export default function HowItWorks() {
                   "inline-flex items-center gap-1.5 text-xs font-semibold px-3 py-1.5 rounded-full border",
                   isOrange
                     ? "bg-[#EEF2FF] text-[#6366F1] border-[#6366F1]/25"
-                    : "bg-blue-500/10 text-blue-400 border-blue-500/25"
+                    : "bg-[#EFF6FF] text-[#1D4ED8] border-[#1D4ED8]/30"
                 )}>
                   <span className="w-1.5 h-1.5 rounded-full bg-current" />
                   {step.detail}
@@ -64,7 +64,7 @@ export default function HowItWorks() {
           >
             Start with Your Free Audit
           </Button>
-          <p className="mt-3 text-[#6B7280] text-xs">Free · No commitment · 48-hour turnaround</p>
+          <p className="mt-3 text-[#374151] text-xs">Free · No commitment · 48-hour turnaround</p>
         </RevealOnScroll>
       </Container>
     </Section>

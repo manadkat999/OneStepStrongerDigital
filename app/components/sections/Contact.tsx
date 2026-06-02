@@ -177,7 +177,7 @@ export default function Contact() {
                       </>
                     )}
                   </button>
-                  <p className="text-center text-[#6B7280] text-xs">No spam. No commitment. Just a free, honest audit.</p>
+                  <p className="text-center text-[#374151] text-xs">No spam. No commitment. Just a free, honest audit.</p>
                 </form>
               )}
             </div>
