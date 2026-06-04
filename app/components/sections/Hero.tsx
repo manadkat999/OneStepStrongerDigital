@@ -1,8 +1,12 @@
 "use client";
 import { useEffect, useRef } from "react";
 import { motion, useScroll, useTransform, useSpring } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { HERO_STATS } from "@/app/lib/data";
 import Container from "@/app/components/ui/Container";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const ArrowRight = () => (
   <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
@@ -53,6 +57,30 @@ export default function Hero() {
     };
     window.addEventListener("mousemove", onMove, { passive: true });
     return () => window.removeEventListener("mousemove", onMove);
+  }, []);
+
+  // GSAP cinematic stats counter on scroll
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".hero-stat",
+        { opacity: 0, y: 40, scale: 0.95 },
+        {
+          opacity: 1,
+          y: 0,
+          scale: 1,
+          duration: 0.7,
+          stagger: 0.12,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".hero-stats-strip",
+            start: "top 90%",
+            once: true,
+          },
+        }
+      );
+    });
+    return () => ctx.revert();
   }, []);
 
   return (
@@ -264,12 +292,12 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="mt-20 pt-8 border-t border-[#E5E7EB] grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="hero-stats-strip mt-20 pt-8 border-t border-[#E5E7EB] grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {HERO_STATS.map((s, i) => (
             <motion.div
               key={s.label}
-              className="text-center"
+              className="text-center hero-stat"
               initial={{ opacity: 0, y: 16 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}

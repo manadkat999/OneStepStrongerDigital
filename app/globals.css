@@ -1,5 +1,24 @@
 @import "tailwindcss";
 
+/* ─── Cinematic Marquee ──────────────────────────────────────────────────────── */
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+.marquee-track {
+  display: flex;
+  width: max-content;
+  animation: marquee 28s linear infinite;
+}
+.marquee-track:hover { animation-play-state: paused; }
+
+/* ─── Cinematic page transitions ─────────────────────────────────────────────── */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-up { animation: fadeUp 0.8s cubic-bezier(0.25,0.46,0.45,0.94) both; }
+
 /* ─── Theme ──────────────────────────────────────────────────────────────────── */
 @theme inline {
   --color-background: #F8F9FF;

@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Poppins, Inter } from "next/font/google";
 import Script from "next/script";
+import SmoothScroll from "@/app/components/ui/SmoothScroll";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -225,7 +226,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         />
       </head>
       <body className="bg-[#F8F9FF] text-[#1E1B4B] antialiased">
+        <SmoothScroll>
         {children}
+        </SmoothScroll>
 
         {/* Google Analytics — add NEXT_PUBLIC_GA_ID to Vercel env vars */}
         {GA_ID && (

@@ -9,6 +9,7 @@ import About from "@/app/components/sections/About";
 import Pricing from "@/app/components/sections/Pricing";
 import CTABanner from "@/app/components/sections/CTABanner";
 import Contact from "@/app/components/sections/Contact";
+import MarqueeStrip from "@/app/components/sections/MarqueeStrip";
 
 export default function Home() {
   return (
@@ -16,7 +17,8 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-<WhyDigital />
+        <MarqueeStrip />
+        <WhyDigital />
         <ServicesBento />
         <HowItWorks />
         <Testimonials />

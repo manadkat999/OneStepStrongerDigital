@@ -1,6 +1,10 @@
 "use client";
-import { useRef } from "react";
+import { useRef, useEffect } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
 import { WHY_DIGITAL_STATS } from "@/app/lib/data";
 import AnimatedNumber from "@/app/components/ui/AnimatedNumber";
 import RevealOnScroll from "@/app/components/ui/RevealOnScroll";
@@ -26,6 +30,30 @@ export default function WhyDigital() {
   // Quote block has slower parallax
   const quoteY = useTransform(scrollYProgress, [0, 1], ["40px", "-40px"]);
 
+  // GSAP cinematic horizontal slide for stat cards
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        ".why-card",
+        { opacity: 0, x: -60, scale: 0.95 },
+        {
+          opacity: 1,
+          x: 0,
+          scale: 1,
+          duration: 0.8,
+          stagger: 0.15,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: ".why-cards-grid",
+            start: "top 80%",
+            once: true,
+          },
+        }
+      );
+    }, sectionRef);
+    return () => ctx.revert();
+  }, []);
+
   return (
     <div ref={sectionRef}>
       <Section id="why-digital" className="bg-gradient-to-b from-[#F8F9FF] via-[#F3F4F6] to-[#F8F9FF]">
@@ -41,11 +69,11 @@ export default function WhyDigital() {
             </p>
           </RevealOnScroll>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
+          <div className="why-cards-grid grid md:grid-cols-2 lg:grid-cols-4 gap-5 mb-14">
             {WHY_DIGITAL_STATS.map((s, i) => (
               <RevealOnScroll key={s.label} delay={i * 90}>
                 <motion.div style={{ y: cardOffsets[i] }}>
-                  <Card className="h-full flex flex-col gap-4 group">
+                  <Card className="why-card h-full flex flex-col gap-4 group">
                     <AnimatedNumber
                       to={s.value}
                       suffix={s.suffix}
