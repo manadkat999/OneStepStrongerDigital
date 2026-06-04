@@ -70,7 +70,7 @@ const SEO_TIERS = [
       "Dedicated SEO strategist",
       "4+ content pieces per month",
       "Digital PR & press outreach",
-      "Quarterly technical SEO deep-audit",
+      "Quarterly technical SEO deep-Review",
       "Custom reporting & analytics dashboard",
       "Quarterly in-depth strategy session",
     ],

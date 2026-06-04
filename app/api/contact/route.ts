@@ -15,13 +15,13 @@ export async function POST(req: NextRequest) {
     const { error } = await resend.emails.send({
       from: "One Step Stronger Media <onboarding@resend.dev>",
       to: [process.env.CONTACT_EMAIL ?? "hello@onestepstronger.media"],
-      subject: `New SEO Audit Request from ${firstName} ${lastName}`,
+      subject: `New SEO Consultation Request from ${firstName} ${lastName}`,
       html: `
         <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto; background: #0d0d0d; color: #f5f5f5; padding: 32px; border-radius: 12px;">
           <div style="background: linear-gradient(135deg, #f97316, #ea580c); padding: 2px; border-radius: 8px; margin-bottom: 24px;">
             <div style="background: #111; padding: 16px 20px; border-radius: 7px;">
               <h1 style="margin: 0; font-size: 20px; color: #f97316;">One Step Stronger Media</h1>
-              <p style="margin: 4px 0 0; color: #9ca3af; font-size: 13px;">New Audit Request</p>
+              <p style="margin: 4px 0 0; color: #9ca3af; font-size: 13px;">New Consultation Request</p>
             </div>
           </div>
 

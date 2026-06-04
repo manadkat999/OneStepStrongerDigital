@@ -35,10 +35,10 @@ export default function Footer() {
             </h2>
             {/* #CBD5E1 on #2D2A5E = ~6:1 ✓ */}
             <p className="text-[#CBD5E1] mb-8">
-              Get a free, no-obligation audit of your online presence. Delivered in 48 hours.
+              Get a free, no-obligation consultation of your online presence. Delivered in 48 hours.
             </p>
             <Button variant="primary" size="lg" href="#contact" icon={<ArrowRight />}>
-              Claim Your Free Audit
+              Claim Your Free Consultation
             </Button>
             {/* #94A3B8 on #2D2A5E = ~4.5:1 ✓ */}
             <p className="mt-4 text-[#94A3B8] text-xs">Free · No commitment · Results in 48 hours</p>

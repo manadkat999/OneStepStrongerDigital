@@ -6,7 +6,7 @@ import Container from "@/app/components/ui/Container";
 import { SectionLabel } from "@/app/components/ui/Badge";
 
 const BENEFITS = [
-  { title: "Free SEO Audit", desc: "A full technical and content audit — $500 value, yours free." },
+  { title: "Free SEO Review", desc: "A full technical and content Review — $500 value, yours free." },
   { title: "Custom Growth Plan", desc: "A 90-day roadmap tailored to your goals and market." },
   { title: "No Long Contracts", desc: "We earn your business month by month." },
   { title: "Response in 24hrs", desc: "A senior strategist will reach out personally." },
@@ -58,7 +58,7 @@ export default function Contact() {
             <span className="gradient-text">Dominate Search?</span>
           </h2>
           <p className="text-[#4B5563] max-w-xl mx-auto">
-            Get a free, no-obligation SEO audit. We&apos;ll identify exactly what&apos;s holding back your rankings and build a custom growth roadmap.
+            Get a free, no-obligation SEO Review. We&apos;ll identify exactly what&apos;s holding back your rankings and build a custom growth roadmap.
           </p>
         </RevealOnScroll>
 
@@ -100,7 +100,7 @@ export default function Contact() {
                     </svg>
                   </div>
                   <h3 className="text-xl font-bold text-[#1E1B4B] mb-2">You&apos;re on the list!</h3>
-                  <p className="text-[#4B5563] text-sm">A senior strategist will reach out within 24 hours with your custom audit plan.</p>
+                  <p className="text-[#4B5563] text-sm">A senior strategist will reach out within 24 hours with your custom Review plan.</p>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
@@ -170,14 +170,14 @@ export default function Contact() {
                       </>
                     ) : (
                       <>
-                        Get My Free Audit
+                        Get My Free Review
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                       </>
                     )}
                   </button>
-                  <p className="text-center text-[#374151] text-xs">No spam. No commitment. Just a free, honest audit.</p>
+                  <p className="text-center text-[#374151] text-xs">No spam. No commitment. Just a free, honest Review.</p>
                 </form>
               )}
             </div>

@@ -83,7 +83,7 @@ export const SERVICES = [
     tags: ["Search Intent", "Competitor Gaps", "Opportunity Mapping"],
     featured: false,
     accent: "blue" as const,
-    metric: { label: "Opportunities identified per audit", value: "50+" },
+    metric: { label: "Opportunities identified per consultation", value: "50+" },
   },
   {
     id: "links",
@@ -146,7 +146,7 @@ export const SERVICES = [
 export const HOW_IT_WORKS_STEPS = [
   {
     number: "01",
-    title: "Free Digital Presence Audit",
+    title: "Free Digital Presence Consultation",
     description:
       "We do a full analysis of your online visibility — website health, local rankings, competitors, and missed opportunities. No jargon. No sales pitch. Just the honest truth about where you stand.",
     detail: "Delivered in 48 hours",
@@ -196,7 +196,7 @@ export const TESTIMONIALS = [
 
 // ─── Hero Stats ───────────────────────────────────────────────────────────────
 export const HERO_STATS = [
-  { value: "Free", label: "SEO Audit" },
+  { value: "Free", label: "SEO Consultation" },
   { value: "48hr", label: "Turnaround" },
   { value: "Month-to-Month", label: "Flexible Contracts" },
   { value: "90-Day", label: "Results Guarantee" },
@@ -251,7 +251,7 @@ export const FOOTER_LINKS = {
   ],
   Company: ["About Us", "Our Mission", "Case Studies", "Blog"],
   Resources: [
-    "Free SEO Audit",
+    "Free SEO Consultation",
     "Small Business Guide",
     "Local SEO Checklist",
     "FAQ",

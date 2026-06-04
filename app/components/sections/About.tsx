@@ -14,7 +14,7 @@ const Check = () => (
 const aboveStats = [
   { value: "2025", label: "Founded" },
   { value: "UK",   label: "Based" },
-  { value: "48hr", label: "Audit Delivery" },
+  { value: "48hr", label: "Review Delivery" },
   { value: "90-Day", label: "Results Guarantee" },
 ];
 

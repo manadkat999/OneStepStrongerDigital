@@ -1,7 +1,7 @@
 const links = {
   Services: ["Local SEO", "Technical SEO", "Content Marketing", "Reputation & Reviews", "Keyword Strategy", "SEO Reporting"],
   Company: ["About Us", "Our Mission", "Case Studies", "Blog", "Careers"],
-  Resources: ["Free SEO Audit", "Small Business Guide", "Local SEO Checklist", "FAQ"],
+  Resources: ["Free SEO Consultation", "Small Business Guide", "Local SEO Checklist", "FAQ"],
 };
 
 const socials = [
@@ -38,10 +38,10 @@ export default function Footer() {
               <span className="gradient-text">searching for you.</span>
             </h2>
             <p className="text-gray-400 mb-8 max-w-lg mx-auto">
-              Get a free, no-obligation audit of your online presence. We&apos;ll show you exactly where you stand and how to get found by more local customers.
+              Get a free, no-obligation consultation of your online presence. We&apos;ll show you exactly where you stand and how to get found by more local customers.
             </p>
             <a href="#contact" className="btn-primary px-10 py-4 rounded-xl font-bold inline-flex items-center gap-2">
-              Claim Your Free Audit
+              Claim Your Free Consultation
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>

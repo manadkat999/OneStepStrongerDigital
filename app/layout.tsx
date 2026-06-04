@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     template: `%s | ${BUSINESS_NAME}`,
   },
   description:
-    "One Step Stronger Digital helps UK small businesses get found on Google. Expert local SEO, technical SEO, and content marketing that turns searches into real customers. Free 48-hour audit.",
+    "One Step Stronger Digital helps UK small businesses get found on Google. Expert local SEO, technical SEO, and content marketing that turns searches into real customers. Free 48-hour consultation.",
   keywords: [
     "One Step Stronger Digital",
     "digital marketing agency UK",
@@ -188,10 +188,10 @@ const organizationSchema = {
         },
         {
           "@type": "Question",
-          name: "What is included in the free SEO audit?",
+          name: "What is included in the free SEO consultation?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our free 48-hour audit covers technical SEO health, local search visibility, keyword opportunities, competitor analysis, and a custom growth roadmap — with no obligation.",
+            text: "Our free 48-hour consultation covers technical SEO health, local search visibility, keyword opportunities, competitor analysis, and a custom growth roadmap — with no obligation.",
           },
         },
         {
@@ -207,7 +207,7 @@ const organizationSchema = {
           name: "How much does SEO cost for a small business?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our plans start at £495/month for a Starter package and go up to £995/month for our full-service Growth plan. We also offer a free 48-hour audit with no commitment.",
+            text: "Our plans start at £495/month for a Starter package and go up to £995/month for our full-service Growth plan. We also offer a free 48-hour consultation with no commitment.",
           },
         },
       ],

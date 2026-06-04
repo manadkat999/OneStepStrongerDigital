@@ -89,8 +89,8 @@ export default function Hero() {
               className="mb-6 inline-flex items-center gap-2 bg-[#EEF2FF] border border-[#6366F1]/20 text-[#4F46E5] text-xs font-semibold px-4 py-2 rounded-full"
             >
               <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
-              UK Digital Agency · Free 48-Hour Audit
-            </motion.div>
+              UK Digital Agency · Free 48-Hour Review
+            </motion.div>Review
 
             <motion.h1
               initial={{ opacity: 0, y: 28 }}
@@ -121,7 +121,7 @@ export default function Hero() {
                 href="#contact"
                 className="btn-primary flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold"
               >
-                Get Your Free Audit
+                Get Your Free Review
                 <ArrowRight />
               </a>
               <a
@@ -141,7 +141,7 @@ export default function Hero() {
             >
               {[
                 { label: "90-day results guarantee" },
-                { label: "Free 48-hour audit" },
+                { label: "Free 48-hour Review" },
                 { label: "No long-term contracts" },
               ].map((t, i) => (
                 <motion.span

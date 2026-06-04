@@ -62,7 +62,7 @@ export default function HowItWorks() {
           <Button variant="primary" size="lg" href="#contact"
             icon={<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>}
           >
-            Start with Your Free Audit
+            Start with Your Free Review
           </Button>
           <p className="mt-3 text-[#374151] text-xs">Free · No commitment · 48-hour turnaround</p>
         </RevealOnScroll>

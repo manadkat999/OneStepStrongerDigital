@@ -4,7 +4,7 @@ import Container from "@/app/components/ui/Container";
 import Button from "@/app/components/ui/Button";
 
 const perks = [
-  "Free 48-hour audit",
+  "Free 48-hour Review",
   "No contracts",
   "Plain-English reporting",
   "90-day results guarantee",
@@ -50,7 +50,7 @@ export default function CTABanner() {
               </div>
 
               <Button variant="primary" size="lg" href="#contact" icon={<ArrowRight />}>
-                Claim Your Free Audit
+                Claim Your Free Review
               </Button>
             </div>
           </div>
