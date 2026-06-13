@@ -99,8 +99,8 @@ export default function Hero() {
         style={{ y: bgYSpring }}
         className="absolute inset-0 pointer-events-none"
       >
-        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-indigo-400/10 blur-[120px]" />
-        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-green-400/10 blur-[100px]" />
+        <div className="absolute top-1/3 left-1/4 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full bg-stone-300/25 blur-[120px]" />
+        <div className="absolute bottom-0 right-0 w-[400px] h-[400px] rounded-full bg-stone-400/15 blur-[100px]" />
       </motion.div>
 
       <Container className="relative z-10">
@@ -114,27 +114,27 @@ export default function Hero() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="mb-6 inline-flex items-center gap-2 bg-[#EEF2FF] border border-[#6366F1]/20 text-[#4F46E5] text-xs font-semibold px-4 py-2 rounded-full"
+              className="mb-8 inline-flex items-center gap-2.5 border border-stone-300 text-stone-700 text-[11px] font-medium uppercase tracking-[0.2em] px-4 py-2 rounded-full"
             >
-              <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse" />
-              UK Digital Agency · Free 48-Hour Review
-            </motion.div>Review
+              <span className="w-1.5 h-1.5 rounded-full bg-stone-900 animate-pulse" />
+              UK Digital Agency · Free 48-Hour Consultation
+            </motion.div>
 
             <motion.h1
               initial={{ opacity: 0, y: 28 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.1, ease: [0.25, 0.46, 0.45, 0.94] }}
-              className="text-5xl md:text-6xl xl:text-[4rem] font-black leading-[1.08] tracking-tight mb-6 text-[#1E1B4B]"
+              className="text-5xl md:text-6xl xl:text-[4.25rem] font-light leading-[1.05] tracking-tight mb-6 text-[#1C1917]"
             >
-              Your Business Deserves to{" "}
-              <span className="gradient-text">Be Found First.</span>
+              Your business deserves to{" "}
+              <span className="gradient-text font-normal italic">be found first.</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 24 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
-              className="text-[#4B5563] text-lg leading-relaxed mb-10 max-w-lg"
+              className="text-[#57534E] text-lg leading-relaxed mb-10 max-w-lg"
             >
               We help UK small businesses get to the top of Google — with expert SEO, professional design, and bespoke digital solutions. No jargon. No lock-ins. Real results.
             </motion.p>
@@ -149,12 +149,12 @@ export default function Hero() {
                 href="#contact"
                 className="btn-primary flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold"
               >
-                Get Your Free Review
+                Get Your Free Consultation
                 <ArrowRight />
               </a>
               <a
                 href="#services"
-                className="flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold border-2 border-[#6366F1]/25 text-[#4F46E5] hover:bg-[#EEF2FF] hover:border-[#6366F1]/50 transition-all duration-200 cursor-pointer"
+                className="flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold border-2 border-[#1C1917]/25 text-[#0C0A09] hover:bg-[#F5F5F4] hover:border-[#1C1917]/50 transition-all duration-200 cursor-pointer"
               >
                 Our Services
               </a>
@@ -169,7 +169,7 @@ export default function Hero() {
             >
               {[
                 { label: "90-day results guarantee" },
-                { label: "Free 48-hour Review" },
+                { label: "Free 48-hour consultation" },
                 { label: "No long-term contracts" },
               ].map((t, i) => (
                 <motion.span
@@ -177,7 +177,7 @@ export default function Hero() {
                   initial={{ opacity: 0, scale: 0.9 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4, delay: 0.5 + i * 0.08 }}
-                  className="flex items-center gap-1.5 text-xs font-medium text-[#16A34A] bg-[#F0FDF4] border border-[#22C55E]/25 rounded-full px-3.5 py-1.5"
+                  className="flex items-center gap-1.5 text-xs font-medium text-[#44403C] bg-[#F5F5F4] border border-[#1C1917]/25 rounded-full px-3.5 py-1.5"
                 >
                   <ShieldCheck />
                   {t.label}
@@ -199,21 +199,21 @@ export default function Hero() {
                 transition={{ duration: 0.8, delay: 0.3, ease: [0.25, 0.46, 0.45, 0.94] }}
                 className="card-glow rounded-2xl p-7"
               >
-                <div className="flex items-center gap-3 mb-6 pb-5 border-b border-[#E5E7EB]">
-                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#6366F1] to-[#4F46E5] flex items-center justify-center text-white font-black text-xs shadow-lg shadow-indigo-500/30">OS</div>
+                <div className="flex items-center gap-3 mb-6 pb-5 border-b border-[#E7E5E4]">
+                  <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#1C1917] to-[#0C0A09] flex items-center justify-center text-white font-semibold text-xs shadow-lg shadow-stone-900/20">OS</div>
                   <div>
-                    <p className="text-[#1E1B4B] font-semibold text-sm">Digital Presence Report</p>
-                    <p className="text-[#374151] text-xs">Rosa&apos;s Artisan Bakery · Example</p>
+                    <p className="text-[#1C1917] font-semibold text-sm">Digital Presence Report</p>
+                    <p className="text-[#57534E] text-xs">Rosa&apos;s Artisan Bakery · Example</p>
                   </div>
-                  <span className="ml-auto flex items-center gap-1 text-xs text-[#22C55E] font-semibold bg-[#F0FDF4] px-2 py-1 rounded-full border border-[#22C55E]/20">
-                    <span className="w-1.5 h-1.5 rounded-full bg-[#22C55E] animate-pulse" />Live
+                  <span className="ml-auto flex items-center gap-1 text-xs text-[#1C1917] font-semibold bg-[#F5F5F4] px-2 py-1 rounded-full border border-[#1C1917]/20">
+                    <span className="w-1.5 h-1.5 rounded-full bg-[#1C1917] animate-pulse" />Live
                   </span>
                 </div>
 
                 {[
-                  { label: "Visibility Score", after: 91, color: "#6366F1" },
-                  { label: "Local Rank",       after: 96, color: "#22C55E" },
-                  { label: "Review Score",     after: 88, color: "#818CF8" },
+                  { label: "Visibility Score", after: 91, color: "#1C1917" },
+                  { label: "Local Rank",       after: 96, color: "#1C1917" },
+                  { label: "Review Score",     after: 88, color: "#78716C" },
                 ].map((m, i) => (
                   <motion.div
                     key={m.label}
@@ -223,10 +223,10 @@ export default function Hero() {
                     transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
                   >
                     <div className="flex justify-between mb-1.5">
-                      <span className="text-[#4B5563] text-xs font-medium">{m.label}</span>
+                      <span className="text-[#57534E] text-xs font-medium">{m.label}</span>
                       <span className="text-xs font-bold" style={{ color: m.color }}>{m.after}%</span>
                     </div>
-                    <div className="h-2 bg-[#F3F4F6] rounded-full overflow-hidden">
+                    <div className="h-2 bg-[#EFEEEC] rounded-full overflow-hidden">
                       <motion.div
                         className="h-full rounded-full"
                         style={{ background: m.color }}
@@ -238,21 +238,21 @@ export default function Hero() {
                   </motion.div>
                 ))}
 
-                <div className="mt-5 grid grid-cols-3 gap-2 pt-4 border-t border-[#E5E7EB]">
+                <div className="mt-5 grid grid-cols-3 gap-2 pt-4 border-t border-[#E7E5E4]">
                   {[
-                    { v: "#1",    l: "Maps Rank",   c: "#6366F1" },
-                    { v: "+340%", l: "Traffic",      c: "#22C55E" },
-                    { v: "4.9★",  l: "Rating",       c: "#818CF8" },
+                    { v: "#1",    l: "Maps Rank",   c: "#1C1917" },
+                    { v: "+340%", l: "Traffic",      c: "#1C1917" },
+                    { v: "4.9★",  l: "Rating",       c: "#78716C" },
                   ].map((s, i) => (
                     <motion.div
                       key={s.l}
-                      className="bg-[#F8F9FF] rounded-xl p-2.5 text-center border border-[#E5E7EB]"
+                      className="bg-[#F5F5F4] rounded-xl p-2.5 text-center border border-[#E7E5E4]"
                       initial={{ opacity: 0, y: 12 }}
                       animate={{ opacity: 1, y: 0 }}
                       transition={{ duration: 0.4, delay: 1.1 + i * 0.1 }}
                     >
                       <p className="text-base font-black" style={{ color: s.c }}>{s.v}</p>
-                      <p className="text-[#374151] text-xs mt-0.5">{s.l}</p>
+                      <p className="text-[#57534E] text-xs mt-0.5">{s.l}</p>
                     </motion.div>
                   ))}
                 </div>
@@ -265,10 +265,10 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 1.2 }}
                 className="absolute -top-5 -right-5 card-glow rounded-xl px-3.5 py-2.5 flex items-center gap-2.5 w-52 shadow-xl"
               >
-                <span className="w-2 h-2 rounded-full bg-[#22C55E] animate-pulse flex-shrink-0" />
+                <span className="w-2 h-2 rounded-full bg-[#1C1917] animate-pulse flex-shrink-0" />
                 <div>
-                  <p className="text-[#1E1B4B] text-xs font-semibold leading-tight">New customer found you</p>
-                  <p className="text-[#374151] text-xs">via &quot;bakery near me&quot; · just now</p>
+                  <p className="text-[#1C1917] text-xs font-semibold leading-tight">New customer found you</p>
+                  <p className="text-[#57534E] text-xs">via &quot;bakery near me&quot; · just now</p>
                 </div>
               </motion.div>
 
@@ -279,9 +279,9 @@ export default function Hero() {
                 transition={{ duration: 0.5, delay: 1.35 }}
                 className="absolute -bottom-5 -left-5 card-glow rounded-xl px-3.5 py-2.5 w-44 shadow-xl"
               >
-                <p className="text-[#374151] text-xs mb-0.5">Now ranking</p>
-                <p className="text-[#1E1B4B] text-xs font-bold">&quot;best bakery london&quot;</p>
-                <p className="text-[#6366F1] text-xs font-bold mt-0.5">#1 · Google Maps ↑5</p>
+                <p className="text-[#57534E] text-xs mb-0.5">Now ranking</p>
+                <p className="text-[#1C1917] text-xs font-bold">&quot;best bakery london&quot;</p>
+                <p className="text-[#1C1917] text-xs font-bold mt-0.5">#1 · Google Maps ↑5</p>
               </motion.div>
             </div>
           </motion.div>
@@ -292,7 +292,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 24 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.7, delay: 0.5 }}
-          className="hero-stats-strip mt-20 pt-8 border-t border-[#E5E7EB] grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="hero-stats-strip mt-20 pt-8 border-t border-[#E7E5E4] grid grid-cols-2 md:grid-cols-4 gap-6"
         >
           {HERO_STATS.map((s, i) => (
             <motion.div
@@ -303,13 +303,13 @@ export default function Hero() {
               transition={{ duration: 0.5, delay: 0.6 + i * 0.1 }}
             >
               <p className="text-2xl md:text-3xl font-black gradient-text mb-1">{s.value}</p>
-              <p className="text-[#374151] text-sm font-medium">{s.label}</p>
+              <p className="text-[#57534E] text-sm font-medium">{s.label}</p>
             </motion.div>
           ))}
         </motion.div>
       </Container>
 
-      <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#F8F9FF] to-transparent pointer-events-none" />
+      <div className="absolute bottom-0 inset-x-0 h-24 bg-gradient-to-t from-[#F5F5F4] to-transparent pointer-events-none" />
     </section>
   );
 }

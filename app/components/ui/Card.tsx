@@ -28,11 +28,11 @@ export default function Card({
   return (
     <div
       className={cn(
-        "rounded-2xl bg-[#111] border transition-all duration-300",
-        glow ? "card-glow" : "border-white/8",
+        "rounded-2xl border transition-all duration-300",
+        glow ? "card-glow" : "border-stone-200 bg-stone-50",
         hover && "hover:-translate-y-1",
-        accent === "orange" && "border-t-2 border-t-orange-500/50",
-        accent === "blue"   && "border-t-2 border-t-blue-500/50",
+        accent === "orange" && "border-t-2 border-t-[#1C1917]/30",
+        accent === "blue"   && "border-t-2 border-t-[#1C1917]/30",
         paddingStyles[padding],
         className
       )}

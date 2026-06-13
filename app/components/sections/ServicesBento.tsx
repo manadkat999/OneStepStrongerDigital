@@ -74,15 +74,15 @@ const bentoLayout: Record<string, string> = {
 
 export default function ServicesBento() {
   return (
-    <Section id="services" className="bg-[#F3F4F6]">
+    <Section id="services" className="bg-[#EFEEEC]">
       <Container>
         <RevealOnScroll className="text-center mb-14">
           <SectionLabel>Our Services</SectionLabel>
-          <h2 className="text-4xl md:text-5xl font-black mb-5 leading-tight text-[#1E1B4B]">
+          <h2 className="text-4xl md:text-5xl font-light mb-5 leading-tight text-[#1C1917]">
             Everything Your Business Needs to{" "}
             <span className="gradient-text">Show Up Online</span>
           </h2>
-          <p className="text-[#4B5563] max-w-xl mx-auto">
+          <p className="text-[#57534E] max-w-xl mx-auto">
             From Google Maps to long-term organic traffic — we cover every angle of your digital presence.
           </p>
         </RevealOnScroll>
@@ -102,11 +102,11 @@ export default function ServicesBento() {
                   className={cn(
                     "card-glow rounded-2xl flex flex-col h-full group transition-all duration-300",
                     isFeatured ? "p-8 lg:p-10" : "p-7",
-                    isFeatured && "border-[#6366F1]/25 ring-1 ring-[#6366F1]/10"
+                    isFeatured && "border-[#1C1917]/25 ring-1 ring-[#1C1917]/10"
                   )}
                 >
                   {isFeatured && (
-                    <span className="self-start mb-4 text-xs bg-[#6366F1] text-white font-bold px-3 py-1 rounded-full shadow-sm shadow-indigo-500/30">
+                    <span className="self-start mb-4 text-[10px] uppercase tracking-[0.15em] bg-[#1C1917] text-white font-medium px-3 py-1 rounded-full shadow-sm shadow-stone-900/20">
                       Most Popular
                     </span>
                   )}
@@ -117,32 +117,32 @@ export default function ServicesBento() {
                       "rounded-xl flex items-center justify-center mb-5 flex-shrink-0 transition-colors duration-300",
                       isFeatured ? "w-14 h-14" : "w-11 h-11",
                       isIndigo
-                        ? "bg-[#EEF2FF] group-hover:bg-[#E0E7FF]"
-                        : "bg-[#F0FDF4] group-hover:bg-[#DCFCE7]"
+                        ? "bg-[#F5F5F4] group-hover:bg-[#E7E5E4]"
+                        : "bg-[#F5F5F4] group-hover:bg-[#E7E5E4]"
                     )}
                   >
-                    <div className={cn(isFeatured ? "w-7 h-7" : "w-5 h-5", isIndigo ? "text-[#6366F1]" : "text-[#22C55E]")}>
+                    <div className={cn(isFeatured ? "w-7 h-7" : "w-5 h-5", isIndigo ? "text-[#1C1917]" : "text-[#1C1917]")}>
                       {Icons[service.icon]}
                     </div>
                   </div>
 
-                  <h3 className={cn("font-black text-[#1E1B4B] mb-2", isFeatured ? "text-2xl" : "text-lg")}>
+                  <h3 className={cn("font-light text-[#1C1917] mb-2", isFeatured ? "text-2xl" : "text-lg")}>
                     {service.title}
                   </h3>
-                  <p className={cn("text-[#4B5563] leading-relaxed flex-1", isFeatured ? "text-base" : "text-sm")}>
+                  <p className={cn("text-[#57534E] leading-relaxed flex-1", isFeatured ? "text-base" : "text-sm")}>
                     {service.description}
                   </p>
 
                   {/* Metric callout */}
                   <div className={cn(
                     "mt-5 flex items-center gap-2",
-                    isFeatured ? "p-4 rounded-xl" : "pt-4 border-t border-[#E5E7EB]",
-                    isFeatured && (isIndigo ? "bg-[#EEF2FF]" : "bg-[#F0FDF4]")
+                    isFeatured ? "p-4 rounded-xl" : "pt-4 border-t border-[#E7E5E4]",
+                    isFeatured && (isIndigo ? "bg-[#F5F5F4]" : "bg-[#F5F5F4]")
                   )}>
-                    <span className={cn("font-black", isFeatured ? "text-2xl" : "text-xl", isIndigo ? "text-[#6366F1]" : "text-[#22C55E]")}>
+                    <span className={cn("font-light", isFeatured ? "text-2xl" : "text-xl", isIndigo ? "text-[#1C1917]" : "text-[#1C1917]")}>
                       {service.metric.value}
                     </span>
-                    <span className="text-[#374151] text-xs font-medium">{service.metric.label}</span>
+                    <span className="text-[#57534E] text-xs font-medium">{service.metric.label}</span>
                   </div>
 
                   {/* Tags */}
@@ -153,8 +153,8 @@ export default function ServicesBento() {
                         className={cn(
                           "text-xs px-2.5 py-1 rounded-full border font-medium",
                           isIndigo
-                            ? "bg-[#EEF2FF] text-[#4F46E5] border-[#6366F1]/20"
-                            : "bg-[#F0FDF4] text-[#16A34A] border-[#22C55E]/25"
+                            ? "bg-[#F5F5F4] text-[#0C0A09] border-[#1C1917]/20"
+                            : "bg-[#F5F5F4] text-[#44403C] border-[#1C1917]/25"
                         )}
                       >
                         {tag}
@@ -172,7 +172,7 @@ export default function ServicesBento() {
             href="#contact"
             className="btn-primary inline-flex items-center gap-2 px-8 py-4 rounded-xl text-base font-semibold"
           >
-            Get Your Free Review
+            Get Your Free Consultation
             <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>
           </a>
         </RevealOnScroll>

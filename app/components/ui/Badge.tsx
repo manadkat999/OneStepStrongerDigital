@@ -11,17 +11,17 @@ interface BadgeProps {
 }
 
 const variantStyles: Record<BadgeVariant, string> = {
-  orange:  "bg-[#EEF2FF] border-[#6366F1]/20 text-[#4F46E5]",
-  blue:    "bg-[#EEF2FF] border-[#6366F1]/20 text-[#4F46E5]",
-  neutral: "bg-[#F3F4F6] border-[#E5E7EB] text-[#4B5563]",
-  green:   "bg-[#F0FDF4] border-[#22C55E]/25 text-[#16A34A]",
+  orange:  "bg-[#F5F5F4] border-[#1C1917]/20 text-[#0C0A09]",
+  blue:    "bg-[#F5F5F4] border-[#1C1917]/20 text-[#0C0A09]",
+  neutral: "bg-[#EFEEEC] border-[#E7E5E4] text-[#57534E]",
+  green:   "bg-[#F5F5F4] border-[#1C1917]/25 text-[#44403C]",
 };
 
 const dotStyles: Record<BadgeVariant, string> = {
-  orange:  "bg-[#6366F1]",
-  blue:    "bg-[#6366F1]",
-  neutral: "bg-[#9CA3AF]",
-  green:   "bg-[#22C55E]",
+  orange:  "bg-[#1C1917]",
+  blue:    "bg-[#1C1917]",
+  neutral: "bg-[#A8A29E]",
+  green:   "bg-[#1C1917]",
 };
 
 export default function Badge({ children, variant = "orange", dot = false, className }: BadgeProps) {
@@ -43,7 +43,7 @@ export default function Badge({ children, variant = "orange", dot = false, class
 
 export function SectionLabel({ children, className }: { children: ReactNode; className?: string }) {
   return (
-    <p className={cn("text-[#6366F1] text-xs font-bold tracking-widest uppercase mb-4", className)}>
+    <p className={cn("text-[#78716C] text-[11px] font-medium tracking-[0.25em] uppercase mb-4", className)}>
       {children}
     </p>
   );

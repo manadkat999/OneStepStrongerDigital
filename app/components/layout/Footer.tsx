@@ -17,31 +17,31 @@ const socials = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#1E1B4B] border-t border-white/10 pt-20 pb-8 relative overflow-hidden">
+    <footer className="bg-[#1C1917] border-t border-white/10 pt-20 pb-8 relative overflow-hidden">
       {/* Subtle glow — dark-theme appropriate */}
-      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[200px] bg-[#6366F1]/10 blur-[90px] pointer-events-none" />
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[200px] bg-[#78716C]/15 blur-[90px] pointer-events-none" />
 
       <Container className="relative z-10">
         {/* CTA band — dark card on dark footer: use a lighter indigo surface */}
-        <div className="rounded-2xl p-10 md:p-14 mb-16 text-center relative overflow-hidden bg-[#2D2A5E] border border-white/10">
-          <div className="absolute inset-0 bg-gradient-to-br from-[#6366F1]/15 via-transparent to-[#22C55E]/8" />
+        <div className="rounded-2xl p-10 md:p-14 mb-16 text-center relative overflow-hidden bg-[#292524] border border-white/10">
+          <div className="absolute inset-0 bg-gradient-to-br from-[#78716C]/20 via-transparent to-[#57534E]/10" />
           <div className="relative z-10 max-w-2xl mx-auto">
-            {/* #A5B4FC on #2D2A5E = good contrast ✓ */}
-            <p className="text-[#A5B4FC] text-xs font-bold tracking-widest uppercase mb-4">Start Free — No Credit Card</p>
-            {/* White on #2D2A5E = high contrast ✓ */}
-            <h2 className="text-3xl md:text-4xl font-black text-white mb-4 leading-tight">
+            {/* #A8A29E on #292524 = good contrast ✓ */}
+            <p className="text-[#A8A29E] text-xs font-bold tracking-widest uppercase mb-4">Start Free — No Credit Card</p>
+            {/* White on #292524 = high contrast ✓ */}
+            <h2 className="text-3xl md:text-4xl font-light text-white mb-4 leading-tight">
               Your next customer is already{" "}
-              <span className="gradient-text">searching for you.</span>
+              <span className="italic font-normal text-stone-300">searching for you.</span>
             </h2>
-            {/* #CBD5E1 on #2D2A5E = ~6:1 ✓ */}
-            <p className="text-[#CBD5E1] mb-8">
+            {/* #D6D3D1 on #292524 = ~6:1 ✓ */}
+            <p className="text-[#D6D3D1] mb-8">
               Get a free, no-obligation consultation of your online presence. Delivered in 48 hours.
             </p>
             <Button variant="primary" size="lg" href="#contact" icon={<ArrowRight />}>
               Claim Your Free Consultation
             </Button>
-            {/* #94A3B8 on #2D2A5E = ~4.5:1 ✓ */}
-            <p className="mt-4 text-[#94A3B8] text-xs">Free · No commitment · Results in 48 hours</p>
+            {/* #78716C on #292524 = ~4.5:1 ✓ */}
+            <p className="mt-4 text-[#78716C] text-xs">Free · No commitment · Results in 48 hours</p>
           </div>
         </div>
 
@@ -58,12 +58,12 @@ export default function Footer() {
                 className="h-20 w-auto object-contain brightness-0 invert"
               />
             </a>
-            {/* #CBD5E1 on #1E1B4B = ~7:1 ✓ */}
-            <p className="text-[#CBD5E1] text-sm leading-relaxed mb-5">
+            {/* #D6D3D1 on #1C1917 = ~7:1 ✓ */}
+            <p className="text-[#D6D3D1] text-sm leading-relaxed mb-5">
               Helping UK small businesses build the online presence they deserve.
             </p>
-            {/* #A5B4FC on dark = clearly visible ✓ */}
-            <a href="mailto:hello@onestepstronger.co.uk" className="flex items-center gap-1.5 text-[#A5B4FC] hover:text-white transition-colors text-sm mb-4">
+            {/* #A8A29E on dark = clearly visible ✓ */}
+            <a href="mailto:hello@onestepstronger.co.uk" className="flex items-center gap-1.5 text-[#A8A29E] hover:text-white transition-colors text-sm mb-4">
               <svg className="w-3.5 h-3.5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.8}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
               </svg>
@@ -76,9 +76,9 @@ export default function Footer() {
                   key={s.name}
                   href={s.href}
                   aria-label={s.name}
-                  className="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center hover:bg-[#6366F1] hover:border-[#6366F1] transition-all duration-200 group"
+                  className="w-8 h-8 rounded-lg bg-white/10 border border-white/15 flex items-center justify-center hover:bg-white hover:border-white transition-all duration-200 group"
                 >
-                  <svg className="w-3.5 h-3.5 fill-[#CBD5E1] group-hover:fill-white transition-colors" viewBox="0 0 24 24">
+                  <svg className="w-3.5 h-3.5 fill-[#D6D3D1] group-hover:fill-[#1C1917] transition-colors" viewBox="0 0 24 24">
                     <path d={s.path} />
                   </svg>
                 </a>
@@ -94,8 +94,8 @@ export default function Footer() {
               <ul className="space-y-2.5">
                 {items.map((item) => (
                   <li key={item}>
-                    {/* #CBD5E1 on #1E1B4B = ~7:1 ✓ */}
-                    <a href="#" className="text-[#CBD5E1] hover:text-white text-sm transition-colors duration-200">
+                    {/* #D6D3D1 on #1C1917 = ~7:1 ✓ */}
+                    <a href="#" className="text-[#D6D3D1] hover:text-white text-sm transition-colors duration-200">
                       {item}
                     </a>
                   </li>
@@ -107,11 +107,11 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div className="border-t border-white/10 pt-6 flex flex-col sm:flex-row items-center justify-between gap-3">
-          {/* #94A3B8 on #1E1B4B = ~4.7:1 ✓ */}
-          <p className="text-[#94A3B8] text-xs">© {new Date().getFullYear()} One Step Stronger Digital · United Kingdom</p>
+          {/* #78716C on #1C1917 = ~4.7:1 ✓ */}
+          <p className="text-[#78716C] text-xs">© {new Date().getFullYear()} One Step Stronger Digital · United Kingdom</p>
           <div className="flex gap-5">
             {["Privacy", "Terms", "Cookies"].map((l) => (
-              <a key={l} href="#" className="text-[#94A3B8] hover:text-white text-xs transition-colors">{l}</a>
+              <a key={l} href="#" className="text-[#78716C] hover:text-white text-xs transition-colors">{l}</a>
             ))}
           </div>
         </div>

@@ -48,10 +48,10 @@ export default function Navbar() {
             <a
               key={l.label}
               href={l.href}
-              className="text-[13px] font-medium text-[#4B5563] hover:text-[#6366F1] transition-colors duration-200 relative group cursor-pointer"
+              className="text-xs font-medium uppercase tracking-[0.18em] text-stone-600 hover:text-stone-900 transition-colors duration-200 relative group cursor-pointer"
             >
               {l.label}
-              <span className="absolute -bottom-0.5 left-0 w-0 h-0.5 bg-[#6366F1] group-hover:w-full transition-all duration-300 rounded-full" />
+              <span className="absolute -bottom-1 left-0 w-0 h-px bg-stone-900 group-hover:w-full transition-all duration-300" />
             </a>
           ))}
         </nav>
@@ -60,7 +60,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a
             href="#results"
-            className="text-sm font-medium text-[#4B5563] hover:text-[#6366F1] transition-colors cursor-pointer px-3 py-2"
+            className="text-xs font-medium uppercase tracking-[0.18em] text-stone-600 hover:text-stone-900 transition-colors cursor-pointer px-3 py-2"
           >
             See Results
           </a>
@@ -80,21 +80,21 @@ export default function Navbar() {
           className="md:hidden p-2 flex flex-col gap-1.5 cursor-pointer"
           onClick={() => setOpen(!open)}
         >
-          <span className={cn("block w-5 h-0.5 bg-[#1E1B4B] transition-all duration-300", open && "rotate-45 translate-y-2")} />
-          <span className={cn("block w-5 h-0.5 bg-[#1E1B4B] transition-all duration-300", open && "opacity-0")} />
-          <span className={cn("block w-5 h-0.5 bg-[#1E1B4B] transition-all duration-300", open && "-rotate-45 -translate-y-2")} />
+          <span className={cn("block w-5 h-0.5 bg-stone-900 transition-all duration-300", open && "rotate-45 translate-y-2")} />
+          <span className={cn("block w-5 h-0.5 bg-stone-900 transition-all duration-300", open && "opacity-0")} />
+          <span className={cn("block w-5 h-0.5 bg-stone-900 transition-all duration-300", open && "-rotate-45 -translate-y-2")} />
         </button>
       </Container>
 
       {/* Mobile drawer */}
       <div className={cn("md:hidden overflow-hidden transition-all duration-300", open ? "max-h-96" : "max-h-0")}>
-        <Container className="bg-white/95 backdrop-blur-md border-t border-indigo-100 flex flex-col gap-1 py-5 shadow-lg">
+        <Container className="bg-stone-50/95 backdrop-blur-md border-t border-stone-200 flex flex-col gap-1 py-5 shadow-lg">
           {NAV_LINKS.map((l) => (
             <a
               key={l.label}
               href={l.href}
               onClick={() => setOpen(false)}
-              className="text-[#4B5563] hover:text-[#6366F1] hover:bg-[#EEF2FF] transition-colors py-2.5 px-3 text-sm font-medium rounded-lg cursor-pointer"
+              className="text-stone-600 hover:text-stone-900 hover:bg-stone-100 transition-colors py-2.5 px-3 text-sm font-medium rounded-lg cursor-pointer"
             >
               {l.label}
             </a>

@@ -22,7 +22,7 @@ const BUSINESS_NAME = "One Step Stronger Digital";
 const GA_ID = "G-Y5WRK4SXR1";
 
 export const viewport: Viewport = {
-  themeColor: "#6366F1",
+  themeColor: "#1C1917",
   width: "device-width",
   initialScale: 1,
 };
@@ -225,7 +225,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
         />
       </head>
-      <body className="bg-[#F8F9FF] text-[#1E1B4B] antialiased">
+      <body className="bg-[#F5F5F4] text-[#1C1917] antialiased">
         <SmoothScroll>
         {children}
         </SmoothScroll>
