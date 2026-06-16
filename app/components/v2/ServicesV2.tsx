@@ -68,7 +68,7 @@ export default function ServicesV2() {
   };
 
   return (
-    <section id="work" className="services-v2 bg-[#FAFAF9] px-6 py-28 md:px-12 md:py-36">
+    <section id="work" className="services-v2 scroll-mt-24 bg-[#FAFAF9] px-6 py-28 md:px-12 md:py-36">
       <div className="mx-auto max-w-6xl">
         <motion.header
           initial={{ opacity: 0, y: 24 }}

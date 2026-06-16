@@ -13,7 +13,7 @@ export default function ClosingV2() {
   const reduce = useReducedMotion();
 
   return (
-    <section id="contact" className="closing-v2 bg-[#1C1917] px-6 py-32 text-stone-50 md:px-12 md:py-44">
+    <section id="contact" className="closing-v2 scroll-mt-24 bg-[#1C1917] px-6 py-32 text-stone-50 md:px-12 md:py-44">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}

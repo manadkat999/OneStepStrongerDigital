@@ -31,7 +31,7 @@ export default function HeroV2() {
   };
 
   return (
-    <section className="hero-v2 relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#FAFAF9] px-6 pt-32 pb-20 md:px-12">
+    <section id="top" className="hero-v2 relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#FAFAF9] px-6 pt-32 pb-20 md:px-12">
       {/* texture */}
       <div aria-hidden className="dot-bg pointer-events-none absolute inset-0 opacity-60" />
       <div
