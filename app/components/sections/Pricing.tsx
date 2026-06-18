@@ -30,12 +30,12 @@ const SEO_TIERS = [
     cta: "Get Started",
     features: [
       "Google Business Profile setup & optimisation",
-      "Local SEO foundation (up to 3 target terms)",
-      "On-page optimisation (up to 5 pages)",
-      "Local citation building & cleanup",
+      "Fixed technical problems",
+      "Robots.txt and sitemap optimization",
+      "Match page-keywords",
+      "Semantic on-page optimization (up to 10 pages)",
+      "Metadata optimisation",
       "Monthly keyword ranking report",
-      "Clear monthly summary",
-      "Email support",
     ],
     note: null,
   },
@@ -48,13 +48,12 @@ const SEO_TIERS = [
     cta: "Start Growing",
     features: [
       "Everything in Starter",
-      "Full keyword strategy (up to 50 terms)",
-      "2 optimised content pages per month",
-      "Digital PR & outreach",
+      "Keyword Analysis",
+      "Data Markup",
+      "Core Web Vitals and Performance Optimization",
+      "Semantic optimisation (all pages)",
       "Review generation strategy",
-      "Competitor gap analysis",
-      "Google Business Profile ongoing management",
-      "Priority support & monthly strategy call",
+      "Orphan & Duplicate pages",
     ],
     note: "Most clients choose this.",
   },
@@ -66,13 +65,13 @@ const SEO_TIERS = [
     featured: false,
     cta: "Let's Talk",
     features: [
-      "Everything in Growth",
-      "Dedicated SEO strategist",
+      "Dedicated SEO Strategist",
+      "Deep audit SXO (Search Experience Optimization)",
       "4+ content pieces per month",
-      "Digital PR & press outreach",
-      "Quarterly technical SEO deep-dive",
-      "Custom reporting & analytics dashboard",
-      "Quarterly in-depth strategy session",
+      "Information Architecture Optimization",
+      "AI SEO Optimization",
+      "Competitor gap analysis",
+      "SEO Migration",
     ],
     note: null,
   },
@@ -297,6 +296,31 @@ export default function Pricing() {
                 <div className="flex-shrink-0 sm:ml-auto">
                   <Button variant="outline" size="md" href="#contact" icon={<ArrowRight />}>
                     Ask About the Bundle
+                  </Button>
+                </div>
+              </div>
+            </div>
+          </RevealOnScroll>
+        )}
+
+        {/* SEO Migration CTA - SEO tab only */}
+        {tab === "seo" && (
+          <RevealOnScroll delay={300} className="mt-5">
+            <div className="bg-white card-glow rounded-2xl p-6 md:p-8 relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-br from-[#F5F5F4] via-transparent to-transparent" />
+              <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
+                <div>
+                  <span className="inline-block bg-[#F5F5F4] border border-[#1C1917]/20 text-[#0C0A09] text-xs font-bold px-3 py-1 rounded-full mb-2">
+                    SEO Migration
+                  </span>
+                  <h3 className="text-lg font-light text-[#1C1917] mb-1">Migrating your website?</h3>
+                  <p className="text-[#57534E] text-sm max-w-lg">
+                    Moving to a new domain, TLD, or CMS, or consolidating multiple websites? Contact us for a free quote - we&apos;ll assess the situation and provide a clear estimate with no surprises.
+                  </p>
+                </div>
+                <div className="flex-shrink-0 sm:ml-auto">
+                  <Button variant="outline" size="md" href="#contact" icon={<ArrowRight />}>
+                    Get a Free Quote
                   </Button>
                 </div>
               </div>
