@@ -65,11 +65,10 @@ const bentoLayout: Record<string, string> = {
   "technical-seo":  "lg:col-span-1",
   "content":        "lg:col-span-1",
   "keywords":       "lg:col-span-1",
-  "links":          "lg:col-span-1",
-  "analytics":      "lg:col-span-2",
   "reviews":        "lg:col-span-1",
+  "analytics":      "lg:col-span-2",
   "graphic-design": "lg:col-span-1",
-  "bespoke-apps":   "lg:col-span-2",
+  "bespoke-apps":   "lg:col-span-3",
 };
 
 export default function ServicesBento() {

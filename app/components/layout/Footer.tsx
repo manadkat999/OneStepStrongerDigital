@@ -48,14 +48,15 @@ export default function Footer() {
         {/* Links grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
           <div className="col-span-2 md:col-span-1">
-            {/* Logo — larger, inverted to white */}
+            {/* Logo — dark-mode version (white wordmark + gradient mark) */}
             <a href="#" className="flex items-center mb-5 select-none">
               <Image
-                src="/logo.png"
+                src="/logo-dark.svg"
                 alt="One Step Stronger Digital"
-                width={280}
-                height={80}
-                className="h-20 w-auto object-contain brightness-0 invert"
+                width={840}
+                height={252}
+                className="h-20 w-auto object-contain"
+                unoptimized
               />
             </a>
             {/* #D6D3D1 on #1C1917 = ~7:1 ✓ */}

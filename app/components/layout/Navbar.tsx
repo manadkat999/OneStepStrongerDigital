@@ -33,12 +33,13 @@ export default function Navbar() {
         {/* Logo */}
         <a href="#" className="flex items-center group select-none" aria-label="One Step Stronger Digital - Home">
           <Image
-            src="/logo.png"
+            src="/logo.svg"
             alt="One Step Stronger Digital"
-            width={240}
-            height={64}
+            width={840}
+            height={252}
             className="h-16 w-auto object-contain"
             priority
+            unoptimized
           />
         </a>
 

@@ -68,7 +68,7 @@ export const SERVICES = [
     icon: "document",
     title: "Content That Converts",
     description:
-      "Good content does two things: it helps people find you, and it gives them a reason to get in touch. We write pages that actually do both.",
+      "Good content does two things: it helps people find you, and it gives them a reason to get in touch. We write pages optimised for search engines and LLMs, so your business shows up wherever people are looking.",
     tags: ["Service Pages", "Blog & FAQ", "EEAT"],
     featured: false,
     accent: "orange" as const,
@@ -86,17 +86,6 @@ export const SERVICES = [
     metric: { label: "Opportunities identified per consultation", value: "50+" },
   },
   {
-    id: "links",
-    icon: "link",
-    title: "Link Building",
-    description:
-      "Links from credible, relevant sites tell Google you're worth paying attention to. We build them properly — no shortcuts, no spam.",
-    tags: ["Local Press", "Digital PR", "Guest Posts"],
-    featured: false,
-    accent: "orange" as const,
-    metric: { label: "Only approach we use", value: "White-hat" },
-  },
-  {
     id: "reviews",
     icon: "star",
     title: "Reputation & Reviews",
@@ -110,9 +99,9 @@ export const SERVICES = [
   {
     id: "analytics",
     icon: "chart",
-    title: "Plain-English Reporting",
+    title: "Clear Monthly Reporting",
     description:
-      "Once a month, you get a plain-English update on what's changed, what we're doing next, and how many people found you through search. No logins, no dashboards, no decoding required.",
+      "Once a month, you get a clear update on what's changed, what we're doing next, and how many people found you through search.",
     tags: ["Monthly Reports", "ROI Tracking", "Clear Metrics"],
     featured: false,
     accent: "orange" as const,
@@ -124,7 +113,7 @@ export const SERVICES = [
     title: "Professional Graphic Design",
     description:
       "First impressions matter. Whether it's a logo, brand identity, social media assets, or print materials — we create designs that look professional, feel consistent, and make your business stand out.",
-    tags: ["Logo & Branding", "Social Media Assets", "Print & Digital"],
+    tags: ["Logo & Branding", "Social Media Assets", "Print Materials"],
     featured: false,
     accent: "orange" as const,
     metric: { label: "Turnaround on most projects", value: "5–7 days" },
@@ -148,7 +137,7 @@ export const HOW_IT_WORKS_STEPS = [
     number: "01",
     title: "Free Digital Presence Consultation",
     description:
-      "We do a full analysis of your online visibility — website health, local rankings, competitors, and missed opportunities. No jargon. No sales pitch. Just the honest truth about where you stand.",
+      "We do a full analysis of your online visibility — website health, local rankings, competitors, and missed opportunities. No sales pitch. Just the honest truth about where you stand.",
     detail: "Delivered in 48 hours",
     accent: "orange" as const,
   },
@@ -156,7 +145,7 @@ export const HOW_IT_WORKS_STEPS = [
     number: "02",
     title: "A Plan Built for Your Business",
     description:
-      "No cookie-cutter packages. We build a strategy around your specific goals, market, and budget — whether you're a candle maker, an app founder, or a growing local firm.",
+      "We build a strategy around your specific goals, market, and budget — whether you're a candle maker, an app founder, or a growing local firm.",
     detail: "Custom to your goals",
     accent: "blue" as const,
   },
@@ -164,7 +153,7 @@ export const HOW_IT_WORKS_STEPS = [
     number: "03",
     title: "We Grow. You Run Your Business.",
     description:
-      "We handle everything — rankings, content, reviews, backlinks — and report back monthly in plain English. You focus on serving customers while we grow your visibility.",
+      "We handle everything — rankings, content, reviews — and send a clear monthly update. You focus on serving customers while we grow your visibility.",
     detail: "Month-over-month results",
     accent: "orange" as const,
   },
@@ -199,18 +188,13 @@ export const HERO_STATS = [
   { value: "Free", label: "SEO Consultation" },
   { value: "48hr", label: "Turnaround" },
   { value: "Month-to-Month", label: "Flexible Contracts" },
-  { value: "90-Day", label: "Results Guarantee" },
 ] as const;
 
 // ─── About ────────────────────────────────────────────────────────────────────
 export const VALUES = [
   {
     title: "We're on your side",
-    desc: "Big brands can afford to throw money at Google ads and still come out ahead. We help the businesses that can't do that compete anyway.",
-  },
-  {
-    title: "No jargon, ever",
-    desc: "We'll always tell you what we're doing and why, in plain English. If we can't explain it clearly, we probably shouldn't be doing it.",
+    desc: "Big brands can afford to throw money at Google Ads and SEO and still come out ahead. We help the businesses that can't do that compete anyway.",
   },
   {
     title: "We play the long game",

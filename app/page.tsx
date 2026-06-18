@@ -8,6 +8,7 @@ import Testimonials from "@/app/components/sections/Testimonials";
 import About from "@/app/components/sections/About";
 import Pricing from "@/app/components/sections/Pricing";
 import CTABanner from "@/app/components/sections/CTABanner";
+import FAQ from "@/app/components/sections/FAQ";
 import Contact from "@/app/components/sections/Contact";
 import MarqueeStrip from "@/app/components/sections/MarqueeStrip";
 
@@ -24,6 +25,7 @@ export default function Home() {
         <Testimonials />
         <About />
         <Pricing />
+        <FAQ />
         <CTABanner />
         <Contact />
       </main>

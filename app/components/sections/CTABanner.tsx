@@ -6,8 +6,7 @@ import Button from "@/app/components/ui/Button";
 const perks = [
   "Free 48-hour consultation",
   "No contracts",
-  "Plain-English reporting",
-  "90-day results guarantee",
+  "Clear monthly reporting",
 ];
 
 const ArrowRight = () => (

@@ -127,7 +127,7 @@ export default function Hero() {
               className="text-5xl md:text-6xl xl:text-[4.25rem] font-light leading-[1.05] tracking-tight mb-6 text-[#1C1917]"
             >
               Your business deserves to{" "}
-              <span className="gradient-text font-normal italic">be found first.</span>
+              <span className="gradient-text font-normal italic">be found.</span>
             </motion.h1>
 
             <motion.p
@@ -136,7 +136,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
               className="text-[#57534E] text-lg leading-relaxed mb-10 max-w-lg"
             >
-              We help UK small businesses get to the top of Google — with expert SEO, professional design, and bespoke digital solutions. No jargon. No lock-ins. Real results.
+              We help UK small businesses get to the top of Google — with expert SEO, professional design, and bespoke digital solutions.
             </motion.p>
 
             <motion.div
@@ -149,7 +149,7 @@ export default function Hero() {
                 href="#contact"
                 className="btn-primary flex items-center gap-2 px-7 py-3.5 rounded-xl text-base font-semibold"
               >
-                Get Your Free Consultation
+                Get Your Free SEO Analysis
                 <ArrowRight />
               </a>
               <a
@@ -168,7 +168,6 @@ export default function Hero() {
               className="mt-10 flex flex-wrap items-center gap-2.5"
             >
               {[
-                { label: "90-day results guarantee" },
                 { label: "Free 48-hour consultation" },
                 { label: "No long-term contracts" },
               ].map((t, i) => (
@@ -281,7 +280,7 @@ export default function Hero() {
               >
                 <p className="text-[#57534E] text-xs mb-0.5">Now ranking</p>
                 <p className="text-[#1C1917] text-xs font-bold">&quot;best bakery london&quot;</p>
-                <p className="text-[#1C1917] text-xs font-bold mt-0.5">#1 · Google Maps ↑5</p>
+                <p className="text-[#1C1917] text-xs font-bold mt-0.5">Top 3 · Google Maps ↑5</p>
               </motion.div>
             </div>
           </motion.div>

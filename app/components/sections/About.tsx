@@ -15,7 +15,6 @@ const aboveStats = [
   { value: "2025", label: "Founded" },
   { value: "UK",   label: "Based" },
   { value: "48hr", label: "Consultation Delivery" },
-  { value: "90-Day", label: "Results Guarantee" },
 ];
 
 const capabilities = [
@@ -26,7 +25,7 @@ const capabilities = [
       </svg>
     ),
     title: "SEO & Digital Marketing",
-    desc: "Getting your business found on Google — local SEO, technical SEO, content, link building, and plain-English reporting.",
+    desc: "Getting your business found on Google — local SEO, technical SEO, content, and clear monthly reporting.",
     color: "#1C1917",
     bg: "#F5F5F4",
   },
@@ -63,11 +62,11 @@ export default function About() {
         <RevealOnScroll className="text-center mb-16">
           <SectionLabel>Who We Are</SectionLabel>
           <h2 className="text-4xl md:text-5xl font-light mb-6 leading-tight">
-            A small team that backs{" "}
-            <span className="gradient-text">small businesses.</span>
+            A team that backs{" "}
+            <span className="gradient-text">small business.</span>
           </h2>
           <p className="text-[#1C1917] text-xl max-w-3xl mx-auto leading-relaxed">
-            Between us we&apos;ve got backgrounds in web development, graphic design, copywriting, app development, and digital marketing. We&apos;re not a big agency — and that&apos;s the point. We came together because we kept seeing the same thing: decent, hard-working businesses getting buried online while their flashier competitors hoovered up all the traffic.
+            Between us we have deep experience in web development, graphic design, copywriting, app development, and digital marketing. We&apos;re not a big agency — and that&apos;s the point. We came together because we kept seeing the same thing: decent, hard-working businesses getting buried online while their flashier competitors hoovered up all the traffic.
           </p>
         </RevealOnScroll>
 
