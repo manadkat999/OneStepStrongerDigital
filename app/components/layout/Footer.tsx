@@ -18,16 +18,16 @@ const socials = [
 export default function Footer() {
   return (
     <footer className="bg-[#1C1917] border-t border-white/10 pt-20 pb-8 relative overflow-hidden">
-      {/* Subtle glow — dark-theme appropriate */}
+      {/* Subtle glow - dark-theme appropriate */}
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[200px] bg-[#78716C]/15 blur-[90px] pointer-events-none" />
 
       <Container className="relative z-10">
-        {/* CTA band — dark card on dark footer: use a lighter indigo surface */}
+        {/* CTA band - dark card on dark footer: use a lighter indigo surface */}
         <div className="rounded-2xl p-10 md:p-14 mb-16 text-center relative overflow-hidden bg-[#292524] border border-white/10">
           <div className="absolute inset-0 bg-gradient-to-br from-[#78716C]/20 via-transparent to-[#57534E]/10" />
           <div className="relative z-10 max-w-2xl mx-auto">
             {/* #A8A29E on #292524 = good contrast ✓ */}
-            <p className="text-[#A8A29E] text-xs font-bold tracking-widest uppercase mb-4">Start Free — No Credit Card</p>
+            <p className="text-[#A8A29E] text-xs font-bold tracking-widest uppercase mb-4">Start Free - No Credit Card</p>
             {/* White on #292524 = high contrast ✓ */}
             <h2 className="text-3xl md:text-4xl font-light text-white mb-4 leading-tight">
               Your next customer is already{" "}
@@ -35,10 +35,10 @@ export default function Footer() {
             </h2>
             {/* #D6D3D1 on #292524 = ~6:1 ✓ */}
             <p className="text-[#D6D3D1] mb-8">
-              Get a free, no-obligation consultation of your online presence. Delivered in 48 hours.
+              Get a free, no-obligation analysis of your online presence. Delivered in 48 hours.
             </p>
             <Button variant="primary" size="lg" href="#contact" icon={<ArrowRight />}>
-              Claim Your Free Consultation
+              Claim Your Free SEO Analysis
             </Button>
             {/* #78716C on #292524 = ~4.5:1 ✓ */}
             <p className="mt-4 text-[#78716C] text-xs">Free · No commitment · Results in 48 hours</p>
@@ -48,7 +48,7 @@ export default function Footer() {
         {/* Links grid */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-10 mb-14">
           <div className="col-span-2 md:col-span-1">
-            {/* Logo — dark-mode version (white wordmark + gradient mark) */}
+            {/* Logo - dark-mode version (white wordmark + gradient mark) */}
             <a href="#" className="flex items-center mb-5 select-none">
               <Image
                 src="/logo-dark.svg"
@@ -70,7 +70,7 @@ export default function Footer() {
               </svg>
               hello@onestepstronger.co.uk
             </a>
-            {/* Social icons — dark-theme: transparent bg, white icons */}
+            {/* Social icons - dark-theme: transparent bg, white icons */}
             <div className="flex gap-2.5">
               {socials.map((s) => (
                 <a

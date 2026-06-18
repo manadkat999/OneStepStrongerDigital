@@ -1,7 +1,7 @@
 const links = {
   Services: ["Local SEO", "Technical SEO", "Content Marketing", "Reputation & Reviews", "Keyword Strategy", "SEO Reporting"],
   Company: ["About Us", "Our Mission", "Case Studies", "Blog", "Careers"],
-  Resources: ["Free SEO Consultation", "Small Business Guide", "Local SEO Checklist", "FAQ"],
+  Resources: ["Free SEO Analysis", "Small Business Guide", "Local SEO Checklist", "FAQ"],
 };
 
 const socials = [
@@ -32,7 +32,7 @@ export default function Footer() {
         <div className="card-glow rounded-2xl p-8 md:p-12 mb-16 text-center relative overflow-hidden">
           <div className="absolute inset-0 bg-gradient-to-r from-orange-500/5 via-transparent to-blue-500/5" />
           <div className="relative z-10">
-            <p className="text-orange-400 text-xs font-bold tracking-widest uppercase mb-3">Get Started Today — It&apos;s Free</p>
+            <p className="text-orange-400 text-xs font-bold tracking-widest uppercase mb-3">Get Started Today - It&apos;s Free</p>
             <h2 className="text-3xl md:text-4xl font-black text-white mb-4">
               Your next customer is already{" "}
               <span className="gradient-text">searching for you.</span>
@@ -41,7 +41,7 @@ export default function Footer() {
               Get a free, no-obligation consultation of your online presence. We&apos;ll show you exactly where you stand and how to get found by more local customers.
             </p>
             <a href="#contact" className="btn-primary px-10 py-4 rounded-xl font-bold inline-flex items-center gap-2">
-              Claim Your Free Consultation
+              Claim Your Free SEO Analysis
               <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
               </svg>

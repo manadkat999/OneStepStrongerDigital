@@ -1,9 +1,9 @@
 "use client";
 
 /**
- * ServicesV2 — bento grid of capabilities with scroll-reveal + stable hover.
+ * ServicesV2 - bento grid of capabilities with scroll-reveal + stable hover.
  * Hover uses colour/border + a transform-only lift (no layout shift), per the
- * UI/UX skill's "stable hover states" rule. SVG icons only — no emoji.
+ * UI/UX skill's "stable hover states" rule. SVG icons only - no emoji.
  */
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
@@ -29,7 +29,7 @@ const SERVICES: Service[] = [
   {
     n: "01",
     title: "Local & Technical SEO",
-    desc: "Get found first when nearby customers search. Foundations, content, links and a clean technical base — reported in plain English.",
+    desc: "Get found first when nearby customers search. Foundations, content, links and a clean technical base - reported in plain English.",
     wide: true,
     icon: icon("m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z"),
   },
@@ -48,7 +48,7 @@ const SERVICES: Service[] = [
   {
     n: "04",
     title: "Plain-English Reporting",
-    desc: "One clear monthly update — what changed, what's next, who found you.",
+    desc: "One clear monthly update - what changed, what's next, who found you.",
     wide: true,
     icon: icon("M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 0 1 3 19.875v-6.75ZM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V8.625ZM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 0 1-1.125-1.125V4.125Z"),
   },

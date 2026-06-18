@@ -12,11 +12,11 @@ const values = [
   },
   {
     title: "Long-Term Thinking",
-    desc: "We build real, lasting visibility — not quick tricks that disappear. Your SEO compounds every month, like interest in a savings account.",
+    desc: "We build real, lasting visibility - not quick tricks that disappear. Your SEO compounds every month, like interest in a savings account.",
   },
   {
     title: "Your Success is Our Success",
-    desc: "Month-to-month contracts only. We keep your business because we earn it — not because you're locked in.",
+    desc: "Month-to-month contracts only. We keep your business because we earn it - not because you're locked in.",
   },
 ];
 
@@ -58,7 +58,7 @@ export default function About() {
             <span className="gradient-text">Small Business</span>
           </h2>
           <p className="text-gray-300 text-xl max-w-3xl mx-auto leading-relaxed">
-            We started One Step Stronger Media because we saw too many incredible small businesses being invisible online — while big chains with mediocre products dominated search results. That&apos;s not right. We&apos;re here to fix it.
+            We started One Step Stronger Media because we saw too many incredible small businesses being invisible online - while big chains with mediocre products dominated search results. That&apos;s not right. We&apos;re here to fix it.
           </p>
         </div>
 
@@ -107,7 +107,7 @@ export default function About() {
                 Founded in Chicago in 2019 by a team of SEOs who spent years at enterprise agencies watching small business clients get deprioritised. They had the smallest budgets but needed the most help.
               </p>
               <p className="text-gray-400 text-sm leading-relaxed">
-                So we built the agency we always wished existed — one that treats every small business like its most important client. Today we work exclusively with small and growing businesses across the United States.
+                So we built the agency we always wished existed - one that treats every small business like its most important client. Today we work exclusively with small and growing businesses across the United States.
               </p>
             </div>
 

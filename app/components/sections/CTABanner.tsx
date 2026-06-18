@@ -27,14 +27,14 @@ export default function CTABanner() {
             <div className="absolute inset-0 bg-gradient-to-br from-[#1C1917]/8 via-transparent to-[#1C1917]/6" />
             <div className="relative z-10">
               <p className="text-[#1C1917] text-xs font-bold tracking-widest uppercase mb-4">
-                Start Today — It&apos;s Free
+                Start Today - It&apos;s Free
               </p>
               <h2 className="text-4xl md:text-5xl font-light text-[#1C1917] mb-5 leading-tight">
                 One step closer to{" "}
                 <span className="gradient-text italic font-normal">page one.</span>
               </h2>
               <p className="text-[#57534E] text-lg mb-10 max-w-lg mx-auto">
-                Get a free, honest look at your digital presence. We&apos;ll tell you exactly where you stand — no hard sell, no jargon, no obligation.
+                Get a free, honest look at your digital presence. We&apos;ll tell you exactly where you stand - no hard sell, no jargon, no obligation.
               </p>
 
               <div className="flex flex-wrap justify-center gap-3 mb-10">
@@ -49,7 +49,7 @@ export default function CTABanner() {
               </div>
 
               <Button variant="primary" size="lg" href="#contact" icon={<ArrowRight />}>
-                Claim Your Free Consultation
+                Claim Your Free SEO Analysis
               </Button>
             </div>
           </div>

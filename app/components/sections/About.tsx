@@ -14,7 +14,7 @@ const Check = () => (
 const aboveStats = [
   { value: "2025", label: "Founded" },
   { value: "UK",   label: "Based" },
-  { value: "48hr", label: "Consultation Delivery" },
+  { value: "48hr", label: "Analysis Delivery" },
 ];
 
 const capabilities = [
@@ -25,7 +25,7 @@ const capabilities = [
       </svg>
     ),
     title: "SEO & Digital Marketing",
-    desc: "Getting your business found on Google — local SEO, technical SEO, content, and clear monthly reporting.",
+    desc: "Getting your business found on Google - local SEO, technical SEO, content, and clear monthly reporting.",
     color: "#1C1917",
     bg: "#F5F5F4",
   },
@@ -36,7 +36,7 @@ const capabilities = [
       </svg>
     ),
     title: "Professional Graphic Design",
-    desc: "Logos, brand identities, social media assets, print materials and more — designs that look sharp, feel consistent, and make people trust you on sight.",
+    desc: "Logos, brand identities, social media assets, print materials and more - designs that look sharp, feel consistent, and make people trust you on sight.",
     color: "#44403C",
     bg: "#EFEEEC",
   },
@@ -47,7 +47,7 @@ const capabilities = [
       </svg>
     ),
     title: "Bespoke App Development",
-    desc: "Got an idea for a web or mobile app? We build it from scratch, tailored exactly to what your business needs. Every project is quoted individually — no templates, no shortcuts.",
+    desc: "Got an idea for a web or mobile app? We build it from scratch, tailored exactly to what your business needs. Every project is quoted individually - no templates, no shortcuts.",
     color: "#78716C",
     bg: "#F5F5F4",
   },
@@ -66,7 +66,7 @@ export default function About() {
             <span className="gradient-text">small business.</span>
           </h2>
           <p className="text-[#1C1917] text-xl max-w-3xl mx-auto leading-relaxed">
-            Between us we have deep experience in web development, graphic design, copywriting, app development, and digital marketing. We&apos;re not a big agency — and that&apos;s the point. We came together because we kept seeing the same thing: decent, hard-working businesses getting buried online while their flashier competitors hoovered up all the traffic.
+            Between us we have deep experience in web development, graphic design, copywriting, app development, and digital marketing. We&apos;re not a big agency - and that&apos;s the point. We came together because we kept seeing the same thing: decent, hard-working businesses getting buried online while their flashier competitors hoovered up all the traffic.
           </p>
         </RevealOnScroll>
 
@@ -128,10 +128,10 @@ export default function About() {
             <Card className="mb-5">
               <h3 className="text-lg font-light text-[#1C1917] mb-3">Our Story</h3>
               <p className="text-[#57534E] text-sm leading-relaxed mb-3">
-                We&apos;re a group of people who met through different corners of the industry and realised we were all frustrated by the same thing. The businesses that actually put in the work — the ones worth finding — kept losing out to whoever had the bigger budget.
+                We&apos;re a group of people who met through different corners of the industry and realised we were all frustrated by the same thing. The businesses that actually put in the work - the ones worth finding - kept losing out to whoever had the bigger budget.
               </p>
               <p className="text-[#57534E] text-sm leading-relaxed mb-3">
-                So we started One Step Stronger Digital. Not to be the biggest agency, but to be a useful one. We do SEO, graphic design, and bespoke app development — all under one roof, all done properly.
+                So we started One Step Stronger Digital. Not to be the biggest agency, but to be a useful one. We do SEO, graphic design, and bespoke app development - all under one roof, all done properly.
               </p>
               <p className="text-[#57534E] text-sm leading-relaxed">
                 We take on clients we believe in, do the work without shortcuts, and tell you exactly what we&apos;re doing without the usual smoke and mirrors.

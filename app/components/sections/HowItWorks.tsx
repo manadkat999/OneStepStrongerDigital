@@ -17,7 +17,7 @@ export default function HowItWorks() {
             <span className="gradient-text">Real Results.</span>
           </h2>
           <p className="text-[#57534E] max-w-xl mx-auto">
-            We made getting started as friction-free as possible — because you have a business to run.
+            We made getting started as friction-free as possible - because you have a business to run.
           </p>
         </RevealOnScroll>
 
@@ -62,7 +62,7 @@ export default function HowItWorks() {
           <Button variant="primary" size="lg" href="#contact"
             icon={<svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}><path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" /></svg>}
           >
-            Start with Your Free Consultation
+            Start with Your Free SEO Analysis
           </Button>
           <p className="mt-3 text-[#57534E] text-xs">Free · No commitment · 48-hour turnaround</p>
         </RevealOnScroll>

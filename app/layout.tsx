@@ -73,7 +73,7 @@ export const metadata: Metadata = {
         url: "/og-image.png",
         width: 1200,
         height: 630,
-        alt: `${BUSINESS_NAME} — SEO & Digital Presence for Small Businesses`,
+        alt: `${BUSINESS_NAME} - SEO & Digital Presence for Small Businesses`,
         type: "image/png",
       },
     ],
@@ -184,7 +184,7 @@ const organizationSchema = {
           name: "Do you work with small businesses?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Yes — we work exclusively with small and growing businesses. Every client gets the same dedicated attention regardless of budget size.",
+            text: "Yes - we work exclusively with small and growing businesses. Every client gets the same dedicated attention regardless of budget size.",
           },
         },
         {
@@ -192,7 +192,7 @@ const organizationSchema = {
           name: "What is included in the free SEO consultation?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Our free 48-hour consultation covers technical SEO health, local search visibility, keyword opportunities, competitor analysis, and a custom growth roadmap — with no obligation.",
+            text: "Our free 48-hour consultation covers technical SEO health, local search visibility, keyword opportunities, competitor analysis, and a custom growth roadmap - with no obligation.",
           },
         },
         {
@@ -200,7 +200,7 @@ const organizationSchema = {
           name: "Are there long-term contracts?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "No. We operate on a month-to-month basis. We also offer a 90-day results guarantee — if you don't see measurable improvement, you don't pay for month three.",
+            text: "No. We operate on a month-to-month basis. We also offer a 90-day results guarantee - if you don't see measurable improvement, you don't pay for month three.",
           },
         },
         {
@@ -230,7 +230,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {children}
         </SmoothScroll>
 
-        {/* Google Analytics — add NEXT_PUBLIC_GA_ID to Vercel env vars */}
+        {/* Google Analytics - add NEXT_PUBLIC_GA_ID to Vercel env vars */}
         {GA_ID && (
           <>
             <Script

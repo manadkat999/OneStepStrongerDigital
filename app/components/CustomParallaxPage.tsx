@@ -29,7 +29,7 @@ import {
 
 /* ── Motion tokens ───────────────────────────────────────────────────────── */
 
-/** Heavyweight, unhurried settle — shared by every scroll-linked layer. */
+/** Heavyweight, unhurried settle - shared by every scroll-linked layer. */
 const LUXURY_SPRING = { stiffness: 70, damping: 22, mass: 0.8 };
 
 /** Out-quint style curve for entrance reveals. */
@@ -47,7 +47,7 @@ const NAV_LINKS = [
 
 const HERO_MEDIA = {
   src: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=1600&q=80",
-  alt: "Minimal modern architecture — white concrete facade in soft daylight",
+  alt: "Minimal modern architecture - white concrete facade in soft daylight",
 };
 
 type Project = {
@@ -112,7 +112,7 @@ export default function CustomParallaxPage() {
 
   return (
     <main className="parallax-page min-h-screen bg-stone-100 text-stone-900 antialiased selection:bg-stone-900 selection:text-stone-100">
-      {/* Fixed site header — lives outside the scroll flow entirely. */}
+      {/* Fixed site header - lives outside the scroll flow entirely. */}
       <header className="site-header fixed inset-x-0 top-0 z-50">
         <nav
           aria-label="Primary"
@@ -120,7 +120,7 @@ export default function CustomParallaxPage() {
         >
           <a
             href="#top"
-            aria-label="One Step Stronger — back to top"
+            aria-label="One Step Stronger - back to top"
             className="brand-wordmark text-sm font-medium uppercase tracking-[0.25em] transition-opacity duration-300 hover:opacity-60"
           >
             One Step Stronger
@@ -142,17 +142,17 @@ export default function CustomParallaxPage() {
         </nav>
       </header>
 
-      {/* ── Hero — typographic statement with weighted parallax media ────── */}
+      {/* ── Hero - typographic statement with weighted parallax media ────── */}
       <section
         id="top"
         ref={heroRef}
         className="parallax-hero-section relative flex h-screen w-full items-center overflow-hidden"
       >
         <div className="hero-layout-grid mx-auto grid w-full max-w-7xl items-center gap-12 px-6 md:grid-cols-2 md:px-12">
-          {/* Left — drifts up and fades to zero on scroll */}
+          {/* Left - drifts up and fades to zero on scroll */}
           <motion.header style={heroCopyStyle} className="hero-copy will-change-transform">
             <p className="hero-eyebrow mb-6 text-xs font-medium uppercase tracking-[0.35em] text-stone-500">
-              Digital Studio — Est. 2025
+              Digital Studio - Est. 2025
             </p>
             <h1 className="hero-headline text-6xl font-light leading-[1.05] tracking-tight md:text-7xl lg:text-8xl">
               Quietly
@@ -167,7 +167,7 @@ export default function CustomParallaxPage() {
             </p>
           </motion.header>
 
-          {/* Right — framed media, lags the scroll for depth */}
+          {/* Right - framed media, lags the scroll for depth */}
           <figure className="hero-media-frame relative hidden aspect-[4/5] overflow-hidden bg-stone-200 md:block">
             <motion.img
               src={HERO_MEDIA.src}
@@ -188,7 +188,7 @@ export default function CustomParallaxPage() {
         </p>
       </section>
 
-      {/* ── Selected works — pinned rail, rising stack ────────────────────── */}
+      {/* ── Selected works - pinned rail, rising stack ────────────────────── */}
       <section id="works" className="works-section">
         <div className="works-layout-grid mx-auto grid max-w-7xl gap-12 px-6 py-28 md:grid-cols-3 md:px-12 md:py-36">
           {/* Left rail stays locked while the stack scrolls past it */}
@@ -265,7 +265,7 @@ function ProjectCard({ project, rise }: { project: Project; rise: number }) {
             {project.title}
           </h3>
           <p className="project-tags text-xs uppercase tracking-[0.2em] text-stone-500">
-            {project.category} — {project.year}
+            {project.category} - {project.year}
           </p>
         </footer>
       </a>

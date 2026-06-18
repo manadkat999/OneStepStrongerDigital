@@ -6,7 +6,7 @@ import Container from "@/app/components/ui/Container";
 import { SectionLabel } from "@/app/components/ui/Badge";
 
 const BENEFITS = [
-  { title: "Free SEO Consultation", desc: "A full technical and content review — £500 value, yours free." },
+  { title: "Free SEO Analysis", desc: "A full technical and content review - £500 value, yours free." },
   { title: "Custom Growth Plan", desc: "A 90-day roadmap tailored to your goals and market." },
   { title: "No Long Contracts", desc: "We earn your business month by month." },
   { title: "Response in 24hrs", desc: "A senior strategist will reach out personally." },
@@ -58,7 +58,7 @@ export default function Contact() {
             <span className="gradient-text italic font-normal">dominate search?</span>
           </h2>
           <p className="text-[#57534E] max-w-xl mx-auto">
-            Get a free, no-obligation SEO consultation. We&apos;ll identify exactly what&apos;s holding back your rankings and build a custom growth roadmap.
+            Get a free, no-obligation SEO analysis. We&apos;ll identify exactly what&apos;s holding back your rankings and build a custom growth roadmap.
           </p>
         </RevealOnScroll>
 
@@ -127,21 +127,21 @@ export default function Contact() {
                     <select value={budget} onChange={(e) => setBudget(e.target.value)} className="w-full bg-white border border-[#E7E5E4] rounded-lg px-4 py-3 text-[#1C1917] text-sm focus:outline-none focus:border-[#1C1917]/50 transition-colors">
                       <option value="">Select a service or budget...</option>
                       <optgroup label="SEO Retainers">
-                        <option>SEO Starter — £495/mo</option>
-                        <option>SEO Growth — £995/mo</option>
-                        <option>SEO Authority — From £1,895/mo</option>
+                        <option>SEO Starter - £495/mo</option>
+                        <option>SEO Growth - £995/mo</option>
+                        <option>SEO Authority - From £1,895/mo</option>
                       </optgroup>
                       <optgroup label="Website Builds">
-                        <option>Website Essential — £795 one-off</option>
-                        <option>Website Professional — £1,895 one-off</option>
-                        <option>Website Premium — From £3,495 one-off</option>
+                        <option>Website Essential - £795 one-off</option>
+                        <option>Website Professional - £1,895 one-off</option>
+                        <option>Website Premium - From £3,495 one-off</option>
                       </optgroup>
                       <optgroup label="Other Services">
-                        <option>Graphic Design — Request a quote</option>
-                        <option>Bespoke App Development — Request a quote</option>
-                        <option>Website + SEO Bundle — Ask us</option>
+                        <option>Graphic Design - Request a quote</option>
+                        <option>Bespoke App Development - Request a quote</option>
+                        <option>Website + SEO Bundle - Ask us</option>
                       </optgroup>
-                      <option>Not sure yet — let&apos;s talk</option>
+                      <option>Not sure yet - let&apos;s talk</option>
                     </select>
                   </div>
                   <div>
@@ -170,14 +170,14 @@ export default function Contact() {
                       </>
                     ) : (
                       <>
-                        Get My Free Consultation
+                        Get My Free SEO Analysis
                         <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2.5}>
                           <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 4.5 21 12m0 0-7.5 7.5M21 12H3" />
                         </svg>
                       </>
                     )}
                   </button>
-                  <p className="text-center text-[#57534E] text-xs">No spam. No commitment. Just a free, honest consultation.</p>
+                  <p className="text-center text-[#57534E] text-xs">No spam. No commitment. Just a free, honest analysis.</p>
                 </form>
               )}
             </div>

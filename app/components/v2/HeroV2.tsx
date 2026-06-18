@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * HeroV2 — animated agency hero (21st.dev-style word reveal).
+ * HeroV2 - animated agency hero (21st.dev-style word reveal).
  * Minimal single-column: oversized light-weight display type, one primary CTA,
  * staggered word entrance via Framer Motion. Honors prefers-reduced-motion.
  */
@@ -50,7 +50,7 @@ export default function HeroV2() {
           variants={fade}
           className="mb-8 text-[11px] font-medium uppercase tracking-[0.35em] text-stone-500"
         >
-          UK Digital Studio — SEO · Design · Software
+          UK Digital Studio - SEO · Design · Software
         </motion.p>
 
         {/* Display headline with per-word reveal */}

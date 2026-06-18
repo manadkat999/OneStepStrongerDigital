@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * NavV2 — fixed glass nav for the /v2 page. Links resolve to real in-page
+ * NavV2 - fixed glass nav for the /v2 page. Links resolve to real in-page
  * sections (smooth-scroll via the html `scroll-smooth` class). Slides in on
  * mount. cursor-pointer + aria on every control; honors reduced motion.
  */
@@ -30,7 +30,7 @@ export default function NavV2() {
       >
         <a
           href="#top"
-          aria-label="One Step Stronger — back to top"
+          aria-label="One Step Stronger - back to top"
           className="cursor-pointer text-sm font-semibold tracking-tight text-[#1C1917] transition-opacity duration-200 hover:opacity-60"
         >
           One Step Stronger

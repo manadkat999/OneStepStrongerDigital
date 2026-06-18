@@ -8,31 +8,31 @@ import { SectionLabel } from "@/app/components/ui/Badge";
 const FAQS = [
   {
     q: "How long does SEO take to show results?",
-    a: "Most clients start to see meaningful improvements within 3–6 months. Local SEO can move faster — sometimes within 8–12 weeks. We'll be honest with you about what to expect for your specific market from the very first consultation.",
+    a: "Most clients start to see meaningful improvements within 3–6 months. Local SEO can move faster - sometimes within 8–12 weeks. We'll be honest with you about what to expect for your specific market from the very first consultation.",
   },
   {
     q: "Do you lock clients into long contracts?",
-    a: "No. After any initial commitment period (our founding offer requires 6 months), all plans move to month-to-month. You stay because the work delivers — not because you're stuck.",
+    a: "No. After any initial commitment period (our founding offer requires 6 months), all plans move to month-to-month. You stay because the work delivers - not because you're stuck.",
   },
   {
-    q: "How does the free consultation work?",
-    a: "We do a full analysis of your online presence — local rankings, website health, competitor gaps, and missed opportunities. You get a clear report within 48 hours. No sales pressure, no obligation.",
+    q: "How does the free SEO analysis work?",
+    a: "We do a full analysis of your online presence - local rankings, website health, competitor gaps, and missed opportunities. You get a clear report within 48 hours. No sales pressure, no obligation.",
   },
   {
     q: "Do you work with any type of business?",
-    a: "We specialise in UK small businesses across a wide range of industries — from trades and restaurants to law firms and tech startups. If you serve customers in a specific area or niche, we can help you get found by them.",
+    a: "We specialise in UK small businesses across a wide range of industries - from trades and restaurants to law firms and tech startups. If you serve customers in a specific area or niche, we can help you get found by them.",
   },
   {
     q: "What does your monthly reporting look like?",
-    a: "Once a month you receive a clear summary of what's changed, what we did, and what's coming next — including keyword rankings, traffic changes, and notable wins. No dashboards to log into, no complicated reports to decode.",
+    a: "Once a month you receive a clear summary of what's changed, what we did, and what's coming next - including keyword rankings, traffic changes, and notable wins. No dashboards to log into, no complicated reports to decode.",
   },
   {
     q: "Can you guarantee specific rankings?",
-    a: "No honest agency can — search engines are outside anyone's full control. What we do promise is transparent, ethical work focused on long-term visibility. If we don't show measurable improvement in your online presence within 90 days, you don't pay for month three.",
+    a: "No honest agency can - search engines are outside anyone's full control. What we do promise is transparent, ethical work focused on long-term visibility. If we don't show measurable improvement in your online presence within 90 days, you don't pay for month three.",
   },
   {
     q: "Do I need a website before you can help with SEO?",
-    a: "Not necessarily. We can work with an existing site or build you one from scratch. If your current site is holding your SEO back, we'll tell you — and we can fix it.",
+    a: "Not necessarily. We can work with an existing site or build you one from scratch. If your current site is holding your SEO back, we'll tell you - and we can fix it.",
   },
 ];
 

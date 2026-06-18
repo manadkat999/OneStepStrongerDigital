@@ -8,7 +8,7 @@ import ProcessV2 from "@/app/components/v2/ProcessV2";
 import ClosingV2 from "@/app/components/v2/ClosingV2";
 
 /**
- * /v2 — preview of the next-version homepage. Self-contained nav whose links
+ * /v2 - preview of the next-version homepage. Self-contained nav whose links
  * resolve to in-page sections (#work, #studio, #process, #contact).
  * Non-destructive: the live homepage (app/page.tsx) is untouched.
  */

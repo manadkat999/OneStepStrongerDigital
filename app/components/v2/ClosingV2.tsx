@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ClosingV2 — full-width charcoal CTA band. Single strong call to action
+ * ClosingV2 - full-width charcoal CTA band. Single strong call to action
  * (per the minimal-single-column pattern), scroll-revealed, inverted button.
  */
 
@@ -30,7 +30,7 @@ export default function ClosingV2() {
         </h2>
         <p className="mt-8 max-w-md text-base leading-relaxed text-stone-400">
           Tell us where you want to be. We&apos;ll show you exactly how to get
-          there — no jargon, no lock-ins, no obligation.
+          there - no jargon, no lock-ins, no obligation.
         </p>
 
         <motion.a

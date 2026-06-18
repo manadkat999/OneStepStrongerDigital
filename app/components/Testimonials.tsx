@@ -21,7 +21,7 @@ const testimonials = [
     type: "Home Services",
   },
   {
-    quote: "My dental practice was struggling to attract new patients post-COVID. The team built our online presence from scratch — reviews, local SEO, content — and we're fully booked three weeks out now.",
+    quote: "My dental practice was struggling to attract new patients post-COVID. The team built our online presence from scratch - reviews, local SEO, content - and we're fully booked three weeks out now.",
     name: "Dr. Sunita Kapoor",
     role: "Principal Dentist, Bright Smiles Dental",
     initials: "SK",
@@ -30,7 +30,7 @@ const testimonials = [
     type: "Healthcare",
   },
   {
-    quote: "I was skeptical about SEO — thought it was just for big companies. They showed me how many people search for auto repair in my town every month and were never finding me. That changed everything.",
+    quote: "I was skeptical about SEO - thought it was just for big companies. They showed me how many people search for auto repair in my town every month and were never finding me. That changed everything.",
     name: "James Whitfield",
     role: "Owner, JW Auto & Tire",
     initials: "JW",
@@ -39,7 +39,7 @@ const testimonials = [
     type: "Auto Services",
   },
   {
-    quote: "The reporting is what sold me. Every month I get a simple breakdown — no tech jargon — showing exactly how many people found my law firm through Google. The ROI is crystal clear.",
+    quote: "The reporting is what sold me. Every month I get a simple breakdown - no tech jargon - showing exactly how many people found my law firm through Google. The ROI is crystal clear.",
     name: "Patricia Chen",
     role: "Principal Attorney, Chen Law Group",
     initials: "PC",
@@ -111,7 +111,7 @@ export default function Testimonials() {
             <span className="gradient-text">Helped Grow</span>
           </h2>
           <p className="text-gray-400 max-w-xl mx-auto">
-            From corner bakeries to multi-location service businesses — here&apos;s what happens when great local businesses get found online.
+            From corner bakeries to multi-location service businesses - here&apos;s what happens when great local businesses get found online.
           </p>
         </div>
 

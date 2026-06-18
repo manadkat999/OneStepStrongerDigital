@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ProcessV2 — three-step "how it works" with a scroll-revealed stagger.
+ * ProcessV2 - three-step "how it works" with a scroll-revealed stagger.
  * Section id ("process") is a nav target.
  */
 
@@ -13,12 +13,12 @@ const STEPS = [
   {
     n: "01",
     title: "Free consultation",
-    desc: "A full read on your online visibility — site health, local rankings, competitors and the gaps worth closing. Delivered in 48 hours.",
+    desc: "A full read on your online visibility - site health, local rankings, competitors and the gaps worth closing. Delivered in 48 hours.",
   },
   {
     n: "02",
     title: "A plan for your business",
-    desc: "No cookie-cutter packages. A strategy built around your goals, market and budget — whatever stage you're at.",
+    desc: "No cookie-cutter packages. A strategy built around your goals, market and budget - whatever stage you're at.",
   },
   {
     n: "03",

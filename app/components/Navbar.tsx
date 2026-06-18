@@ -49,7 +49,7 @@ export default function Navbar() {
           href="#contact"
           className="hidden md:inline-flex btn-primary px-5 py-2.5 rounded-lg text-sm font-semibold"
         >
-          Get Free Consultation
+          Get Free SEO Analysis
         </a>
 
         {/* Mobile hamburger */}
@@ -82,7 +82,7 @@ export default function Navbar() {
             </a>
           ))}
           <a href="#contact" className="btn-primary px-5 py-2.5 rounded-lg text-sm font-semibold text-center mt-2">
-            Get Free Consultation
+            Get Free SEO Analysis
           </a>
         </nav>
       </div>

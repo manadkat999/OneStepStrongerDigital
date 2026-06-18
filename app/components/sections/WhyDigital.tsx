@@ -65,7 +65,7 @@ export default function WhyDigital() {
               <span className="gradient-text italic font-normal">Are you showing up?</span>
             </h2>
             <p className="text-[#57534E] max-w-2xl mx-auto text-lg">
-              A strong online presence isn&apos;t optional for small businesses anymore — it&apos;s the difference between a full calendar and an empty one.
+              A strong online presence isn&apos;t optional for small businesses anymore - it&apos;s the difference between a full calendar and an empty one.
             </p>
           </RevealOnScroll>
 
@@ -87,7 +87,7 @@ export default function WhyDigital() {
             ))}
           </div>
 
-          {/* Pull quote — parallax float */}
+          {/* Pull quote - parallax float */}
           <RevealOnScroll>
             <motion.div style={{ y: quoteY }}>
               <div className="relative card-glow rounded-2xl p-10 md:p-14 text-center overflow-hidden max-w-4xl mx-auto">
@@ -97,7 +97,7 @@ export default function WhyDigital() {
                   <p className="text-xl md:text-2xl font-medium text-[#1C1917] leading-relaxed -mt-4 mb-5">
                     Businesses with websites are{" "}
                     <span className="text-[#1C1917] font-bold">2.8× more likely to grow revenues</span>{" "}
-                    than those without — and small businesses with a strong online presence grow{" "}
+                    than those without - and small businesses with a strong online presence grow{" "}
                     <span className="text-[#1C1917] font-bold">40% faster</span>.
                   </p>
                   <p className="text-[#57534E] text-sm">Google & Deloitte Connected Small Businesses Report</p>

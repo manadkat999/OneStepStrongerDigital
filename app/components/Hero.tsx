@@ -55,7 +55,7 @@ export default function Hero() {
             </h1>
 
             <p className="text-gray-400 text-lg leading-relaxed mb-10 max-w-xl animate-fade-in-up delay-200">
-              You&apos;ve built something worth finding. We make sure the right customers — the ones in your community actively searching for what you offer — can find you first.
+              You&apos;ve built something worth finding. We make sure the right customers - the ones in your community actively searching for what you offer - can find you first.
             </p>
 
             <div className="flex flex-wrap gap-4 animate-fade-in-up delay-300">

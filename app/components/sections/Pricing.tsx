@@ -105,7 +105,7 @@ const WEBSITE_TIERS = [
     features: [
       "Up to 10 pages",
       "Custom design & branding",
-      "Full on-page SEO — every page",
+      "Full on-page SEO - every page",
       "Schema markup & technical setup",
       "Blog / content hub setup",
       "Speed optimisation (Core Web Vitals)",
@@ -184,7 +184,7 @@ export default function Pricing() {
               )}>
                 {tier.featured && (
                   <>
-                    {/* Indigo top bar — replaces low-contrast orange line */}
+                    {/* Indigo top bar - replaces low-contrast orange line */}
                     <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-[#1C1917] via-[#78716C] to-[#1C1917] rounded-t-2xl" />
                     {/* White text on indigo = 4.5:1 ✓ */}
                     <span className="self-start mb-4 text-[10px] uppercase tracking-[0.15em] bg-[#1C1917] text-white font-medium px-3 py-1 rounded-full shadow-sm shadow-stone-900/15 mt-2">
@@ -196,7 +196,7 @@ export default function Pricing() {
                 <div className="mb-5">
                   {/* #1C1917 on white = 14:1 ✓ */}
                   <h3 className="text-lg font-light text-[#1C1917] mb-1">{tier.name}</h3>
-                  {/* #57534E on white = 8.6:1 ✓ — replaces #9CA3AF (2.8:1 ✗) */}
+                  {/* #57534E on white = 8.6:1 ✓ - replaces #9CA3AF (2.8:1 ✗) */}
                   <p className="text-[#57534E] text-sm">{tier.tagline}</p>
                 </div>
 
@@ -204,7 +204,7 @@ export default function Pricing() {
                   <span className={cn("font-light leading-none text-[#1C1917]", tier.featured ? "text-4xl" : "text-3xl")}>
                     {tier.price}
                   </span>
-                  {/* #6B7280 on white = 4.6:1 ✓ — acceptable for large/bold text */}
+                  {/* #6B7280 on white = 4.6:1 ✓ - acceptable for large/bold text */}
                   <span className="text-[#57534E] text-sm ml-1 font-medium">{tier.period}</span>
                   {"note" in tier && tier.note && (
                     <p className="text-[#0C0A09] text-xs font-semibold mt-1.5">{tier.note}</p>
@@ -234,7 +234,7 @@ export default function Pricing() {
           ))}
         </div>
 
-        {/* Founding cohort offer — SEO tab only */}
+        {/* Founding cohort offer - SEO tab only */}
         {tab === "seo" && (
           <RevealOnScroll delay={200}>
             <div className="bg-white card-glow rounded-2xl p-8 md:p-10 relative overflow-hidden border-[#1C1917]/25">
@@ -244,7 +244,7 @@ export default function Pricing() {
                 <div className="flex-shrink-0">
                   <span className="inline-flex items-center gap-2 bg-[#F5F5F4] border border-[#1C1917]/20 text-[#0C0A09] text-xs font-bold px-3 py-1.5 rounded-full mb-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-[#1C1917] animate-pulse" />
-                    Founding Client Offer — 3 Spots Only
+                    Founding Client Offer - 3 Spots Only
                   </span>
                   <h3 className="text-2xl font-light text-[#1C1917] mb-2">
                     Growth at{" "}
@@ -253,10 +253,10 @@ export default function Pricing() {
                     <span className="text-[#57534E] text-lg font-normal line-through ml-3">£995</span>
                   </h3>
                   <p className="text-[#57534E] text-sm leading-relaxed max-w-lg">
-                    Our first three clients get 40% off the Growth plan for 6 months — in exchange for a 6-month commitment, a testimonial, and case study rights. You get full-service SEO at a founding price. We get proof. Everyone wins.
+                    Our first three clients get 40% off the Growth plan for 6 months - in exchange for a 6-month commitment, a testimonial, and case study rights. You get full-service SEO at a founding price. We get proof. Everyone wins.
                   </p>
                   <ul className="flex flex-wrap gap-x-5 gap-y-1.5 mt-4">
-                    {["40% off for 6 months", "6-month commitment", "Testimonial + case study rights", "Full Growth plan — nothing removed"].map((item) => (
+                    {["40% off for 6 months", "6-month commitment", "Testimonial + case study rights", "Full Growth plan - nothing removed"].map((item) => (
                       <li key={item} className="flex items-center gap-1.5 text-xs text-[#57534E] font-medium">
                         <Check />
                         {item}
@@ -276,14 +276,14 @@ export default function Pricing() {
           </RevealOnScroll>
         )}
 
-        {/* Bundle offer — SEO tab only */}
+        {/* Bundle offer - SEO tab only */}
         {tab === "seo" && (
           <RevealOnScroll delay={250} className="mt-5">
             <div className="bg-white card-glow rounded-2xl p-6 md:p-8 relative overflow-hidden">
               <div className="absolute inset-0 bg-gradient-to-br from-[#F5F5F4] via-transparent to-transparent" />
               <div className="relative z-10 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-8">
                 <div>
-                  {/* #0C0A09 on white = 6.9:1 ✓ — replaces text-[#1D4ED8] on white (3:1 ✗) */}
+                  {/* #0C0A09 on white = 6.9:1 ✓ - replaces text-[#1D4ED8] on white (3:1 ✗) */}
                   <span className="inline-block bg-[#F5F5F4] border border-[#1C1917]/20 text-[#0C0A09] text-xs font-bold px-3 py-1 rounded-full mb-2">
                     Bundle & Save
                   </span>
@@ -291,7 +291,7 @@ export default function Pricing() {
                   <p className="text-[#57534E] text-sm">
                     Professional website build <span className="text-[#1C1917] font-semibold">(£1,895)</span> + 3 months Growth SEO at{" "}
                     <span className="text-[#1C1917] font-semibold">£795/mo</span>{" "}
-                    <span className="text-[#57534E] line-through text-xs">£995</span> — one seamless project, one team.
+                    <span className="text-[#57534E] line-through text-xs">£995</span> - one seamless project, one team.
                   </p>
                 </div>
                 <div className="flex-shrink-0 sm:ml-auto">
@@ -305,7 +305,7 @@ export default function Pricing() {
         )}
 
         <RevealOnScroll className="text-center mt-10">
-          {/* #6B7280 on #EFEEEC = 4.5:1 ✓ barely passes — use #57534E to be safe */}
+          {/* #6B7280 on #EFEEEC = 4.5:1 ✓ barely passes - use #57534E to be safe */}
           <p className="text-[#57534E] text-sm">
             All plans are month-to-month after the initial term. No cancellation fees. No hidden costs. Prices exclude VAT.
           </p>

@@ -13,7 +13,7 @@ const stats = [
   },
   {
     value: "27%",
-    label: "of small businesses still don't have a website — losing customers daily",
+    label: "of small businesses still don't have a website - losing customers daily",
     source: "SCORE, 2025",
     icon: (
       <path strokeLinecap="round" strokeLinejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253M3 12c0 .778.099 1.533.284 2.253" />
@@ -121,7 +121,7 @@ export default function WhyDigital() {
             <span className="gradient-text">Are You Showing Up?</span>
           </h2>
           <p className="text-gray-400 max-w-2xl mx-auto text-lg">
-            A strong online presence isn&apos;t a luxury for small businesses — it&apos;s the difference between a full calendar and an empty one. Here&apos;s what the data says.
+            A strong online presence isn&apos;t a luxury for small businesses - it&apos;s the difference between a full calendar and an empty one. Here&apos;s what the data says.
           </p>
         </div>
 
@@ -137,7 +137,7 @@ export default function WhyDigital() {
           <p className="text-xl md:text-2xl font-medium text-white leading-relaxed mb-6">
             Businesses with websites are{" "}
             <span className="text-orange-400 font-bold">2.8× more likely to grow revenues</span>{" "}
-            than those without — and small businesses with strong online presence grow{" "}
+            than those without - and small businesses with strong online presence grow{" "}
             <span className="text-blue-400 font-bold">40% faster</span>.
           </p>
           <p className="text-gray-500 text-sm">Google & Deloitte Connected Small Businesses Report</p>

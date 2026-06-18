@@ -49,7 +49,7 @@ export default function Testimonials() {
             <span className="gradient-text italic font-normal">proud to back</span>
           </h2>
           <p className="text-[#57534E] max-w-xl mx-auto">
-            From luxury candle makers to app startups — we work with small businesses building something real, and help them get found online.
+            From luxury candle makers to app startups - we work with small businesses building something real, and help them get found online.
           </p>
         </RevealOnScroll>
 

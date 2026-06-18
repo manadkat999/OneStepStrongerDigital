@@ -2,7 +2,7 @@
  * MarqueeStrip.tsx
  * ---------------------------------------------------------------------------
  * A continuously scrolling capability ticker that sits between the hero and
- * the body. Pure CSS transform animation (see .marquee-track) — no JS, no
+ * the body. Pure CSS transform animation (see .marquee-track) - no JS, no
  * layout work. Doubled content array makes the loop seamless.
  */
 
@@ -14,7 +14,7 @@ const CAPABILITIES = [
   "Technical SEO",
   "Plain-English Reporting",
   "No Long-Term Contracts",
-  "Free 48-Hour Consultation",
+  "Free 48-Hour SEO Analysis",
 ];
 
 export default function MarqueeStrip() {
@@ -33,7 +33,7 @@ export default function MarqueeStrip() {
           >
             {item}
             <span aria-hidden="true" className="ml-8 text-stone-600">
-              —
+              -
             </span>
           </li>
         ))}

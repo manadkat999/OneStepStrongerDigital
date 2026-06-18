@@ -106,7 +106,7 @@ export default function Hero() {
       <Container className="relative z-10">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          {/* ── Copy — fades/rises on scroll ── */}
+          {/* ── Copy - fades/rises on scroll ── */}
           <motion.div style={{ y: copyY, opacity: copyOpacity }}>
 
             {/* Trust badge */}
@@ -117,7 +117,7 @@ export default function Hero() {
               className="mb-8 inline-flex items-center gap-2.5 border border-stone-300 text-stone-700 text-[11px] font-medium uppercase tracking-[0.2em] px-4 py-2 rounded-full"
             >
               <span className="w-1.5 h-1.5 rounded-full bg-stone-900 animate-pulse" />
-              UK Digital Agency · Free 48-Hour Consultation
+              UK Digital Agency · Free 48-Hour SEO Analysis
             </motion.div>
 
             <motion.h1
@@ -136,7 +136,7 @@ export default function Hero() {
               transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
               className="text-[#57534E] text-lg leading-relaxed mb-10 max-w-lg"
             >
-              We help UK small businesses get to the top of Google — with expert SEO, professional design, and bespoke digital solutions.
+              We help UK small businesses get to the top of Google - with expert SEO, professional design, and bespoke digital solutions.
             </motion.p>
 
             <motion.div
@@ -185,7 +185,7 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* ── Dashboard card — parallax depth ── */}
+          {/* ── Dashboard card - parallax depth ── */}
           <motion.div
             style={{ y: cardYSpring }}
             className="hidden lg:block"
@@ -257,7 +257,7 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              {/* Floating notification — top right */}
+              {/* Floating notification - top right */}
               <motion.div
                 initial={{ opacity: 0, x: 20, y: -10 }}
                 animate={{ opacity: 1, x: 0, y: 0 }}
@@ -271,7 +271,7 @@ export default function Hero() {
                 </div>
               </motion.div>
 
-              {/* Floating ranking tag — bottom left */}
+              {/* Floating ranking tag - bottom left */}
               <motion.div
                 initial={{ opacity: 0, x: -20, y: 10 }}
                 animate={{ opacity: 1, x: 0, y: 0 }}

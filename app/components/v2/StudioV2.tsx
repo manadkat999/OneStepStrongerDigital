@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * StudioV2 — "about the studio" section. Large statement type + a small
+ * StudioV2 - "about the studio" section. Large statement type + a small
  * figures row, scroll-revealed. Section id ("studio") is a nav target.
  */
 
@@ -51,7 +51,7 @@ export default function StudioV2() {
           transition={{ duration: 0.8, ease: EASE }}
           className="max-w-[20ch] text-[clamp(2rem,4.5vw,3.5rem)] font-light leading-[1.1] tracking-tight text-[#1C1917]"
         >
-          A small team, deliberately — so every client gets{" "}
+          A small team, deliberately - so every client gets{" "}
           <span className="italic text-stone-500">senior attention, no filler.</span>
         </motion.h2>
 
@@ -64,7 +64,7 @@ export default function StudioV2() {
         >
           We came together because we kept seeing hard-working businesses buried
           online while flashier competitors took the traffic. We do SEO, design
-          and bespoke software — all under one roof, all done properly, all
+          and bespoke software - all under one roof, all done properly, all
           explained in plain English.
         </motion.p>
 

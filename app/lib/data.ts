@@ -19,7 +19,7 @@ export const WHY_DIGITAL_STATS = [
   {
     value: 27,
     suffix: "%",
-    label: "of small businesses still don't have a website — invisible to customers",
+    label: "of small businesses still don't have a website - invisible to customers",
     source: "SCORE, 2025",
     accent: "blue" as const,
   },
@@ -46,7 +46,7 @@ export const SERVICES = [
     icon: "map-pin",
     title: "Local SEO",
     description:
-      "When someone nearby searches for what you do, you want to be the first name they see — not your competitor down the road. We sort your local presence so that actually happens.",
+      "When someone nearby searches for what you do, you want to be the first name they see - not your competitor down the road. We sort your local presence so that actually happens.",
     tags: ["Google Business Profile", "Maps Ranking", "Local Citations"],
     featured: true,
     accent: "orange" as const,
@@ -57,7 +57,7 @@ export const SERVICES = [
     icon: "wrench",
     title: "Technical SEO",
     description:
-      "There are often technical reasons a site doesn't rank well that have nothing to do with content — speed issues, crawl errors, broken structure. We find them and fix them.",
+      "There are often technical reasons a site doesn't rank well that have nothing to do with content - speed issues, crawl errors, broken structure. We find them and fix them.",
     tags: ["Site Speed", "Core Web Vitals", "Schema Markup"],
     featured: false,
     accent: "blue" as const,
@@ -112,7 +112,7 @@ export const SERVICES = [
     icon: "palette",
     title: "Professional Graphic Design",
     description:
-      "First impressions matter. Whether it's a logo, brand identity, social media assets, or print materials — we create designs that look professional, feel consistent, and make your business stand out.",
+      "First impressions matter. Whether it's a logo, brand identity, social media assets, or print materials - we create designs that look professional, feel consistent, and make your business stand out.",
     tags: ["Logo & Branding", "Social Media Assets", "Print Materials"],
     featured: false,
     accent: "orange" as const,
@@ -123,7 +123,7 @@ export const SERVICES = [
     icon: "code",
     title: "Bespoke App Development",
     description:
-      "Got an idea for an app or a tool your business needs? We build custom web and mobile applications tailored exactly to your requirements. Every project is quoted individually — no off-the-shelf solutions, just something built for you.",
+      "Got an idea for an app or a tool your business needs? We build custom web and mobile applications tailored exactly to your requirements. Every project is quoted individually - no off-the-shelf solutions, just something built for you.",
     tags: ["Web Apps", "Mobile Apps", "Custom Quoting"],
     featured: false,
     accent: "blue" as const,
@@ -135,9 +135,9 @@ export const SERVICES = [
 export const HOW_IT_WORKS_STEPS = [
   {
     number: "01",
-    title: "Free Digital Presence Consultation",
+    title: "Free Digital Presence Analysis",
     description:
-      "We do a full analysis of your online visibility — website health, local rankings, competitors, and missed opportunities. No sales pitch. Just the honest truth about where you stand.",
+      "We do a full analysis of your online visibility - website health, local rankings, competitors, and missed opportunities. No sales pitch. Just the honest truth about where you stand.",
     detail: "Delivered in 48 hours",
     accent: "orange" as const,
   },
@@ -145,7 +145,7 @@ export const HOW_IT_WORKS_STEPS = [
     number: "02",
     title: "A Plan Built for Your Business",
     description:
-      "We build a strategy around your specific goals, market, and budget — whether you're a candle maker, an app founder, or a growing local firm.",
+      "We build a strategy around your specific goals, market, and budget - whether you're a candle maker, an app founder, or a growing local firm.",
     detail: "Custom to your goals",
     accent: "blue" as const,
   },
@@ -153,7 +153,7 @@ export const HOW_IT_WORKS_STEPS = [
     number: "03",
     title: "We Grow. You Run Your Business.",
     description:
-      "We handle everything — rankings, content, reviews — and send a clear monthly update. You focus on serving customers while we grow your visibility.",
+      "We handle everything - rankings, content, reviews - and send a clear monthly update. You focus on serving customers while we grow your visibility.",
     detail: "Month-over-month results",
     accent: "orange" as const,
   },
@@ -163,7 +163,7 @@ export const HOW_IT_WORKS_STEPS = [
 export const TESTIMONIALS = [
   {
     quote:
-      "We pour every candle by hand in our London studio — but reaching the right customers online felt out of reach. One Step Stronger Digital is building our search presence so that people looking for premium home fragrance find Casa Nochi first.",
+      "We pour every candle by hand in our London studio - but reaching the right customers online felt out of reach. One Step Stronger Digital is building our search presence so that people looking for premium home fragrance find Casa Nochi first.",
     name: "Pavel & Milayde",
     role: "Co-Founders, Casa Nochi",
     initials: "CN",
@@ -175,7 +175,7 @@ export const TESTIMONIALS = [
     quote:
       "We're launching something completely new in London's nightlife scene. Before we go live, One Step Stronger Digital is laying the SEO foundations to make sure MYSOVA shows up wherever London's nightlife crowd is searching.",
     name: "MYSOVA Team",
-    role: "MYSOVA — London Nightlife App",
+    role: "MYSOVA - London Nightlife App",
     initials: "MY",
     color: "#44403C",
     result: "App Launch SEO",
@@ -185,7 +185,7 @@ export const TESTIMONIALS = [
 
 // ─── Hero Stats ───────────────────────────────────────────────────────────────
 export const HERO_STATS = [
-  { value: "Free", label: "SEO Consultation" },
+  { value: "Free", label: "SEO Analysis" },
   { value: "48hr", label: "Turnaround" },
   { value: "Month-to-Month", label: "Flexible Contracts" },
 ] as const;
@@ -202,7 +202,7 @@ export const VALUES = [
   },
   {
     title: "No lock-ins",
-    desc: "We don't tie anyone into long contracts. If we're doing good work, you'll stay because you want to — not because you have to.",
+    desc: "We don't tie anyone into long contracts. If we're doing good work, you'll stay because you want to - not because you have to.",
   },
 ] as const;
 
@@ -235,7 +235,7 @@ export const FOOTER_LINKS = {
   ],
   Company: ["About Us", "Our Mission", "Case Studies", "Blog"],
   Resources: [
-    "Free SEO Consultation",
+    "Free SEO Analysis",
     "Small Business Guide",
     "Local SEO Checklist",
     "FAQ",
