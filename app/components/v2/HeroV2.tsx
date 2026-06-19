@@ -1,100 +1,122 @@
 "use client";
 
 /**
- * HeroV2 - animated agency hero (21st.dev-style word reveal).
- * Minimal single-column: oversized light-weight display type, one primary CTA,
- * staggered word entrance via Framer Motion. Honors prefers-reduced-motion.
+ * HeroV2 — modern agency hero (adapted from a 21st.dev aurora hero).
+ * Performance notes:
+ *  - Ambient aurora = 2 transform-only blobs on slow loops; paused entirely
+ *    under prefers-reduced-motion. No per-frame mouse listeners / re-renders.
+ *  - Grid is a static inline SVG. Headline reveals once on mount.
+ *  - No image in the hero, so first paint / LCP stays fast.
+ * Copy is the real One Step Stronger Digital messaging.
  */
 
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 
-const LINE_ONE = ["We", "build", "presence"];
-const LINE_TWO = ["for", "brands", "that"];
-const ACCENT = "deserve to be found.";
-
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
+
+const HEADLINE = ["Your", "business", "deserves", "to", "be", "found", "first."];
 
 export default function HeroV2() {
   const reduce = useReducedMotion();
 
-  const container: Variants = {
+  const headline: Variants = {
     hidden: {},
-    show: { transition: { staggerChildren: reduce ? 0 : 0.06, delayChildren: 0.1 } },
+    show: { transition: { staggerChildren: reduce ? 0 : 0.07, delayChildren: 0.15 } },
   };
   const word: Variants = {
-    hidden: { y: reduce ? 0 : "100%", opacity: reduce ? 1 : 0 },
-    show: { y: "0%", opacity: 1, transition: { duration: 0.8, ease: EASE } },
+    hidden: { opacity: 0, y: reduce ? 0 : 40, rotateX: reduce ? 0 : -80 },
+    show: { opacity: 1, y: 0, rotateX: 0, transition: { duration: 0.8, ease: EASE } },
   };
   const fade: Variants = {
     hidden: { opacity: 0, y: reduce ? 0 : 16 },
     show: { opacity: 1, y: 0, transition: { duration: 0.7, ease: EASE } },
   };
 
-  return (
-    <section id="top" className="hero-v2 relative flex min-h-screen flex-col justify-center overflow-hidden bg-[#FAFAF9] px-6 pt-32 pb-20 md:px-12">
-      {/* texture */}
-      <div aria-hidden className="dot-bg pointer-events-none absolute inset-0 opacity-60" />
-      <div
-        aria-hidden
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(110% 80% at 50% 0%, transparent 55%, rgba(28,25,23,0.04) 100%)",
-        }}
-      />
+  const blob = (delay: number) =>
+    reduce
+      ? undefined
+      : {
+          x: [0, 60, 0],
+          y: [0, 40, 0],
+          scale: [1, 1.15, 1],
+          transition: { duration: 26 + delay, repeat: Infinity, ease: "easeInOut" as const },
+        };
 
-      <div className="relative z-10 mx-auto w-full max-w-6xl">
-        <motion.p
+  return (
+    <section
+      id="top"
+      className="hero-v2 relative flex min-h-screen items-center justify-center overflow-hidden bg-[#FAFAF9] px-6 pt-28 pb-20 md:px-12"
+    >
+      {/* ambient aurora — transform-only, paused for reduced motion */}
+      <div aria-hidden className="pointer-events-none absolute inset-0 overflow-hidden">
+        <motion.div
+          animate={blob(0)}
+          className="absolute -top-24 left-1/4 h-[34rem] w-[34rem] -translate-x-1/2 rounded-full bg-stone-300/40 blur-[110px]"
+        />
+        <motion.div
+          animate={blob(6)}
+          className="absolute -bottom-24 right-1/4 h-[30rem] w-[30rem] translate-x-1/2 rounded-full bg-stone-400/30 blur-[120px]"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-[#FAFAF9]/40 to-[#FAFAF9]" />
+      </div>
+
+      {/* static grid texture */}
+      <svg aria-hidden className="pointer-events-none absolute inset-0 h-full w-full opacity-60">
+        <defs>
+          <pattern id="hero-grid" width="44" height="44" patternUnits="userSpaceOnUse">
+            <path d="M 44 0 L 0 0 0 44" fill="none" stroke="rgba(28,25,23,0.05)" strokeWidth="1" />
+          </pattern>
+        </defs>
+        <rect width="100%" height="100%" fill="url(#hero-grid)" />
+      </svg>
+
+      <div className="relative z-10 mx-auto w-full max-w-5xl text-center">
+        <motion.span
           initial="hidden"
           animate="show"
           variants={fade}
-          className="mb-8 text-[11px] font-medium uppercase tracking-[0.35em] text-stone-500"
+          className="mb-8 inline-flex items-center rounded-full border border-stone-300 bg-white/60 px-4 py-1.5 text-[11px] font-medium uppercase tracking-[0.25em] text-stone-600 backdrop-blur-sm"
         >
-          UK Digital Studio - SEO · Design · Software
-        </motion.p>
+          UK Digital Agency — Free 48-Hour Consultation
+        </motion.span>
 
-        {/* Display headline with per-word reveal */}
         <motion.h1
           initial="hidden"
           animate="show"
-          variants={container}
-          className="max-w-[16ch] text-[clamp(3rem,9vw,7.5rem)] font-light leading-[0.98] tracking-tight text-[#1C1917]"
+          variants={headline}
+          style={{ perspective: 1000 }}
+          className="mx-auto max-w-[15ch] text-[clamp(2.75rem,8vw,6.5rem)] font-light leading-[0.98] tracking-tight text-[#1C1917]"
         >
-          {[LINE_ONE, LINE_TWO].map((line, li) => (
-            <span key={li} className="block">
-              {line.map((w, i) => (
-                <span key={i} className="mr-[0.22em] inline-block overflow-hidden align-bottom">
-                  <motion.span variants={word} className="inline-block">
-                    {w}
-                  </motion.span>
-                </span>
-              ))}
-            </span>
-          ))}
-          <span className="block overflow-hidden">
-            <motion.span variants={word} className="inline-block italic text-stone-500">
-              {ACCENT}
+          {HEADLINE.map((w, i) => (
+            <motion.span
+              key={i}
+              variants={word}
+              style={{ transformStyle: "preserve-3d" }}
+              className={`mr-[0.25em] inline-block ${i >= 5 ? "italic text-stone-500" : ""}`}
+            >
+              {w}
             </motion.span>
-          </span>
+          ))}
         </motion.h1>
 
         <motion.p
           initial="hidden"
           animate="show"
           variants={fade}
-          transition={{ delay: 0.5 }}
-          className="mt-10 max-w-md text-lg leading-relaxed text-stone-600"
+          transition={{ delay: 0.55 }}
+          className="mx-auto mt-9 max-w-xl text-lg leading-relaxed text-stone-600"
         >
-          A small studio crafting search visibility, sharp design and bespoke
-          software for ambitious small businesses. Measured in real results.
+          We help UK small businesses get to the top of Google — with expert SEO,
+          professional design, and bespoke software. No jargon. No lock-ins. Real
+          results.
         </motion.p>
 
         <motion.div
           initial="hidden"
           animate="show"
           variants={fade}
-          transition={{ delay: 0.62 }}
-          className="mt-12 flex flex-wrap items-center gap-5"
+          transition={{ delay: 0.68 }}
+          className="mt-12 flex flex-col items-center justify-center gap-5 sm:flex-row"
         >
           <motion.a
             href="#contact"
@@ -103,7 +125,7 @@ export default function HeroV2() {
             transition={{ type: "spring", stiffness: 400, damping: 22 }}
             className="group inline-flex cursor-pointer items-center gap-2.5 rounded-full bg-[#1C1917] px-8 py-4 text-sm font-medium text-[#FAFAF9]"
           >
-            Start a project
+            Get your free consultation
             <svg
               className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1"
               fill="none"
@@ -120,17 +142,20 @@ export default function HeroV2() {
             href="#work"
             className="cursor-pointer text-sm tracking-wide text-stone-600 underline-offset-4 transition-colors duration-200 hover:text-stone-900 hover:underline"
           >
-            See selected work
+            Explore our services
           </a>
         </motion.div>
       </div>
 
-      <span
+      {/* scroll cue */}
+      <motion.div
         aria-hidden
-        className="pointer-events-none absolute bottom-8 left-1/2 -translate-x-1/2 text-[10px] uppercase tracking-[0.4em] text-stone-400"
+        animate={reduce ? undefined : { y: [0, 8, 0] }}
+        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+        className="absolute bottom-8 left-1/2 flex h-9 w-5 -translate-x-1/2 items-start justify-center rounded-full border border-stone-300 p-1.5"
       >
-        Scroll
-      </span>
+        <span className="h-1.5 w-1.5 rounded-full bg-stone-400" />
+      </motion.div>
     </section>
   );
 }

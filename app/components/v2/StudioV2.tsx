@@ -1,10 +1,13 @@
 "use client";
 
 /**
- * StudioV2 - "about the studio" section. Large statement type + a small
- * figures row, scroll-revealed. Section id ("studio") is a nav target.
+ * StudioV2 — "about the studio": statement copy beside a generated brand
+ * visual, with a figures row below. The image (Higgsfield, 32KB WebP) is
+ * served via next/image — lazy by default and responsively sized, so it
+ * never blocks first paint. Section id ("studio") is a nav target.
  */
 
+import Image from "next/image";
 import { motion, useReducedMotion, type Variants } from "framer-motion";
 
 const EASE: [number, number, number, number] = [0.22, 1, 0.36, 1];
@@ -34,46 +37,69 @@ export default function StudioV2() {
       className="studio-v2 scroll-mt-24 border-t border-stone-200 bg-[#FAFAF9] px-6 py-28 md:px-12 md:py-36"
     >
       <div className="mx-auto max-w-6xl">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.6 }}
-          transition={{ duration: 0.6, ease: EASE }}
-          className="mb-8 text-[11px] font-medium uppercase tracking-[0.35em] text-stone-500"
-        >
-          The studio
-        </motion.p>
+        <div className="grid gap-12 md:grid-cols-2 md:items-center md:gap-16">
+          {/* copy */}
+          <div className="studio-copy">
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.6 }}
+              transition={{ duration: 0.6, ease: EASE }}
+              className="mb-8 text-[11px] font-medium uppercase tracking-[0.35em] text-stone-500"
+            >
+              The studio
+            </motion.p>
 
-        <motion.h2
-          initial={{ opacity: 0, y: 28 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.8, ease: EASE }}
-          className="max-w-[20ch] text-[clamp(2rem,4.5vw,3.5rem)] font-light leading-[1.1] tracking-tight text-[#1C1917]"
-        >
-          A small team, deliberately - so every client gets{" "}
-          <span className="italic text-stone-500">senior attention, no filler.</span>
-        </motion.h2>
+            <motion.h2
+              initial={{ opacity: 0, y: 28 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.4 }}
+              transition={{ duration: 0.8, ease: EASE }}
+              className="max-w-[20ch] text-[clamp(2rem,4.5vw,3.5rem)] font-light leading-[1.1] tracking-tight text-[#1C1917]"
+            >
+              A small team, deliberately — so every client gets{" "}
+              <span className="italic text-stone-500">senior attention, no filler.</span>
+            </motion.h2>
 
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
-          className="mt-8 max-w-xl text-base leading-relaxed text-stone-600"
-        >
-          We came together because we kept seeing hard-working businesses buried
-          online while flashier competitors took the traffic. We do SEO, design
-          and bespoke software - all under one roof, all done properly, all
-          explained in plain English.
-        </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.5 }}
+              transition={{ duration: 0.7, ease: EASE, delay: 0.1 }}
+              className="mt-8 max-w-xl text-base leading-relaxed text-stone-600"
+            >
+              We came together because we kept seeing hard-working businesses buried
+              online while flashier competitors took the traffic. We do SEO, design
+              and bespoke software — all under one roof, all done properly, all
+              explained in plain English.
+            </motion.p>
+          </div>
+
+          {/* generated brand visual */}
+          <motion.figure
+            initial={{ opacity: 0, scale: reduce ? 1 : 0.96 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true, amount: 0.3 }}
+            transition={{ duration: 0.9, ease: EASE }}
+            className="relative overflow-hidden rounded-3xl border border-stone-200"
+          >
+            <Image
+              src="/studio-visual.webp"
+              alt="Abstract monochrome brand visual representing One Step Stronger Digital"
+              width={928}
+              height={1152}
+              sizes="(max-width: 768px) 100vw, 42vw"
+              className="h-full w-full object-cover"
+            />
+          </motion.figure>
+        </div>
 
         <motion.dl
           variants={list}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.3 }}
-          className="mt-16 grid grid-cols-2 gap-x-8 gap-y-10 border-t border-stone-200 pt-12 md:grid-cols-4"
+          className="mt-16 grid grid-cols-2 gap-x-8 gap-y-10 border-t border-stone-200 pt-12 md:mt-24 md:grid-cols-4"
         >
           {FIGURES.map((f) => (
             <motion.div key={f.l} variants={item}>
