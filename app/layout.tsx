@@ -98,10 +98,6 @@ export const metadata: Metadata = {
       "max-snippet": -1,
     },
   },
-  icons: {
-    icon: [{ url: "/favicon.ico" }],
-    apple: [{ url: "/apple-touch-icon.png" }],
-  },
   category: "technology",
 };
 
